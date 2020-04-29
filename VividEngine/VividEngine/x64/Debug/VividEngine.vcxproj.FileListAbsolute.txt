@@ -1,0 +1,2 @@
+C:\Git\VividEngine\Project\VividEngine\x64\Debug\VividEngine.pdb
+C:\Git\VividEngine\Project\VividEngine\VividEngine\x64\Debug\VividEngine.pdb

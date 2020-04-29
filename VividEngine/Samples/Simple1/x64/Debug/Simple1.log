@@ -1,0 +1,4 @@
+﻿  Simple1.cpp
+C:\Git\VividEngine\Project\VividEngine\VividEngine\EngineMain.h(68,18): warning C4305: 'return': truncation from 'int' to 'bool'
+C:\Git\VividEngine\Project\VividEngine\VividEngine\EngineMain.h(102,18): warning C4305: 'return': truncation from 'int' to 'bool'
+  Simple1.vcxproj -> C:\Git\VividEngine\Project\VividEngine\x64\Debug\Simple1.exe
