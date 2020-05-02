@@ -10,6 +10,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VividEngine", "VividEngine\VividEngine.vcxproj", "{28D08AD9-A007-4576-9B70-CD3E4FB48000}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple1", "Samples\Simple1\Simple1.vcxproj", "{E1C8A877-9A9C-49EE-AAB5-ACBF7F5E27B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28D08AD9-A007-4576-9B70-CD3E4FB48000} = {28D08AD9-A007-4576-9B70-CD3E4FB48000}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

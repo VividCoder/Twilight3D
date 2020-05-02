@@ -152,12 +152,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DataGen.h" />
     <ClInclude Include="EngineMain.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="MeshTypes.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="VividApp.h" />
+    <ClInclude Include="VMesh2D.h" />
+    <ClInclude Include="VMesh3D.h" />
+    <ClInclude Include="VSceneEntity.h" />
+    <ClInclude Include="vSceneNode.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataGen.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -166,6 +173,10 @@
     </ClCompile>
     <ClCompile Include="VividApp.cpp" />
     <ClCompile Include="VividEngine.cpp" />
+    <ClCompile Include="VMesh2D.cpp" />
+    <ClCompile Include="VMesh3D.cpp" />
+    <ClCompile Include="VSceneEntity.cpp" />
+    <ClCompile Include="vSceneNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

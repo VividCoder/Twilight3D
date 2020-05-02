@@ -27,9 +27,15 @@
     <ClInclude Include="Simple1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="sampleSimple1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Simple1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sampleSimple1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

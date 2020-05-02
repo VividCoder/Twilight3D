@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Simple1.h"
 #include "EngineMain.h"
+#include "sampleSimple1.h"
 
 #define MAX_LOADSTRING 100
 
@@ -32,6 +33,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 #endif
 
    // 
-    initWindow(hInstance, nCmdShow);
+    initWindow(hInstance, nCmdShow, new sampleSimple1());
 
 }

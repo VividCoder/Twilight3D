@@ -57,10 +57,10 @@ LRESULT CALLBACK MessageProc(HWND wnd, UINT message, WPARAM wParam, LPARAM lPara
 
 
 
-bool initWindow(HINSTANCE hInstance,int nCmdShow)
+bool initWindow(HINSTANCE hInstance,int nCmdShow,VividApp * app)
 {
 
-    g_pTheApp.reset(new VividApp);
+    g_pTheApp.reset(app);
 
 
     const auto* cmdLine = GetCommandLineA();
@@ -101,7 +101,7 @@ bool initWindow(HINSTANCE hInstance,int nCmdShow)
     if (!g_pTheApp->InitBackend(wnd))
         return -1;
 
-    //g_pTheApp->CreateResources();
+   g_pTheApp->CreateResources();
 
     // Main message loop
     MSG msg = { 0 };
@@ -114,7 +114,7 @@ bool initWindow(HINSTANCE hInstance,int nCmdShow)
         }
         else
         {
-            //      g_pTheApp->Render();
+            g_pTheApp->Render();
             g_pTheApp->Present();
             printf("Ye!");
                 

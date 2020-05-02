@@ -15,7 +15,15 @@ public:
     bool ProcessCommandLine(const char* CmdLine);
 
     void Present();
-   
+
+    void CreateResources();
+
+    void Render();
+
+    virtual void InitApp() {};
+    virtual void UpdateApp() {};
+    virtual void RenderApp() {};
+    virtual void CloseApp() {};
      
     RENDER_DEVICE_TYPE GetDeviceType() const { return m_DeviceType; }
 

@@ -16,6 +16,8 @@
 #include <memory>
 #include <iomanip>
 #include <iostream>
+#include <array>
+#include <vector>
 
 #ifndef NOMINMAX
 #    define NOMINMAX
@@ -56,6 +58,8 @@
 #include "Graphics/GraphicsEngine/interface/SwapChain.h"
 
 #include "Common/interface/RefCntAutoPtr.hpp"
+
+
 
 //#include "VividApp.h"
 

@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{db9fcfcd-6e38-4beb-a5af-da472efc63fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Nodes">
+      <UniqueIdentifier>{a92d6fa5-3d70-4edd-b2ae-9506bebfcc78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mesh">
+      <UniqueIdentifier>{e93444cd-8245-4e3a-96cd-d2938ca2c23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{4d9902f3-de34-4e1f-8fd8-e0144cf91268}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -27,6 +39,24 @@
     <ClInclude Include="VividApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="vSceneNode.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="VSceneEntity.h">
+      <Filter>Scene\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshTypes.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="VMesh3D.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="VMesh2D.h">
+      <Filter>Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="DataGen.h">
+      <Filter>Data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VividEngine.cpp">
@@ -37,6 +67,21 @@
     </ClCompile>
     <ClCompile Include="VividApp.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vSceneNode.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="VSceneEntity.cpp">
+      <Filter>Scene\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="VMesh3D.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="VMesh2D.cpp">
+      <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="DataGen.cpp">
+      <Filter>Data</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
