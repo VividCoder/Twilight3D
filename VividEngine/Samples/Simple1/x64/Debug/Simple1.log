@@ -1,6 +1,75 @@
-﻿  sampleSimple1.cpp
-  Simple1.cpp
+﻿  Simple1.cpp
 C:\Git\VividEngine\Project\VividEngine\VividEngine\EngineMain.h(68,18): warning C4305: 'return': truncation from 'int' to 'bool'
 C:\Git\VividEngine\Project\VividEngine\VividEngine\EngineMain.h(102,18): warning C4305: 'return': truncation from 'int' to 'bool'
-  Generating Code...
-  Simple1.vcxproj -> C:\Git\VividEngine\Project\VividEngine\x64\Debug\Simple1.exe
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1594,12): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1594,12): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1594,12): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1594,12): error C2923: 'Diligent::Vector3': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1594,12): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1595,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1595,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1600,12): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1600,12): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1600,12): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1600,12): error C2923: 'Diligent::Vector4': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1600,12): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1601,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1601,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1606,12): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1606,12): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1606,12): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1606,12): error C2923: 'Diligent::Vector3': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1606,12): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1607,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1607,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1612,12): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1612,12): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1612,12): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1612,12): error C2923: 'Diligent::Vector4': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1612,12): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1613,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1613,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1926,17): error C2589: '(': illegal token on right side of '::'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(1932,17): error C2589: '(': illegal token on right side of '::'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2088,22): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2088,22): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2088,22): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2088,22): error C2923: 'Diligent::Vector2': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2088,22): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2089,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2089,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2096,22): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2096,22): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2096,22): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2096,22): error C2923: 'Diligent::Vector3': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2096,22): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2097,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2097,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2105,22): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2105,22): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2105,22): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2105,22): error C2923: 'Diligent::Vector4': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2105,22): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2106,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2106,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2116,22): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2116,22): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2116,22): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2116,22): error C2923: 'Diligent::Vector2': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2116,22): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2117,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2117,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2124,22): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2124,22): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2124,22): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2124,22): error C2923: 'Diligent::Vector3': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2124,22): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2125,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2125,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2133,22): error C2988: unrecognizable template declaration/definition
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2133,22): error C2059: syntax error: 'const'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2133,22): error C2065: 'T': undeclared identifier
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2133,22): error C2923: 'Diligent::Vector4': 'T' is not a valid template type argument for parameter 'T'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2133,22): error C2059: syntax error: ')'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2134,1): error C2143: syntax error: missing ';' before '{'
+C:\Git\VividEngine\Project\OpenSourceContrib\DiligentEngine\DiligentCore\Common\interface\BasicMath.hpp(2134,1): error C2447: '{': missing function header (old-style formal list?)

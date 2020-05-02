@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "VMesh2D.h"
 
+/*
+
 VMesh2D::VMesh2D() {
 
 	Vertices.resize(0);
@@ -21,3 +23,5 @@ void VMesh2D::AddIndex(int index) {
 	Indices.push_back(i);
 
 };
+
+*/

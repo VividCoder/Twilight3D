@@ -48,6 +48,7 @@
 #    define VULKAN_SUPPORTED 1
 #endif
 
+#include "Graphics//GraphicsEngine/interface/EngineFactory.h"
 #include "Graphics/GraphicsEngineD3D11/interface/EngineFactoryD3D11.h"
 #include "Graphics/GraphicsEngineD3D12/interface/EngineFactoryD3D12.h"
 #include "Graphics/GraphicsEngineOpenGL/interface/EngineFactoryOpenGL.h"
@@ -58,7 +59,7 @@
 #include "Graphics/GraphicsEngine/interface/SwapChain.h"
 
 #include "Common/interface/RefCntAutoPtr.hpp"
-
+//#include "Common/interface/BasicMath.hpp"
 
 
 //#include "VividApp.h"

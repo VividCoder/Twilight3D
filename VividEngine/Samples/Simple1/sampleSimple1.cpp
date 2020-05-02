@@ -2,7 +2,7 @@
 
 void sampleSimple1::InitApp() {
 
-	testMesh2D = new VMesh2D();
+//	testMesh2D = new VMesh2D();
 
 
 

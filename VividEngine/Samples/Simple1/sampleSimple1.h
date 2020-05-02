@@ -1,7 +1,12 @@
 #pragma once
+#pragma warning(push)
+#pragma warning(disable : 4201) 
 #include <VividApp.h>
-#include "MeshTypes.h"
-#include "VMesh2D.h"
+
+#include "Common/interface/BasicMath.hpp"
+//#include "VMesh2D.h"
+
+
 
 
 class sampleSimple1 :
@@ -16,7 +21,7 @@ public:
 
 private:
 
-	VMesh2D* testMesh2D;
+	//VMesh2D* testMesh2D;
 
 
 };
