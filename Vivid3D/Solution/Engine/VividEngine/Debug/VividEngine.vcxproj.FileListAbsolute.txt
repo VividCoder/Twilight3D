@@ -1,0 +1,2 @@
+C:\Projects\Vivid3D\Solution\Debug\VividEngine.pdb
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Debug\VividEngine.pdb

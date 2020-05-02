@@ -1,0 +1,12 @@
+﻿  pch.cpp
+  DataGen.cpp
+  MeshTypes2.cpp
+  VividApp.cpp
+  VMesh2D.cpp
+  VMesh3D.cpp
+  VSceneEntity.cpp
+  vSceneNode.cpp
+  Generating Code...
+d3dcompiler.lib(D3DCOMPILER_47.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
+dxgi.lib(dxgi.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
+  VividEngine.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\VividEngine.lib
