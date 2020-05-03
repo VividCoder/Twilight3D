@@ -48,6 +48,12 @@ namespace Vivid {
 
             };
 
+            static RefCntAutoPtr<IDeviceContext> GetDeviceContext() {
+
+                return sThis->m_pImmediateContext;
+
+            }
+
         private:
             static Vivid::App::VividApp *sThis;
             int winWidth, winHeight;

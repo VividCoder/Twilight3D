@@ -20,6 +20,19 @@ namespace Vivid {
 
 				VertexBuffer2D(vector<Vivid::DataTypes::Vertex2D *> verts,vector<Uint32> indices);
 
+				RefCntAutoPtr<IBuffer> GetVBuf() {
+
+					return VBuf;
+
+				}
+
+				RefCntAutoPtr<IBuffer> GetIBuf() {
+
+					return IBuf;
+
+				}
+
+
 			private:
 			
 				RefCntAutoPtr<IBuffer> VBuf;

@@ -12,6 +12,25 @@ namespace Vivid {
 		{
 		public:
 			RenderState2D();
+
+			RefCntAutoPtr<IBuffer> GetConsts() {
+
+				return vsConsts;
+
+			}
+
+			RefCntAutoPtr<IPipelineState> GetState() {
+
+				return pState;
+
+			}
+
+			RefCntAutoPtr<IShaderResourceBinding> GetBinding() {
+
+				return pRB;
+
+			}
+
 		private:
 			RefCntAutoPtr<IBuffer> vsConsts;
 			RefCntAutoPtr<IPipelineState> pState;

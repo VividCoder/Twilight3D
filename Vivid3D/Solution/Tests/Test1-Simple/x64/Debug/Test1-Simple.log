@@ -1,1 +1,7 @@
-﻿  Test1-Simple.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\Test1-Simple.exe
+﻿  pch.cpp
+  Test1-Simple.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(74,26): warning C4305: 'return': truncation from 'int' to 'bool'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(108,26): warning C4305: 'return': truncation from 'int' to 'bool'
+  Test1Simple.cpp
+  Generating Code...
+  Test1-Simple.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\Test1-Simple.exe

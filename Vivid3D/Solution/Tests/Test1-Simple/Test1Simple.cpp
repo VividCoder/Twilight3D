@@ -18,6 +18,7 @@ void Test1Simple::UpdateApp() {
 void Test1Simple::RenderApp() {
 
 	Drawer->Rect(20, 20, 200, 200);
+	Drawer->Rect(20, 300, 200, 200);
 
 };
 

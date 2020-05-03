@@ -325,14 +325,7 @@ void VividApp::Render() {
     m_pImmediateContext->ClearRenderTarget(pRTV, ClearColor, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
     m_pImmediateContext->ClearDepthStencil(pDSV, CLEAR_DEPTH_FLAG, 1.f, 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
 
-    // Set the pipeline state in the immediate context
-    m_pImmediateContext->SetPipelineState(m_pPSO);
-    // Commit shader resources. Even though in this example we don't really
-    // have any resources, this call also sets the shaders in OpenGL backend.
-    m_pImmediateContext->CommitShaderResources(nullptr, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
-    DrawAttribs drawAttrs;
-    drawAttrs.NumVertices = 3; // Render 3 vertices
-    m_pImmediateContext->Draw(drawAttrs);
+   
 
     RenderApp();
 
