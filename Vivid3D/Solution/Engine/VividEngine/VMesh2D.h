@@ -3,19 +3,26 @@
 #include <vector>
 
 using namespace std;
+using namespace Vivid::DataTypes;
 
-class VMesh2D
-{
-public:
+namespace Vivid {
+	namespace Mesh {
 
-	VMesh2D();
-	//void AddVertex(Vertex2D* vertex);
-	//void AddIndex(int index);
+		class VMesh2D
+		{
+		public:
 
-private:
+			VMesh2D();
+			void AddVertex(Vertex2D* vertex);
+			void AddIndex(int index);
 
-	//vector<Vertex2D*> Vertices;
-	//vector<Index*> Indices;
+		private:
 
-};
+			vector<Vertex2D*> Vertices;
+			vector<Index*> Indices;
 
+		};
+
+	}
+
+}

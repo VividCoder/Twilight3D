@@ -18,21 +18,27 @@
 #include "Common/interface/RefCntAutoPtr.hpp"
 #include "Common/interface/BasicMath.hpp"
 
+namespace Vivid {
+
+	namespace DataTypes {
+
+		struct Vertex2D {
+
+			Diligent::float3 Pos;
+			Diligent::float2 Uv;
+			Diligent::float4 Col;
+
+		};
 
 
-struct Vertex2D {
 
-	Diligent::float3 Pos;
-	Diligent::float2 Uv;
-	Diligent::float4 Col;
+		struct Index {
 
-};
+			int VertexID;
 
+		};
 
-/*
-struct Index {
+		
 
-	int VertexID;
-
-};
-*/
+	}
+}

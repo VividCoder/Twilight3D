@@ -1,7 +1,9 @@
 #include "pch.h"
 #include "DataGen.h"
 
-/*
+using namespace Diligent;
+
+using namespace Vivid::DataGen;
 
 vector<Vertex2D*> DataGen::MakeQuad(float x, float y, float w,float h,float z) {
 
@@ -40,4 +42,3 @@ vector<Vertex2D*> DataGen::MakeQuad(float x, float y, float w,float h,float z) {
 	return ret;
 
 };
-*/

@@ -158,10 +158,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DataGen.h" />
+    <ClInclude Include="Draw2D.h" />
     <ClInclude Include="EngineMain.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MeshTypes2.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RenderState2D.h" />
+    <ClInclude Include="VertexBuffer2D.h" />
     <ClInclude Include="VividApp.h" />
     <ClInclude Include="VMesh2D.h" />
     <ClInclude Include="VMesh3D.h" />
@@ -170,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataGen.cpp" />
+    <ClCompile Include="Draw2D.cpp" />
     <ClCompile Include="MeshTypes2.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -177,6 +181,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="RenderState2D.cpp" />
+    <ClCompile Include="VertexBuffer2D.cpp" />
     <ClCompile Include="VividApp.cpp" />
     <ClCompile Include="VMesh2D.cpp" />
     <ClCompile Include="VMesh3D.cpp" />

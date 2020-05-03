@@ -1,12 +1,8 @@
-﻿  pch.cpp
-  DataGen.cpp
-  MeshTypes2.cpp
-  VividApp.cpp
-  VMesh2D.cpp
-  VMesh3D.cpp
-  VSceneEntity.cpp
-  vSceneNode.cpp
-  Generating Code...
+﻿  VertexBuffer2D.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(11,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(49,48): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(52,40): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(58,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 d3dcompiler.lib(D3DCOMPILER_47.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
 dxgi.lib(dxgi.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
   VividEngine.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\VividEngine.lib

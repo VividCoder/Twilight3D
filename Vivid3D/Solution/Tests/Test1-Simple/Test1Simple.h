@@ -5,9 +5,9 @@
 #include <VividApp.h>
 
 #include "VMesh2D.h"
+#include "Draw2D.h"
 
-
-
+using namespace Vivid::App;
 
 class Test1Simple :
 	public VividApp
@@ -21,7 +21,10 @@ public:
 
 private:
 
-	//VMesh2D* testMesh2D;
+	Vivid::Mesh::VMesh2D* testMesh2D;
+
+	Vivid::Draw::Draw2D* Drawer;
+
 
 
 };

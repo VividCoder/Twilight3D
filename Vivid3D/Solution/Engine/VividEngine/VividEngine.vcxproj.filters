@@ -13,6 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Mesh">
+      <UniqueIdentifier>{ccacfe75-5c60-44c6-bda7-2b914afd71e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataTypes">
+      <UniqueIdentifier>{b53a5686-a25e-4335-9bbb-8a10400cb9e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataGen">
+      <UniqueIdentifier>{9122a846-dcf2-40ad-9f04-6fbe926e4ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{c6acdbfa-a685-49ad-8c64-d17fbe0e211f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{df16c727-500a-4fe0-adc1-079da4a3b99b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Nodes">
+      <UniqueIdentifier>{b457ea7c-643d-4103-adb2-31f856137cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{087daadb-0e59-4e26-9a0f-0cff0c0cf967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw">
+      <UniqueIdentifier>{5ceadeaf-bf51-4c0d-bb28-be92cf6ce345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buffer">
+      <UniqueIdentifier>{7cb63b94-e792-45c3-99e0-8163d726c8b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buffer\Vertex">
+      <UniqueIdentifier>{124c3a73-560b-48cd-a029-a5b07bd818ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderState">
+      <UniqueIdentifier>{e68223a5-0fcc-4b3e-a5d0-417a7ce056ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -21,29 +54,38 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataGen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EngineMain.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MeshTypes2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VividApp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="VMesh2D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Mesh</Filter>
     </ClInclude>
     <ClInclude Include="VMesh3D.h">
-      <Filter>Header Files</Filter>
+      <Filter>Mesh</Filter>
     </ClInclude>
-    <ClInclude Include="VSceneEntity.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MeshTypes2.h">
+      <Filter>DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="DataGen.h">
+      <Filter>DataGen</Filter>
+    </ClInclude>
+    <ClInclude Include="VividApp.h">
+      <Filter>App</Filter>
     </ClInclude>
     <ClInclude Include="vSceneNode.h">
-      <Filter>Header Files</Filter>
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="VSceneEntity.h">
+      <Filter>Scene\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineMain.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw2D.h">
+      <Filter>Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer2D.h">
+      <Filter>Buffer\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderState2D.h">
+      <Filter>RenderState</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -51,25 +93,34 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DataGen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MeshTypes2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VividApp.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>DataGen</Filter>
     </ClCompile>
     <ClCompile Include="VMesh2D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Mesh</Filter>
     </ClCompile>
     <ClCompile Include="VMesh3D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Mesh</Filter>
     </ClCompile>
-    <ClCompile Include="VSceneEntity.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="VividApp.cpp">
+      <Filter>App</Filter>
     </ClCompile>
     <ClCompile Include="vSceneNode.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="VSceneEntity.cpp">
+      <Filter>Scene\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTypes2.cpp">
+      <Filter>DataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw2D.cpp">
+      <Filter>Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer2D.cpp">
+      <Filter>Buffer\Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderState2D.cpp">
+      <Filter>RenderState</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "VMesh2D.h"
 
-/*
+using namespace Vivid::Mesh;
 
 VMesh2D::VMesh2D() {
 
@@ -24,4 +24,3 @@ void VMesh2D::AddIndex(int index) {
 
 };
 
-*/

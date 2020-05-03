@@ -1,7 +1,20 @@
 #pragma once
 #include "vSceneNode.h"
-class VSceneEntity :
-	public VSceneNode
-{
-};
+
+namespace Vivid {
+
+	namespace Scene {
+
+		namespace Nodes {
+
+			class VSceneEntity :
+				public VSceneNode
+			{
+			};
+
+		}
+	}
+
+}
+
 

@@ -4,11 +4,20 @@
 
 using namespace std;
 
-class DataGen
-{
-public:
+using namespace Vivid::DataTypes;
 
-	//static vector<Vertex2D*> MakeQuad(float x, float y, float w, float h, float z = 0);
+namespace Vivid {
 
-};
+	namespace DataGen {
+		class DataGen
+		{
+		public:
+
+			static vector<Vertex2D*> MakeQuad(float x, float y, float w, float h, float z = 0);
+
+		};
+
+	}
+}
+
 

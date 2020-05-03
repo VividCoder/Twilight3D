@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "VividApp.h"
 
+using namespace Vivid::App;
+
 static const char* VSSource = R"(
 struct PSInput 
 { 
@@ -59,6 +61,16 @@ void VividApp::WindowResize(int w, int h)
 
 }
 
+VividApp::VividApp() {
+
+    sThis = this;
+
+}
+
+VividApp * VividApp::sThis = NULL;
+
+
+
 bool VividApp::InitBackend(HWND hWnd) {
 
     SwapChainDesc SCDesc;
@@ -99,6 +111,7 @@ bool VividApp::InitBackend(HWND hWnd) {
         //EngineCI.EnableDebugLayer = true;
 #    endif
         auto* pFactoryD3D12 = GetEngineFactoryD3D12();
+        m_pEngineFactory = pFactoryD3D12;
         pFactoryD3D12->CreateDeviceAndContextsD3D12(EngineCI, &m_pDevice, &m_pImmediateContext);
         Win32NativeWindow Window{ hWnd };
         pFactoryD3D12->CreateSwapChainD3D12(m_pDevice, m_pImmediateContext, SCDesc, FullScreenModeDesc{}, Window, &m_pSwapChain);
@@ -218,6 +231,9 @@ void VividApp::CreateResources() {
     PSODesc.GraphicsPipeline.pPS = pPS;
     m_pDevice->CreatePipelineState(PSOCreateInfo, &m_pPSO);
 
+    InitApp();
+
+
 };
 
 bool VividApp::ProcessCommandLine(const char* CmdLine)
@@ -294,6 +310,9 @@ void VividApp::Present()
 
 void VividApp::Render() {
 
+    UpdateApp();
+
+
     // Set render targets before issuing any draw command.
        // Note that Present() unbinds the back buffer if it is set as render target.
     auto* pRTV = m_pSwapChain->GetCurrentBackBufferRTV();
@@ -314,6 +333,8 @@ void VividApp::Render() {
     DrawAttribs drawAttrs;
     drawAttrs.NumVertices = 3; // Render 3 vertices
     m_pImmediateContext->Draw(drawAttrs);
+
+    RenderApp();
 
 
 }

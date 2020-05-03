@@ -4,17 +4,24 @@
 
 using namespace std;
 
-class VSceneNode
-{
-public:
+namespace Vivid {
 
-	VSceneNode();
-	virtual void Update() {};
-	virtual void Render() {};
+	namespace Scene {
 
-private:
+		class VSceneNode
+		{
+		public:
 
-	vector<VSceneNode*> nodes;
+			VSceneNode();
+			virtual void Update() {};
+			virtual void Render() {};
 
-};
+		private:
 
+			vector<VSceneNode*> nodes;
+
+		};
+
+	}
+
+}
