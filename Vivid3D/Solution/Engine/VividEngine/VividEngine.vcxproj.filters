@@ -46,6 +46,9 @@
     <Filter Include="RenderState">
       <UniqueIdentifier>{e68223a5-0fcc-4b3e-a5d0-417a7ce056ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{804174aa-c288-4bd7-a404-566e9eedb496}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -87,6 +90,9 @@
     <ClInclude Include="RenderState2D.h">
       <Filter>RenderState</Filter>
     </ClInclude>
+    <ClInclude Include="Texture2D.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -121,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="RenderState2D.cpp">
       <Filter>RenderState</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture2D.cpp">
+      <Filter>Texture</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

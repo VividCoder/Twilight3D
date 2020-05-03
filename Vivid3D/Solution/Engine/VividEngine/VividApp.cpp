@@ -331,3 +331,5 @@ void VividApp::Render() {
 
 
 }
+
+const char* Vivid::App::VividApp::AppPath = NULL;

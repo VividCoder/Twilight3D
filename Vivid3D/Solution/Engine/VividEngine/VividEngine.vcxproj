@@ -109,14 +109,14 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>DiligentCore.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DiligentCore.lib;Diligent-TextureLoader.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;LibJpeg.lib;LibPng.lib;LibTiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Other\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
@@ -164,6 +164,7 @@
     <ClInclude Include="MeshTypes2.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RenderState2D.h" />
+    <ClInclude Include="Texture2D.h" />
     <ClInclude Include="VertexBuffer2D.h" />
     <ClInclude Include="VividApp.h" />
     <ClInclude Include="VMesh2D.h" />
@@ -182,6 +183,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RenderState2D.cpp" />
+    <ClCompile Include="Texture2D.cpp" />
     <ClCompile Include="VertexBuffer2D.cpp" />
     <ClCompile Include="VividApp.cpp" />
     <ClCompile Include="VMesh2D.cpp" />

@@ -107,7 +107,7 @@
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Solution\Engine\VividEngine;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Solution\Engine\VividEngine;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

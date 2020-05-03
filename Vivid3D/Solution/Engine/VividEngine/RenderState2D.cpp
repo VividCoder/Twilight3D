@@ -54,7 +54,7 @@ RenderState2D::RenderState2D() {
         ShaderCI.Desc.ShaderType = SHADER_TYPE_VERTEX;
         ShaderCI.EntryPoint = "main";
         ShaderCI.Desc.Name = "Cube VS";
-        ShaderCI.FilePath = "cube.vsh";
+        ShaderCI.FilePath = Vivid::App::VividApp::GetResPath("render2D.vsh");
         device->CreateShader(ShaderCI, &pVS);
         // Create dynamic uniform buffer that will store our transformation matrix
         // Dynamic buffers can be frequently updated by the CPU
@@ -73,7 +73,7 @@ RenderState2D::RenderState2D() {
         ShaderCI.Desc.ShaderType = SHADER_TYPE_PIXEL;
         ShaderCI.EntryPoint = "main";
         ShaderCI.Desc.Name = "Cube PS";
-        ShaderCI.FilePath = "cube.psh";
+        ShaderCI.FilePath = Vivid::App::VividApp::GetResPath("Render2D.psh");
         device->CreateShader(ShaderCI, &pPS);
     }
 
@@ -97,12 +97,36 @@ RenderState2D::RenderState2D() {
     // Define variable type that will be used by default
     PSODesc.ResourceLayout.DefaultVariableType = SHADER_RESOURCE_VARIABLE_TYPE_STATIC;
 
-    device->CreatePipelineState(PSOCreateInfo, &pState);
-
 
     // Since we did not explcitly specify the type for 'Constants' variable, default
     // type (SHADER_RESOURCE_VARIABLE_TYPE_STATIC) will be used. Static variables never
     // change and are bound directly through the pipeline state object.
+
+    ShaderResourceVariableDesc Vars[] =
+    {
+        {SHADER_TYPE_PIXEL, "g_Texture", SHADER_RESOURCE_VARIABLE_TYPE_MUTABLE}
+    };
+    PSODesc.ResourceLayout.Variables = Vars;
+    PSODesc.ResourceLayout.NumVariables = _countof(Vars);
+
+
+    SamplerDesc SamLinearClampDesc
+    {
+        FILTER_TYPE_LINEAR, FILTER_TYPE_LINEAR, FILTER_TYPE_LINEAR,
+        TEXTURE_ADDRESS_CLAMP, TEXTURE_ADDRESS_CLAMP, TEXTURE_ADDRESS_CLAMP
+    };
+    StaticSamplerDesc StaticSamplers[] =
+    {
+        {SHADER_TYPE_PIXEL, "g_Texture", SamLinearClampDesc}
+    };
+
+    PSODesc.ResourceLayout.StaticSamplers = StaticSamplers;
+    PSODesc.ResourceLayout.NumStaticSamplers = _countof(StaticSamplers);
+
+
+    device->CreatePipelineState(PSOCreateInfo, &pState);
+
+
     pState->GetStaticVariableByName(SHADER_TYPE_VERTEX, "Constants")->Set(vsConsts);
 
     // Create a shader resource binding object and bind all static resources in it

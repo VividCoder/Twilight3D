@@ -39,9 +39,21 @@ void Draw2D::SetColor(float r, float g, float b, float a)
 
 }
 
+void Draw2D::SetTexture(Vivid::Texture::Texture2D* tex) {
+
+    bTex = tex;
+
+};
+
 void Draw2D::Rect(int x, int y, int w, int h) {
 
 	auto quad = Vivid::DataGen::DataGen::MakeQuad(x, y, w, h);
+
+    quad[0]->Col = float4(cRed, cGreen, cBlue, cAlpha);
+    quad[1]->Col = float4(cRed, cGreen, cBlue, cAlpha);
+    quad[2]->Col = float4(cRed, cGreen, cBlue, cAlpha);
+    quad[3]->Col = float4(cRed, cGreen, cBlue, cAlpha);
+
 
 	Uint32 indices[] =
 	{
@@ -74,6 +86,11 @@ void Draw2D::Rect(int x, int y, int w, int h) {
         MapHelper<float4x4> CBConstants(devCon, ren->GetConsts() , MAP_WRITE, MAP_FLAG_DISCARD);
         *CBConstants = mvp.Transpose();
     }
+
+    auto rb = ren->GetBinding();
+
+    rb->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Set(bTex->GetView());
+
 
     // Bind vertex and index buffers
     Uint32   offset = 0;

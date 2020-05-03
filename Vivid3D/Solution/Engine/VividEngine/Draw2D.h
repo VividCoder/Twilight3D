@@ -1,4 +1,5 @@
 #pragma once
+#include "Texture2D.h"
 
 namespace Vivid {
 
@@ -20,6 +21,8 @@ namespace Vivid {
 
 			void SetBlend(BlendMode mode);
 
+			void SetTexture(Vivid::Texture::Texture2D* tex);
+
 			void Bind();
 
 			void Release();
@@ -28,6 +31,7 @@ namespace Vivid {
 
 		private:
 
+			Vivid::Texture::Texture2D* bTex;
 			float cRed, cGreen, cBlue, cAlpha;
 			BlendMode bMode;
 

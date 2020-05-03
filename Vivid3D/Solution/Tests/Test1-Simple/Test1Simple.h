@@ -6,6 +6,7 @@
 
 #include "VMesh2D.h"
 #include "Draw2D.h"
+#include "Texture2D.h"
 
 using namespace Vivid::App;
 
@@ -22,7 +23,7 @@ public:
 private:
 
 	Vivid::Mesh::VMesh2D* testMesh2D;
-
+	Vivid::Texture::Texture2D *tex1;
 	Vivid::Draw::Draw2D* Drawer;
 
 
