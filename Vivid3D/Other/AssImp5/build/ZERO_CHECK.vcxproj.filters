@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\4514f7536105150e24b9b654072b6dba\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C3E1E7DA-28EC-3723-8097-51A8872FB3AC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

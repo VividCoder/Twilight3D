@@ -120,11 +120,18 @@ namespace Vivid {
                 }
                 else
                 {
+                }
+
+                std::clock_t start = std::clock();
+
                     g_pTheApp->Render();
                     g_pTheApp->Present();
                     printf("Ye!");
+                    std::clock_t end = std::clock();
 
-                }
+
+                    DBOUT("Looped:" << (end - start) << "\n");
+                    
             }
 
             g_pTheApp.reset();

@@ -7,6 +7,8 @@
 #include "VMesh2D.h"
 #include "Draw2D.h"
 #include "Texture2D.h"
+#include "SceneBase.h"
+#include "Importer.h"
 
 using namespace Vivid::App;
 
@@ -24,8 +26,10 @@ private:
 
 	Vivid::Mesh::VMesh2D* testMesh2D;
 	Vivid::Texture::Texture2D *tex1;
+	Vivid::Texture::Texture2D* tex2;
 	Vivid::Draw::Draw2D* Drawer;
-
+	int x, y;
+	Vivid::Scene::SceneBase* scene;
 
 
 };

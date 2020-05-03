@@ -49,6 +49,12 @@
     <Filter Include="Texture">
       <UniqueIdentifier>{804174aa-c288-4bd7-a404-566e9eedb496}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Import">
+      <UniqueIdentifier>{36a9f1aa-41cf-4e6e-ad8b-232362c57d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{bc119bab-8f27-427b-b9a8-09a59267e333}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -93,6 +99,18 @@
     <ClInclude Include="Texture2D.h">
       <Filter>Texture</Filter>
     </ClInclude>
+    <ClInclude Include="NodeCam.h">
+      <Filter>Scene\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Importer.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -130,6 +148,18 @@
     </ClCompile>
     <ClCompile Include="Texture2D.cpp">
       <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeCam.cpp">
+      <Filter>Scene\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Importer.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRenderer.cpp">
+      <Filter>Renderer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

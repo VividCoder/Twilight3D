@@ -1,0 +1,10 @@
+^C:\PROJECTS\VIVID3D\OTHER\ASSIMP5\CONTRIB\ZLIB\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Vivid3D/Other/AssImp5 -BC:/Projects/Vivid3D/Other/AssImp5/build --check-stamp-file C:/Projects/Vivid3D/Other/AssImp5/build/contrib/zlib/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

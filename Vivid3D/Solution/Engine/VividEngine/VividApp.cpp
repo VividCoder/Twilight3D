@@ -304,11 +304,23 @@ bool VividApp::ProcessCommandLine(const char* CmdLine)
 
 void VividApp::Present()
 {
+
+    std::clock_t start = std::clock();
+
+    //DBOUT("Presenting.\n");
+
     m_pSwapChain->Present();
+    
+    std::clock_t end = std::clock();
+    
+
+    DBOUT("Presented:" << (end-start) << "\n" );
 }
 
 
 void VividApp::Render() {
+
+    std::clock_t start = std::clock();
 
     UpdateApp();
 
@@ -329,7 +341,11 @@ void VividApp::Render() {
 
     RenderApp();
 
+    std::clock_t end = std::clock();
 
+
+    DBOUT("Rendered:" << (end - start) << "\n");
 }
+
 
 const char* Vivid::App::VividApp::AppPath = NULL;

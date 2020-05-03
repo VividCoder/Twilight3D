@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D45155C-DB6A-326D-A9DB-88D5A208E867}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\build;C:\Projects\Vivid3D\Other\AssImp5\include;C:\Projects\Vivid3D\Other\AssImp5\code;C:\Projects\Vivid3D\Other\AssImp5\.;C:\Projects\Vivid3D\Other\AssImp5\contrib\zlib;C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\build;C:\Projects\Vivid3D\Other\AssImp5\include;C:\Projects\Vivid3D\Other\AssImp5\code;C:\Projects\Vivid3D\Other\AssImp5\.;C:\Projects\Vivid3D\Other\AssImp5\contrib\zlib;C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\build;C:\Projects\Vivid3D\Other\AssImp5\include;C:\Projects\Vivid3D\Other\AssImp5\code;C:\Projects\Vivid3D\Other\AssImp5\.;C:\Projects\Vivid3D\Other\AssImp5\contrib\zlib;C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\build;C:\Projects\Vivid3D\Other\AssImp5\include;C:\Projects\Vivid3D\Other\AssImp5\code;C:\Projects\Vivid3D\Other\AssImp5\.;C:\Projects\Vivid3D\Other\AssImp5\contrib\zlib;C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\Vivid3D\Other\AssImp5\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Projects/Vivid3D/Other/AssImp5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Vivid3D/Other/AssImp5 -BC:/Projects/Vivid3D/Other/AssImp5/build --check-stamp-file C:/Projects/Vivid3D/Other/AssImp5/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Projects\Vivid3D\Other\AssImp5\assimp-config-version.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp-config.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp.pc.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-debug.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-release.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCXXCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeRCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeSystem.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindDirectX.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindPkgMacros.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindZLIB.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\PrecompiledHeader.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\cmake_uninstall.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\cmake\HunterGate.cmake;C:\Projects\Vivid3D\Other\AssImp5\include\assimp\config.h.in;C:\Projects\Vivid3D\Other\AssImp5\revision.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Projects/Vivid3D/Other/AssImp5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Vivid3D/Other/AssImp5 -BC:/Projects/Vivid3D/Other/AssImp5/build --check-stamp-file C:/Projects/Vivid3D/Other/AssImp5/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Projects\Vivid3D\Other\AssImp5\assimp-config-version.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp-config.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp.pc.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-debug.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-release.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCXXCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeRCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeSystem.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindDirectX.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindPkgMacros.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindZLIB.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\PrecompiledHeader.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\cmake_uninstall.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\cmake\HunterGate.cmake;C:\Projects\Vivid3D\Other\AssImp5\include\assimp\config.h.in;C:\Projects\Vivid3D\Other\AssImp5\revision.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Projects/Vivid3D/Other/AssImp5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Vivid3D/Other/AssImp5 -BC:/Projects/Vivid3D/Other/AssImp5/build --check-stamp-file C:/Projects/Vivid3D/Other/AssImp5/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Projects\Vivid3D\Other\AssImp5\assimp-config-version.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp-config.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp.pc.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-debug.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-release.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCXXCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeRCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeSystem.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindDirectX.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindPkgMacros.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindZLIB.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\PrecompiledHeader.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\cmake_uninstall.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\cmake\HunterGate.cmake;C:\Projects\Vivid3D\Other\AssImp5\include\assimp\config.h.in;C:\Projects\Vivid3D\Other\AssImp5\revision.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Projects/Vivid3D/Other/AssImp5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/Vivid3D/Other/AssImp5 -BC:/Projects/Vivid3D/Other/AssImp5/build --check-stamp-file C:/Projects/Vivid3D/Other/AssImp5/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.17\Modules\Platform\WindowsPaths.cmake;C:\Projects\Vivid3D\Other\AssImp5\assimp-config-version.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp-config.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimp.pc.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-debug.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets-release.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\assimpTargets.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeCXXCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeRCCompiler.cmake;C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\3.17.2\CMakeSystem.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindDirectX.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindPkgMacros.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\FindZLIB.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\PrecompiledHeader.cmake;C:\Projects\Vivid3D\Other\AssImp5\cmake-modules\cmake_uninstall.cmake.in;C:\Projects\Vivid3D\Other\AssImp5\cmake\HunterGate.cmake;C:\Projects\Vivid3D\Other\AssImp5\include\assimp\config.h.in;C:\Projects\Vivid3D\Other\AssImp5\revision.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Projects\Vivid3D\Other\AssImp5\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Projects\Vivid3D\Other\AssImp5\build\ZERO_CHECK.vcxproj">
+      <Project>{284FDA03-33E9-3FBA-A747-3856CA84E0C5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\Vivid3D\Other\AssImp5\build\contrib\irrXML\IrrXML.vcxproj">
+      <Project>{3FA3A246-9A12-3C04-BFB7-F1F7D9C3952D}</Project>
+      <Name>IrrXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\Vivid3D\Other\AssImp5\build\code\assimp.vcxproj">
+      <Project>{18F0BDBC-7B82-3B7C-8095-2654DF11B1C0}</Project>
+      <Name>assimp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\Vivid3D\Other\AssImp5\build\tools\assimp_cmd\assimp_cmd.vcxproj">
+      <Project>{5FDA8001-2D1B-3F1E-8897-290E623AD8A4}</Project>
+      <Name>assimp_cmd</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib\zlib.vcxproj">
+      <Project>{6128F433-7B0F-3871-A436-DBD42685144C}</Project>
+      <Name>zlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib\zlibstatic.vcxproj">
+      <Project>{605169E6-30D5-3603-89DA-9B50B0EC86A8}</Project>
+      <Name>zlibstatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

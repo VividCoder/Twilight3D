@@ -109,14 +109,14 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>DiligentCore.lib;Diligent-TextureLoader.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;LibJpeg.lib;LibPng.lib;LibTiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DiligentCore.lib;Diligent-TextureLoader.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;LibJpeg.lib;LibPng.lib;LibTiff.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Other\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
@@ -161,9 +161,13 @@
     <ClInclude Include="Draw2D.h" />
     <ClInclude Include="EngineMain.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Importer.h" />
     <ClInclude Include="MeshTypes2.h" />
+    <ClInclude Include="NodeCam.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RenderState2D.h" />
+    <ClInclude Include="SceneBase.h" />
+    <ClInclude Include="SceneRenderer.h" />
     <ClInclude Include="Texture2D.h" />
     <ClInclude Include="VertexBuffer2D.h" />
     <ClInclude Include="VividApp.h" />
@@ -175,7 +179,9 @@
   <ItemGroup>
     <ClCompile Include="DataGen.cpp" />
     <ClCompile Include="Draw2D.cpp" />
+    <ClCompile Include="Importer.cpp" />
     <ClCompile Include="MeshTypes2.cpp" />
+    <ClCompile Include="NodeCam.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -183,6 +189,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RenderState2D.cpp" />
+    <ClCompile Include="SceneBase.cpp" />
+    <ClCompile Include="SceneRenderer.cpp" />
     <ClCompile Include="Texture2D.cpp" />
     <ClCompile Include="VertexBuffer2D.cpp" />
     <ClCompile Include="VividApp.cpp" />

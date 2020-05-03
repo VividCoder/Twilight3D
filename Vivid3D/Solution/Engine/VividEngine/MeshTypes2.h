@@ -30,11 +30,28 @@ namespace Vivid {
 
 		};
 
+		struct Vertex3D {
+
+			Diligent::float3 Pos;
+			Diligent::float3 UV;
+			Diligent::float3 Normal;
+			Diligent::float3 Tangent;
+			Diligent::float3 BiNormal;
+
+		};
+
 
 
 		struct Index {
 
 			int VertexID;
+
+		};
+
+
+		struct Tri {
+
+			int V0, V1, V2;
 
 		};
 

@@ -1,0 +1,18 @@
+﻿  Building Custom Rule C:/Projects/Vivid3D/Other/AssImp5/contrib/zlib/CMakeLists.txt
+  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  gzclose.c
+  gzlib.c
+  gzread.c
+  gzwrite.c
+  inflate.c
+  infback.c
+  inftrees.c
+  inffast.c
+  trees.c
+  uncompr.c
+  zutil.c
+     Creating library C:/Projects/Vivid3D/Other/AssImp5/build/contrib/zlib/Debug/zlibd.lib and object C:/Projects/Vivid3D/Other/AssImp5/build/contrib/zlib/Debug/zlibd.exp
+  zlib.vcxproj -> C:\Projects\Vivid3D\Other\AssImp5\build\contrib\zlib\Debug\zlibd.dll
