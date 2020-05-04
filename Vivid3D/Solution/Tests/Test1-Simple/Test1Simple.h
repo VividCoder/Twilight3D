@@ -9,6 +9,7 @@
 #include "Texture2D.h"
 #include "SceneBase.h"
 #include "Importer.h"
+#include "SceneRenderer.h"
 
 using namespace Vivid::App;
 
@@ -30,7 +31,8 @@ private:
 	Vivid::Draw::Draw2D* Drawer;
 	int x, y;
 	Vivid::Scene::SceneBase* scene;
-
+	Vivid::Renderer::SceneRenderer* sceneRen;
+	float ang = 0.0f;
 
 };
 

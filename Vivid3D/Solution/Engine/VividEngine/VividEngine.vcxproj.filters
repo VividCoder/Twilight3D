@@ -55,6 +55,15 @@
     <Filter Include="Renderer">
       <UniqueIdentifier>{bc119bab-8f27-427b-b9a8-09a59267e333}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Renderer\RenderStates">
+      <UniqueIdentifier>{9558072c-d0b2-4dad-bdd3-ff9f0a1db226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths">
+      <UniqueIdentifier>{119f3aee-835f-4d71-8f11-ad269d09fef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Material">
+      <UniqueIdentifier>{30bdd4d9-7964-4d53-9d68-3cd4ac7d5780}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -111,6 +120,18 @@
     <ClInclude Include="SceneRenderer.h">
       <Filter>Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="RenderState3DNormal.h">
+      <Filter>Renderer\RenderStates</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer3D.h">
+      <Filter>Buffer\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="MathsUtil.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Material</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -160,6 +181,18 @@
     </ClCompile>
     <ClCompile Include="SceneRenderer.cpp">
       <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderState3DNormal.cpp">
+      <Filter>Renderer\RenderStates</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer3D.cpp">
+      <Filter>Buffer\Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="MathsUtil.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Material</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

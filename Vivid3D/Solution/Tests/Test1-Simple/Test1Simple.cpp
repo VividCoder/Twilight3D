@@ -1,24 +1,30 @@
 #include "pch.h"
 #include "Test1Simple.h"
-
+#include <filesystem>
 
 
 void Test1Simple::InitApp() {
 	SetPath("C:/Projects/Vivid3D/Solution/x64/Debug/");
 
+	
+
 //	testMesh2D = new VMesh2D();
 	Drawer = new Vivid::Draw::Draw2D();
 	
-	tex1 = new Vivid::Texture::Texture2D("tex1.jpg");
-	tex2 = new Vivid::Texture::Texture2D("tex2.jpg");
+	//tex1 = new Vivid::Texture::Texture2D("tex1.jpg");
+//	tex2 = new Vivid::Texture::Texture2D("tex2.jpg");
 	
 	srand(time(NULL));
 
 	scene = new Vivid::Scene::SceneBase();
 	
-	auto e = Vivid::Import::Importer::LoadEntityAI("model/spider.obj");
+	auto e = Vivid::Import::Importer::LoadEntityAI("scene.gltf");
 
 	scene->AddNode(e);
+
+	sceneRen = new Vivid::Renderer::SceneRenderer(scene);
+
+
 }
 
 void Test1Simple::UpdateApp() {
@@ -27,6 +33,16 @@ void Test1Simple::UpdateApp() {
 
 void Test1Simple::RenderApp() {
 
+	auto cam = scene->GetCam();
+
+	cam->SetPosition(0, 0, -7);
+
+	ang = ang + 1;
+	scene->GetRoot()->SetRotation(0, ang, 0);
+
+	sceneRen->Render();
+
+	return;
 	Drawer->SetTexture(tex2);
 
 	Drawer->Bind();

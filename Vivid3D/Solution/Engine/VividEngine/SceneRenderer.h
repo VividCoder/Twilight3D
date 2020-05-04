@@ -1,6 +1,8 @@
 #pragma once
 #include "SceneRenderer.h"
 #include "SceneBase.h"
+#include "VSceneEntity.h"
+#include "RenderState3DNormal.h"
 
 namespace Vivid {
 
@@ -18,6 +20,7 @@ namespace Vivid {
 		private:
 
 			Vivid::Scene::SceneBase* pScene;
+			Vivid::Renderer::States::RenderState3DNormal* rs1;
 
 		};
 

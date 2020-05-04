@@ -162,14 +162,18 @@
     <ClInclude Include="EngineMain.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Importer.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="MathsUtil.h" />
     <ClInclude Include="MeshTypes2.h" />
     <ClInclude Include="NodeCam.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RenderState2D.h" />
+    <ClInclude Include="RenderState3DNormal.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneRenderer.h" />
     <ClInclude Include="Texture2D.h" />
     <ClInclude Include="VertexBuffer2D.h" />
+    <ClInclude Include="VertexBuffer3D.h" />
     <ClInclude Include="VividApp.h" />
     <ClInclude Include="VMesh2D.h" />
     <ClInclude Include="VMesh3D.h" />
@@ -180,6 +184,8 @@
     <ClCompile Include="DataGen.cpp" />
     <ClCompile Include="Draw2D.cpp" />
     <ClCompile Include="Importer.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="MathsUtil.cpp" />
     <ClCompile Include="MeshTypes2.cpp" />
     <ClCompile Include="NodeCam.cpp" />
     <ClCompile Include="pch.cpp">
@@ -189,10 +195,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RenderState2D.cpp" />
+    <ClCompile Include="RenderState3DNormal.cpp" />
     <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="SceneRenderer.cpp" />
     <ClCompile Include="Texture2D.cpp" />
     <ClCompile Include="VertexBuffer2D.cpp" />
+    <ClCompile Include="VertexBuffer3D.cpp" />
     <ClCompile Include="VividApp.cpp" />
     <ClCompile Include="VMesh2D.cpp" />
     <ClCompile Include="VMesh3D.cpp" />

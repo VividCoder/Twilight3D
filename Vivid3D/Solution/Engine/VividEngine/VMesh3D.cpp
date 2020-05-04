@@ -59,3 +59,24 @@ using namespace Diligent;
 
  
  }
+
+ void Mesh3D::Final() {
+
+     vector<Uint32> i1;
+
+     i1.resize(0);
+
+     for (int i = 0; i < indices.size(); i++) {
+
+         auto t = indices.at(i);
+
+         i1.push_back((Uint32)t->V0);
+         i1.push_back((Uint32)t->V1);
+         i1.push_back((Uint32)t->V2);
+
+     }
+
+     vb = new VertexBuffer3D(vertices, i1);
+
+
+ };

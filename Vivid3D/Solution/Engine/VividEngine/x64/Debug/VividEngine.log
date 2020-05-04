@@ -1,39 +1,18 @@
-﻿  pch.cpp
-  DataGen.cpp
-  Draw2D.cpp
+﻿  Importer.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Draw2D.cpp(70,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Draw2D.cpp(70,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Draw2D.cpp(70,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Draw2D.cpp(70,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Importer.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(20,20): warning C4018: '<': signed/unsigned mismatch
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(28,20): warning C4018: '<': signed/unsigned mismatch
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(50,20): warning C4018: '<': signed/unsigned mismatch
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(59,21): warning C4018: '<': signed/unsigned mismatch
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(86,21): warning C4018: '<': signed/unsigned mismatch
-  MeshTypes2.cpp
-  NodeCam.cpp
-  RenderState2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  SceneBase.cpp
-  Texture2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  VertexBuffer2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(11,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(49,48): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(52,40): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(58,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  VividApp.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  VMesh2D.cpp
-  VMesh3D.cpp
-  VSceneEntity.cpp
-  vSceneNode.cpp
-  Generating Code...
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(23,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(32,20): warning C4018: '<': signed/unsigned mismatch
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(44,20): warning C4018: '<': signed/unsigned mismatch
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(78,20): warning C4018: '<': signed/unsigned mismatch
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(101,20): warning C4018: '<': signed/unsigned mismatch
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(121,21): warning C4018: '<': signed/unsigned mismatch
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(148,21): warning C4018: '<': signed/unsigned mismatch
 d3dcompiler.lib(D3DCOMPILER_47.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
 dxgi.lib(dxgi.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
 assimp-vc142-mtd.lib(assimp-vc142-mtd.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in D3D12.lib(d3d12.dll); second definition ignored
+Importer.obj : warning LNK4006: "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) already defined in assimp-vc142-mtd.lib(assimp-vc142-mtd.dll); second definition ignored
   VividEngine.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\VividEngine.lib

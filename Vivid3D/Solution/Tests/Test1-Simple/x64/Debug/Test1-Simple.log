@@ -1,10 +1,10 @@
-﻿  pch.cpp
-  Test1-Simple.cpp
+﻿  Test1Simple.cpp
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(74,26): warning C4305: 'return': truncation from 'int' to 'bool'
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(108,26): warning C4305: 'return': truncation from 'int' to 'bool'
-  Test1Simple.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(15,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(23,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(17,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Test1-Simple.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\Test1-Simple.exe

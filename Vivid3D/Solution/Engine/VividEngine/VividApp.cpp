@@ -314,7 +314,7 @@ void VividApp::Present()
     std::clock_t end = std::clock();
     
 
-    DBOUT("Presented:" << (end-start) << "\n" );
+   // DBOUT("Presented:" << (end-start) << "\n" );
 }
 
 
@@ -344,7 +344,7 @@ void VividApp::Render() {
     std::clock_t end = std::clock();
 
 
-    DBOUT("Rendered:" << (end - start) << "\n");
+   // DBOUT("Rendered:" << (end - start) << "\n");
 }
 
 

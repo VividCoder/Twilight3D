@@ -10,6 +10,8 @@ Texture2D::Texture2D(const char* path) {
 
 	const char* realPath = Vivid::App::VividApp::GetResPath(path);
 
+   // DBOUT("TexPath:" << realPath << "\n");
+
     TextureLoadInfo loadInfo;
     loadInfo.IsSRGB = true;
     RefCntAutoPtr<ITexture> Tex;
@@ -17,8 +19,8 @@ Texture2D::Texture2D(const char* path) {
     tex = Tex;
     // Get shader resource view from the texture
     texView = Tex->GetDefaultView(TEXTURE_VIEW_SHADER_RESOURCE);
-
-
+    DBOUT("Tex:" << realPath);
+    texpath = realPath;
     // Set texture SRV in the SRB
   //  m_SRB->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Set(m_TextureSRV);
 }

@@ -14,7 +14,21 @@ namespace Vivid {
 			public:
 
 				VSceneEntity();
+				
 				void AddMesh(Vivid::Mesh::Mesh3D* mesh);
+			
+				int MeshCount()
+				{
+
+					return meshes.size();
+
+				}
+
+				Vivid::Mesh::Mesh3D* GetMesh(int num) {
+
+					return meshes.at(num);
+
+				}
 
 			private:
 

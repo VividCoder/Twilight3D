@@ -20,10 +20,17 @@ namespace Vivid {
 
 			}
 
+			const char* GetPath() {
+				
+				return texpath;
+
+			}
+
 		private:
 			
 			RefCntAutoPtr<ITexture> tex;
 			RefCntAutoPtr<ITextureView> texView;
+			const char* texpath = NULL;
 
 		};
 

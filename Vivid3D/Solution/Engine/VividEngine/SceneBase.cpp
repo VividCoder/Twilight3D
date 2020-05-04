@@ -5,7 +5,8 @@ using namespace Vivid::Scene;
 
 SceneBase::SceneBase() {
 
-	root = new VSceneNode();
+	root = (VSceneNode *)new Vivid::Scene::Nodes::VSceneEntity();
+	cam = new Nodes::NodeCam();
 
 }
 

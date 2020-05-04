@@ -126,11 +126,11 @@ namespace Vivid {
 
                     g_pTheApp->Render();
                     g_pTheApp->Present();
-                    printf("Ye!");
+                    //printf("Ye!");
                     std::clock_t end = std::clock();
 
 
-                    DBOUT("Looped:" << (end - start) << "\n");
+                   // DBOUT("Looped:" << (end - start) << "\n");
                     
             }
 
