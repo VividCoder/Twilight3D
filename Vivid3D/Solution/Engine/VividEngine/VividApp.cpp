@@ -61,11 +61,34 @@ void VividApp::WindowResize(int w, int h)
 
 }
 
+void empty_mm(int x, int y) {
+
+}
+
+
 VividApp::VividApp() {
 
     sThis = this;
+    MouseX = 0;
+    MouseY = 0;
+    MouseDX = 0;
+    MouseDY = 0;
+
 
 }
+
+
+
+
+
+
+
+int VividApp::MouseX = 0;
+int VividApp::MouseY = 0;
+int VividApp::MouseDX = 0;
+int VividApp::MouseDY = 0;
+bool VividApp::firstMouse = true;
+
 
 VividApp * VividApp::sThis = NULL;
 
@@ -73,6 +96,7 @@ VividApp * VividApp::sThis = NULL;
 
 bool VividApp::InitBackend(HWND hWnd) {
 
+    m_DeviceType = RENDER_DEVICE_TYPE_D3D12;
     SwapChainDesc SCDesc;
     switch (m_DeviceType)
     {

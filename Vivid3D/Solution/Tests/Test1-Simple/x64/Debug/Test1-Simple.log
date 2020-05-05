@@ -5,6 +5,9 @@ C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C424
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(23,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(34,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   The contents of <filesystem> are available only with C++17 or later.
-C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(17,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(32,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(32,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(58,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Test1-Simple.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\Test1-Simple.exe

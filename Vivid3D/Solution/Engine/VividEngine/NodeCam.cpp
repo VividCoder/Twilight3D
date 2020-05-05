@@ -12,6 +12,6 @@ float4x4 NodeCam::GetWorld() {
 
 	auto world = VSceneNode::GetWorld();
 
-	return world.Inverse();
+	return world;
 
 }

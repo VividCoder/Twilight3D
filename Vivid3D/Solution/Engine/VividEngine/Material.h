@@ -13,6 +13,27 @@ namespace Vivid {
 
 			Material();
 
+			void SetNormal(Texture2D* norm) {
+
+				tNormal = norm;
+
+			}
+
+
+			Texture2D* GetNormal()
+			{
+
+				return tNormal;
+
+			}
+
+			bool hasNormal() {
+
+				if (tNormal == NULL) return false;
+				return true;
+
+			}
+
 			void SetDiffuse(Texture2D* dif) {
 
 				tDiffuse = dif;
@@ -43,6 +64,7 @@ namespace Vivid {
 			Texture2D* tRough;
 			Texture2D* tNormal;
 			Texture2D* tReflect;
+
 
 		};
 

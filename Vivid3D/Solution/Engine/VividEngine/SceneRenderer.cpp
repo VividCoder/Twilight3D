@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "SceneRenderer.h"
 #include "VMesh3D.h"
+#include "NodeLight.h"
 #include "Material.h"
 
 using namespace Vivid::Renderer;
@@ -9,7 +10,15 @@ Vivid::Renderer::States::RenderState3DNormal *s1;
 
 float4x4 mvp;
 
+float4x4 mview;
+float4x4 mmodel;
+float4x4 mproj;
+
+Vivid::Scene::Nodes::NodeLight* light;
+
 Vivid::Scene::Nodes::NodeCam* cam;
+
+Vivid::Scene::Nodes::VSceneEntity* ent;
 
 SceneRenderer::SceneRenderer(Vivid::Scene::SceneBase* scene)
 {
@@ -36,7 +45,8 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
      auto mat = mesh->GetMaterial();
      
 
-     if (mat->hasDiffuse()) {
+     //if (mat->hasDiffuse()) {
+
 
 
 
@@ -44,8 +54,12 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
 
         // DBOUT("Tex:" << mat->GetDiffuse()->GetPath() << "\n");
        
-         rb->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Set(mat->GetDiffuse()->GetView());
-     }
+         rb->GetVariableByName(SHADER_TYPE_PIXEL, "color_Texture")->Set(mat->GetDiffuse()->GetView());
+         rb->GetVariableByName(SHADER_TYPE_PIXEL, "normal_Texture")->Set(mat->GetNormal()->GetView());
+
+     //}
+
+     
 
 
 
@@ -58,12 +72,45 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
     devCon->SetIndexBuffer(mesh->GetVB()->GetIBuf(), 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
 
 
- 
+    struct Constants {
+
+        float4x4 g_View;
+        float4x4 g_Model;
+        float4x4 g_Projection;
+        float4 lightDir;
+        float4 lightPos;
+        float4 lightDiff;
+        float4 lightSpec;
+        float4 camPos;
+
+
+    };
+
+
+
 
     {
         // Map the buffer and write current world-view-projection matrix
-        MapHelper<float4x4> CBConstants(devCon, s1->GetConsts(), MAP_WRITE, MAP_FLAG_DISCARD);
-        *CBConstants = mvp.Transpose();
+        MapHelper<Constants> CBConstants(devCon, s1->GetConsts(), MAP_WRITE, MAP_FLAG_DISCARD);
+        CBConstants->g_View = mview.Transpose();
+        CBConstants->g_Model = mmodel.Transpose();
+        CBConstants->g_Projection = mproj.Transpose();
+        CBConstants->lightDir = float4(0.4f,0.3f, -0.2f, 0);
+        
+        auto pos = light->GetPosition();
+        auto diff = light->GetDiffuse();
+        auto spec = light->GetSpecular();
+        auto cpos = cam->GetPosition();
+
+        CBConstants->lightPos = float4(pos.x,pos.y,pos.z, 1.0);
+        CBConstants->lightDiff = float4(diff.x, diff.y, diff.z, 1.0);
+        CBConstants->lightSpec = float4(spec.x, spec.y, spec.z, 1.0);
+        CBConstants->camPos = float4(cpos.x, cpos.y, cpos.z, 1.0);
+        //CBConstants->lightDir;
+
+
+
+
 
     }
 
@@ -90,14 +137,16 @@ void render_node(Vivid::Scene::VSceneNode* node) {
     mvp = node->GetWorld() * cam->GetWorld();
 
 
-    mvp = mvp * float4x4::Projection(45.0f, 800.0f / 600.0f , 0.1f, 1000.f, false);
-   
+    //mvp = mvp * float4x4::Projection(45.0f, 800.0f / 600.0f , 0.1f, 1000.f, false);
+    
+    mmodel = node->GetWorld();
+
    
     for (int i = 0; i < nEnt->MeshCount(); i++) {
 
         auto msh = nEnt->GetMesh(i);
 
-
+        ent = nEnt;
 
         render_mesh(msh);
 
@@ -116,13 +165,18 @@ void render_node(Vivid::Scene::VSceneNode* node) {
 void SceneRenderer::Render() {
 
 
-    //mvp = float4x4::Projection(45.0f, 800.0f / 600.0f, 0.1f, 1000.0f, false);
+    mproj = float4x4::Projection(45.0f, 800.0f / 600.0f, 0.1f, 1000.0f, false);
     
 
-
+     
     cam = pScene->GetCam();
 
-    
+    mview = cam->GetWorld();
+
+    light = pScene->GetLight(0);
+
+
+
     render_node(pScene->GetRoot());
 
 };

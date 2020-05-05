@@ -7,6 +7,7 @@ SceneBase::SceneBase() {
 
 	root = (VSceneNode *)new Vivid::Scene::Nodes::VSceneEntity();
 	cam = new Nodes::NodeCam();
+	lights.resize(0);
 
 }
 

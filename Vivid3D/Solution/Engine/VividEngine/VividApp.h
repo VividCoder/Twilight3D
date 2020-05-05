@@ -96,7 +96,81 @@ namespace Vivid {
 
             }
 
-        private:
+            static void SetMouse(int x, int y) {
+
+                int lx, ly;
+                lx = MouseX;
+                ly = MouseY;
+                MouseX = x;
+                MouseY = y;
+
+                if (firstMouse) {
+                   
+                    MouseDX = 0;
+                    MouseDY = 0;
+                    firstMouse = false;
+
+                }
+                else {
+                    MouseDX = MouseX - lx;
+                    MouseDY = MouseY - ly;
+                }
+
+            }
+
+            static int GetMouseX() {
+                return MouseX;
+            }
+
+            static int GetMouseY() {
+                return MouseY;
+            }
+
+            static int GetMouseDX() {
+                return MouseDX;
+            }
+
+            static int GetMouseDY() {
+                return MouseDY;
+            }
+
+            static void CallMouseMoveFunc(int x, int y) {
+
+                sThis->MouseMoved(x, y);
+
+            }
+
+        
+
+            static void CallKeyDown(int key) {
+
+
+                sThis->SetKeyDown(key);
+                //sThis->KeyDown(int key);
+
+            }
+
+            static void CallKeyUp(int key) {
+
+                sThis->SetKeyDown(key);
+
+            };
+
+
+
+            virtual void MouseMoved(int x, int y) {};
+            virtual void SetKeyDown(int k) {};
+            virtual void SetKeyUp(int k) {};
+private:
+
+         //   static void (*FMouseMove)(int, int) = NULL;
+
+
+
+            static int MouseX, MouseY;
+            static int MouseDX, MouseDY;
+            static bool firstMouse;
+
             static Vivid::App::VividApp *sThis;
             int winWidth, winHeight;
             static const char* AppPath;

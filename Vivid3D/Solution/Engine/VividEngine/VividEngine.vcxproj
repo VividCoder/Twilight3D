@@ -109,15 +109,15 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\glfw-3.3.2.bin.WIN64\include;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>DiligentCore.lib;Diligent-TextureLoader.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;LibJpeg.lib;LibPng.lib;LibTiff.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Other\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DiligentCore.lib;Diligent-TextureLoader.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;LibJpeg.lib;LibPng.lib;LibTiff.lib;assimp-vc142-mtd.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Other\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Projects\Vivid3D\Other\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -166,6 +166,7 @@
     <ClInclude Include="MathsUtil.h" />
     <ClInclude Include="MeshTypes2.h" />
     <ClInclude Include="NodeCam.h" />
+    <ClInclude Include="NodeLight.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RenderState2D.h" />
     <ClInclude Include="RenderState3DNormal.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="MathsUtil.cpp" />
     <ClCompile Include="MeshTypes2.cpp" />
     <ClCompile Include="NodeCam.cpp" />
+    <ClCompile Include="NodeLight.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

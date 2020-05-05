@@ -108,7 +108,8 @@ RenderState3DNormal::RenderState3DNormal() {
     
     ShaderResourceVariableDesc Vars[] =
     {
-        {SHADER_TYPE_PIXEL, "g_Texture", SHADER_RESOURCE_VARIABLE_TYPE_DYNAMIC},
+        {SHADER_TYPE_PIXEL, "color_Texture", SHADER_RESOURCE_VARIABLE_TYPE_DYNAMIC},
+        {SHADER_TYPE_PIXEL, "normal_Texture", SHADER_RESOURCE_VARIABLE_TYPE_DYNAMIC}
         
     };
     PSODesc.ResourceLayout.Variables = Vars;
@@ -122,7 +123,8 @@ RenderState3DNormal::RenderState3DNormal() {
     };
     StaticSamplerDesc StaticSamplers[] =
     {
-        {SHADER_TYPE_PIXEL, "g_Texture", SamLinearClampDesc}
+        {SHADER_TYPE_PIXEL, "color_Texture", SamLinearClampDesc},
+        {SHADER_TYPE_PIXEL, "normal_Texture",SamLinearClampDesc}
     };
 
     PSODesc.ResourceLayout.StaticSamplers = StaticSamplers;

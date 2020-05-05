@@ -3,74 +3,74 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 128,
+      "count": 65532,
       "max": [
-        1,
-        1,
-        1
+        0.13997800648212433,
+        0.15545499324798584,
+        0.40934300422668457
       ],
       "min": [
-        -1,
-        -1,
-        -1
+        -0.14334200322628021,
+        -0.18391899764537811,
+        0.0045739999040961266
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 1536,
+      "byteOffset": 786384,
       "componentType": 5126,
-      "count": 128,
+      "count": 65532,
       "max": [
-        0.90453958511352539,
-        0.82608240842819214,
-        0.94772732257843018
+        0.99978333711624146,
+        0.99968665838241577,
+        0.99998462200164795
       ],
       "min": [
-        -0.90453958511352539,
-        -0.82608240842819214,
-        -0.94772732257843018
+        -0.99978333711624146,
+        -0.99998080730438232,
+        -0.99999880790710449
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 3,
       "componentType": 5126,
-      "count": 128,
+      "count": 65532,
       "max": [
-        0.79675430059432983,
-        0.9734426736831665,
-        0.99360388517379761,
+        1,
+        0.99998223781585693,
+        0.99994587898254395,
         1
       ],
       "min": [
-        -0.99356210231781006,
-        -0.9734426736831665,
-        -0.99539774656295776,
-        1
+        -1,
+        -0.99988538026809692,
+        -0.99985718727111816,
+        -1
       ],
       "type": "VEC4"
     },
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 128,
+      "count": 65532,
       "max": [
-        0.99745768308639526,
-        0.91186273097991943
+        0.99966800212860107,
+        0.99928200244903564
       ],
       "min": [
-        0.002534213475883007,
-        0.0025335806421935558
+        0.00082000001566484571,
+        -0.0041269999928772449
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 324,
+      "count": 295974,
       "max": [
-        127
+        65531
       ],
       "min": [
         0
@@ -79,79 +79,79 @@
     },
     {
       "bufferView": 2,
-      "byteOffset": 3072,
+      "byteOffset": 1572768,
       "componentType": 5126,
-      "count": 144,
+      "count": 26467,
       "max": [
-        0.8762781023979187,
-        0.72726202011108398,
-        0.86792373657226562
+        0.13278099894523621,
+        0.16073800623416901,
+        0.41005301475524902
       ],
       "min": [
-        -0.8762781023979187,
-        -0.72726160287857056,
-        0.6678776741027832
+        -0.13614499568939209,
+        -0.15434099733829498,
+        0.032554000616073608
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 4800,
+      "byteOffset": 1890372,
       "componentType": 5126,
-      "count": 144,
+      "count": 26467,
       "max": [
-        1,
-        0,
-        1
+        0.99989438056945801,
+        0.9995993971824646,
+        0.99980336427688599
       ],
       "min": [
-        -1,
-        0,
-        -1
+        -0.99992775917053223,
+        -0.99950093030929565,
+        -0.99998140335083008
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 3,
-      "byteOffset": 2048,
+      "byteOffset": 1048512,
       "componentType": 5126,
-      "count": 144,
+      "count": 26467,
       "max": [
-        1,
-        6.1120954342186451e-06,
-        1,
+        0.99996012449264526,
+        0.99993956089019775,
+        0.99999994039535522,
         1
       ],
       "min": [
-        -1,
-        -1.5973560948623344e-05,
-        -1,
+        -0.99997633695602417,
+        -0.99999314546585083,
+        -0.99992179870605469,
         -1
       ],
       "type": "VEC4"
     },
     {
       "bufferView": 1,
-      "byteOffset": 1024,
+      "byteOffset": 524256,
       "componentType": 5126,
-      "count": 144,
+      "count": 26467,
       "max": [
-        0.99574500322341919,
-        0.5853000283241272
+        0.98809999227523804,
+        0.98376500606536865
       ],
       "min": [
-        0.75138890743255615,
-        0.22592820227146149
+        0.00082000001566484571,
+        0.00070400000549852848
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
-      "byteOffset": 1296,
+      "byteOffset": 1183896,
       "componentType": 5125,
-      "count": 384,
+      "count": 141912,
       "max": [
-        143
+        26466
       ],
       "min": [
         0
@@ -161,42 +161,42 @@
   ],
   "asset": {
     "extras": {
-      "author": "Luckkk3d (https://sketchfab.com/Luckkk3d)",
+      "author": "Sololopenko (https://sketchfab.com/Sololopenko)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/cuble-low-poly-box-crate-8136ea79bbbc433990d15313c4051528",
-      "title": "Cuble Low Poly Box Crate"
+      "source": "https://sketchfab.com/3d-models/helmet-ba0414d87a774088bea1b2a5cbb6d26d",
+      "title": "Helmet"
     },
-    "generator": "Sketchfab-8.33.0",
+    "generator": "Sketchfab-7.95.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 2832,
+      "byteLength": 1751544,
       "byteOffset": 0,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 2176,
-      "byteOffset": 2832,
+      "byteLength": 735992,
+      "byteOffset": 1751544,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 6528,
-      "byteOffset": 5008,
+      "byteLength": 2207976,
+      "byteOffset": 2487536,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 4352,
-      "byteOffset": 11536,
+      "byteLength": 1471984,
+      "byteOffset": 4695512,
       "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
@@ -204,25 +204,26 @@
   ],
   "buffers": [
     {
-      "byteLength": 15888,
+      "byteLength": 6167496,
       "uri": "scene.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/Scene_-_Root_baseColor.png"
+      "uri": "textures/helmet_baseColor.png"
     },
     {
-      "uri": "textures/Scene_-_Root_metallicRoughness.png"
+      "uri": "textures/helmet_metallicRoughness.png"
     },
     {
-      "uri": "textures/Scene_-_Root_normal.png"
+      "uri": "textures/helmet_normal.png"
     }
   ],
   "materials": [
     {
+      "alphaMode": "BLEND",
       "doubleSided": true,
-      "name": "Scene_-_Root",
+      "name": "helmet",
       "normalTexture": {
         "index": 2,
         "scale": 1,
@@ -255,7 +256,6 @@
   ],
   "meshes": [
     {
-      "name": "cube__0",
       "primitives": [
         {
           "attributes": {
@@ -271,7 +271,6 @@
       ]
     },
     {
-      "name": "cyl__0",
       "primitives": [
         {
           "attributes": {
@@ -308,90 +307,18 @@
     },
     {
       "children": [
-        3
+        3,
+        4
       ],
-      "matrix": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        -1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "name": "d477325773584ddea72e0730f5da0f8a.fbx"
-    },
-    {
-      "children": [
-        4,
-        6
-      ],
-      "name": "RootNode"
-    },
-    {
-      "children": [
-        5
-      ],
-      "matrix": [
-        100,
-        0,
-        0,
-        0,
-        0,
-        -1.6292067939183141e-05,
-        -99.999999999998678,
-        0,
-        0,
-        99.999999999998678,
-        -1.6292067939183141e-05,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "name": "cube"
+      "name": "helmet.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
-      "name": "cube__0"
-    },
-    {
-      "children": [
-        7
-      ],
-      "matrix": [
-        100,
-        0,
-        0,
-        0,
-        0,
-        -1.6292067939183141e-05,
-        -99.999999999998678,
-        0,
-        0,
-        99.999999999998678,
-        -1.6292067939183141e-05,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "name": "cyl"
+      "name": ""
     },
     {
       "mesh": 1,
-      "name": "cyl__0"
+      "name": ""
     }
   ],
   "samplers": [

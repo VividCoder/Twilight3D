@@ -53,7 +53,7 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 	auto rpath = Vivid::App::VividApp::GetResPath(path);
 
-	unsigned int flags = aiProcessPreset_TargetRealtime_MaxQuality;
+	unsigned int flags = aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_ConvertToLeftHanded;
 
 	auto root = aiImportFile(rpath, flags);
 
@@ -95,6 +95,11 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 		mat->SetDiffuse(tex);
 
+		am->GetTexture(aiTextureType_NORMALS, 0, &tpath);
+		
+		mat->SetNormal(new Texture2D(&tpath.data[0]));
+
+
 		mats.push_back(mat);
 	}
 
@@ -135,11 +140,11 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 		
 
-			nv->Pos = Diligent::float3((float)pv.x, (float)pv.y, (float)pv.z);
-			nv->Normal = Diligent::float3(nmv.x, nmv.y, nmv.z);
-			nv->BiNormal = Diligent::float3(bv.x, bv.y, bv.z);
-			nv->Tangent = Diligent::float3(tv.x, tv.y, tv.z);
-			nv->UV = Diligent::float3(uvv.x,1.0f-uvv.y, uvv.z);
+			nv->Pos = Diligent::float3((float)pv.x, -(float)pv.z, (float)pv.y);
+			nv->Normal = Diligent::float3(nmv.x, -nmv.z, nmv.y);
+			nv->BiNormal = Diligent::float3(bv.x, -bv.z, bv.y);
+			nv->Tangent = Diligent::float3(tv.x, -tv.z, tv.y);
+			nv->UV = Diligent::float3(uvv.x,uvv.y, uvv.z);
 	
 			eMesh->SetVertex(v, nv);
 

@@ -2,6 +2,17 @@
 
 #include "pch.h"
 #include "VividApp.h"
+#include "windowsx.h"
+
+#if PLATFORM_MACOS
+#define GLFW_EXPOSE_NATIVE_COCOA
+#endif
+#if PLATFORM_WIN32
+#define GLFW_EXPOSE_NATIVE_WIN32
+#endif
+#include <GLFW/glfw3.h>
+#include "GLFW/glfw3native.h"
+
 using namespace Diligent;
 
 
@@ -22,8 +33,16 @@ namespace Vivid {
         // Called every time the NativeNativeAppBase receives a message
         LRESULT CALLBACK MessageProc(HWND wnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
+            int xPos, yPos;
+            xPos = yPos = 0;
             switch (message)
             {
+           
+            case WM_MOUSEMOVE:
+                 xPos = GET_X_LPARAM(lParam);
+                 yPos = GET_Y_LPARAM(lParam);
+                 VividApp::CallMouseMoveFunc(xPos, yPos);
+                return 0;
             case WM_PAINT:
             {
                 PAINTSTRUCT ps;
@@ -38,6 +57,9 @@ namespace Vivid {
                 }
                 return 0;
 
+            case WM_KEYDOWN:
+                VividApp::CallKeyDown((int)wParam);
+                return 0;
             case WM_CHAR:
                 if (wParam == VK_ESCAPE)
                     PostQuitMessage(0);
@@ -63,82 +85,76 @@ namespace Vivid {
 
 
 
-        bool initWindow(HINSTANCE hInstance, int nCmdShow, VividApp* app)
+        bool initWindow(VividApp* app)
         {
 
             g_pTheApp.reset(app);
 
 
-            const auto* cmdLine = GetCommandLineA();
-            if (!g_pTheApp->ProcessCommandLine(cmdLine))
+            GLFWwindow* window;
+
+            /* Initialize the library */
+            if (!glfwInit()) {
                 return -1;
-
-
-            std::wstring Title(L"VividEngine: Sample:Simple1");
-            switch (g_pTheApp->GetDeviceType())
-            {
-            case RENDER_DEVICE_TYPE_D3D11: Title.append(L" (D3D11)"); break;
-            case RENDER_DEVICE_TYPE_D3D12: Title.append(L" (D3D12)"); break;
-            case RENDER_DEVICE_TYPE_GL: Title.append(L" (GL)"); break;
-            case RENDER_DEVICE_TYPE_VULKAN: Title.append(L" (VK)"); break;
             }
-            // Register our window class
-            WNDCLASSEX wcex = { sizeof(WNDCLASSEX), CS_HREDRAW | CS_VREDRAW, MessageProc,
-                               0L, 0L, hInstance, NULL, NULL, NULL, NULL, L"SampleApp", NULL };
-            RegisterClassEx(&wcex);
 
-            // Create a window
-            LONG WindowWidth = 800;
-            LONG WindowHeight = 600;
-            RECT rc = { 0, 0, WindowWidth, WindowHeight };
-            AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
-            HWND wnd = CreateWindow(L"SampleApp", Title.c_str(),
-                WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
-                rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance, NULL);
-            if (!wnd)
-            {
-                MessageBox(NULL, L"Cannot create window", L"Error", MB_OK | MB_ICONERROR);
-                return 0;
-            }
-            ShowWindow(wnd, nCmdShow);
-            UpdateWindow(wnd);
+#if PLATFORM_WIN32
+            glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+#else
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+#endif
 
+            /* Create a windowed mode window and its OpenGL context */
+            window = glfwCreateWindow(800, 600, "Vivid3D Application", NULL, NULL);
 
-            if (!g_pTheApp->InitBackend(wnd))
+            if (!window) {
+                glfwTerminate();
                 return -1;
+            }
+     
+            HWND hw;
+            void* window_handle = NULL;
+#if PLATFORM_WIN32
+            hw = glfwGetWin32Window(window);
+#elif PLATFORM_MACOS
+            glfwMakeContextCurrent(window);
+            window_handle = static_cast<void*>(glfwGetCocoaWindow(window));
+#elif PLATFORM_LINUX
+            // FIXME: Get x11 or wayland window handle using glfw
+            glfwMakeContextCurrent(window);
+            throw std::runtime_error("Missing window handle");
+#endif
+
+
+           if (!g_pTheApp->InitBackend(hw))
+               return -1;
+
 
             g_pTheApp->CreateResources();
 
-            // Main message loop
-            MSG msg = { 0 };
-            while (WM_QUIT != msg.message)
-            {
-                if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
-                {
-                    TranslateMessage(&msg);
-                    DispatchMessage(&msg);
-                }
-                else
-                {
-                }
+          
+            /* Loop until the user closes the window */
+            while (!glfwWindowShouldClose(window)) {
+                //if (m_pImmediateContext) {
 
-                std::clock_t start = std::clock();
+               
 
                     g_pTheApp->Render();
+
+#if PLATFORM_MACOS
+                    glfwSwapBuffers(window);
+#else
                     g_pTheApp->Present();
-                    //printf("Ye!");
-                    std::clock_t end = std::clock();
+#endif
+                
 
-
-                   // DBOUT("Looped:" << (end - start) << "\n");
-                    
+                /* Poll for and process events */
+                glfwPollEvents();
             }
-
-            g_pTheApp.reset();
-
-
-            return (int)msg.wParam;
-
+          
+            glfwTerminate();
         }
 
         int vInitEngine()

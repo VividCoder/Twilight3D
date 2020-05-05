@@ -2,6 +2,49 @@
 #include "Test1Simple.h"
 #include <filesystem>
 
+int mx, my;
+int mdx, mdy;
+bool firstm = true;
+
+int cp=0, cy=0;
+
+void Test1Simple::MouseMoved(int x, int y) {
+
+	//e//xit(1);
+	int lx, ly;
+	lx = mx;
+	ly = my;
+	mx = x;
+	my = y;
+	if (firstm) {
+		mdx = 0;
+		mdy = 0;
+		firstm = false;
+		return;
+	}
+	mdx = mx - lx;
+	mdy = my - ly;
+
+	cp = cp + mdy;
+	cy = cy + mdx;
+
+	auto cam = scene->GetCam();
+	cam->SetRotation(-cp,cy, 0);
+
+
+}
+
+void Test1Simple::SetKeyDown(int key) {
+
+	if(key ==)
+
+	exit(1);
+
+};
+
+void Test1Simple::SetKeyUp(int key) {
+
+};
 
 void Test1Simple::InitApp() {
 	SetPath("C:/Projects/Vivid3D/Solution/x64/Debug/");
@@ -24,6 +67,12 @@ void Test1Simple::InitApp() {
 
 	sceneRen = new Vivid::Renderer::SceneRenderer(scene);
 
+	l1 = new Vivid::Scene::Nodes::NodeLight();
+
+	l1->SetPosition(0, 0, -15);
+	scene->AddLight(l1);
+
+//	VividApp::SetMouseMoveFunc(F_MouseMove);
 
 }
 
@@ -35,10 +84,21 @@ void Test1Simple::RenderApp() {
 
 	auto cam = scene->GetCam();
 
-	cam->SetPosition(0, 0, -7);
+	cam->SetPosition(0, 0.2f, 0.8f);
 
-	ang = ang + 1;
-	scene->GetRoot()->SetRotation(0, ang, 0);
+	ang = ang + 1.4f;
+	float x, z;
+
+	x = cosf(Vivid::Maths::MathsUtil::DegToRad(ang)) * 7;
+	z = sinf(Vivid::Maths::MathsUtil::DegToRad(ang)) * 7;
+
+	
+	//scene->GetRoot()->GetNode(0)->SetRotation(0, ang, 0);
+	//scene->GetRoot()->SetRotation(60, 0, 0);
+	l1->SetPosition(x, 0, z);
+
+
+
 
 	sceneRen->Render();
 
