@@ -1,0 +1,2 @@
+#define VIVIDBIND_API __declspec(dllexport)
+#define VIVIDBIND_API __declspec(dllimport)

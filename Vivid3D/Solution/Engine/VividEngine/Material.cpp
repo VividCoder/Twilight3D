@@ -8,6 +8,6 @@ Material::Material() {
 	auto white = new Texture2D("white.png");
 
 	tDiffuse = white;
-	tNormal = white;
+	tNormal = new Texture2D("normalBlank.png");
 
 }

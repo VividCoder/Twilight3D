@@ -38,7 +38,7 @@ RenderState3DNormal::RenderState3DNormal() {
     // Cull back faces
     PSODesc.GraphicsPipeline.RasterizerDesc.CullMode = CULL_MODE_BACK;
     // Enable depth testing
-    PSODesc.GraphicsPipeline.DepthStencilDesc.DepthEnable = False;
+    PSODesc.GraphicsPipeline.DepthStencilDesc.DepthEnable = true;
     
     PSODesc.GraphicsPipeline.BlendDesc = Blend;
     
@@ -150,6 +150,8 @@ RenderState3DNormal::RenderState3DNormal() {
     Blend2.RenderTargets[0].DestBlend = BLEND_FACTOR_ONE;
     
     PSODesc.GraphicsPipeline.BlendDesc = Blend2;
+    PSODesc.GraphicsPipeline.DepthStencilDesc.DepthEnable = true;
+    PSODesc.GraphicsPipeline.DepthStencilDesc.DepthFunc = COMPARISON_FUNC_EQUAL;
 
     device->CreatePipelineState(PSOCreateInfo, &pState2);
    

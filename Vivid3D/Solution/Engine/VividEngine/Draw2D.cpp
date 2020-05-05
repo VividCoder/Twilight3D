@@ -12,7 +12,7 @@ Draw2D::Draw2D() {
     auto devCon = Vivid::App::VividApp::GetDeviceContext();
 
 
-    float4x4 mvp = float4x4::OrthoOffCenter(0, 800, 600, 0, 0, 1, false);
+    float4x4 mvp = float4x4::OrthoOffCenter(0, 1366, 800, 0, 0, 1, false);
 
     {
         // Map the buffer and write current world-view-projection matrix
@@ -110,7 +110,7 @@ void Draw2D::Rect(int x, int y, int w, int h) {
     devCon->SetIndexBuffer(vb1->GetIBuf(), 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
 
 
-    float4x4 mvp = float4x4::OrthoOffCenter(0, 800, 600, 0, 0, 1, false);
+    float4x4 mvp = float4x4::OrthoOffCenter(0, 1366, 800, 0, 0, 1, false);
 
     {
         // Map the buffer and write current world-view-projection matrix

@@ -1,0 +1,6 @@
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\bin\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\bin\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\Debug\VividNet.csprojAssemblyReference.cache
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\Debug\VividNet.csproj.CoreCompileInputs.cache
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\Debug\VividNet.pdb

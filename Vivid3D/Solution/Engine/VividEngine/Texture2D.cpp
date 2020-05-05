@@ -21,6 +21,6 @@ Texture2D::Texture2D(const char* path) {
     texView = Tex->GetDefaultView(TEXTURE_VIEW_SHADER_RESOURCE);
     DBOUT("Tex:" << realPath);
     texpath = realPath;
-    // Set texture SRV in the SRB
+    // Set texture SRV in the SRBr
   //  m_SRB->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Set(m_TextureSRV);
 }

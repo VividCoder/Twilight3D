@@ -81,24 +81,33 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 		auto am = root->mMaterials[i];
 
-		am->GetTexture(aiTextureType_DIFFUSE, 0, &tpath);
+		if(am->GetTextureCount(aiTextureType_DIFFUSE)>0)
+		{
 
-		string p = string(&tpath.data[0]);
+			am->GetTexture(aiTextureType_DIFFUSE, 0, &tpath);
 
-		string p2 = p.replace(0, 2, "");
+			string p = string(&tpath.data[0]);
+
+			string p2 = p.replace(0, 2, "");
 
 
 
-		Texture2D* tex = new Texture2D(&tpath.data[0]);
+			Texture2D* tex = new Texture2D(&tpath.data[0]);
 
-	//	DBOUT("Mat:" << i << " Tex:" << p2.c_str() << "\n");
+			//	DBOUT("Mat:" << i << " Tex:" << p2.c_str() << "\n");
 
-		mat->SetDiffuse(tex);
+			mat->SetDiffuse(tex);
 
-		am->GetTexture(aiTextureType_NORMALS, 0, &tpath);
-		
-		mat->SetNormal(new Texture2D(&tpath.data[0]));
+		}
 
+		if (am->GetTextureCount(aiTextureType_NORMALS) > 0)
+
+		{
+			am->GetTexture(aiTextureType_NORMALS, 0, &tpath);
+
+			mat->SetNormal(new Texture2D(&tpath.data[0]));
+
+		}
 
 		mats.push_back(mat);
 	}

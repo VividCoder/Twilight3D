@@ -111,7 +111,7 @@ namespace Vivid {
 #endif
 
             /* Create a windowed mode window and its OpenGL context */
-            window = glfwCreateWindow(800, 600, "Vivid3D Application", NULL, NULL);
+            window = glfwCreateWindow(1366, 800, "Vivid3D Application", NULL, NULL);
 
             if (!window) {
                 glfwTerminate();
