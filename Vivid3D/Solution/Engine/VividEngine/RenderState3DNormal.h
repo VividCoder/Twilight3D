@@ -22,6 +22,8 @@ namespace Vivid {
 
 				}
 
+
+
 				RefCntAutoPtr<IPipelineState> GetState() {
 
 					return pState;
@@ -34,11 +36,34 @@ namespace Vivid {
 
 				}
 
+				RefCntAutoPtr<IBuffer> GetConsts2() {
+
+					return vsConsts2;
+
+				}
+
+
+
+				RefCntAutoPtr<IPipelineState> GetState2() {
+					
+					return pState2;
+
+				}
+
+				RefCntAutoPtr<IShaderResourceBinding> GetBinding2() {
+
+					return pRB2;
+
+				}
+
 			private:
 
 				RefCntAutoPtr<IBuffer> vsConsts;
 				RefCntAutoPtr<IPipelineState> pState;
 				RefCntAutoPtr<IShaderResourceBinding> pRB;
+				RefCntAutoPtr<IBuffer> vsConsts2;
+				RefCntAutoPtr<IPipelineState> pState2;
+				RefCntAutoPtr<IShaderResourceBinding> pRB2;
 
 			};
 

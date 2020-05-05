@@ -10,6 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C954E9B9-9C0C-45D2-9C01-D6C073760D17}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VividTest1", "Tests\VividTest1\VividTest1.vcxproj", "{473888DC-BB90-4D8F-AD79-8C9C582EC9E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC630681-60B1-482C-8D03-2781228802F0} = {CC630681-60B1-482C-8D03-2781228802F0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

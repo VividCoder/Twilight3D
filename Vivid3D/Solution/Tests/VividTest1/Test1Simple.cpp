@@ -68,10 +68,15 @@ void Test1Simple::InitApp() {
 	sceneRen = new Vivid::Renderer::SceneRenderer(scene);
 
 	l1 = new Vivid::Scene::Nodes::NodeLight();
+	l2 = new Vivid::Scene::Nodes::NodeLight();
 
-	l1->SetPosition(0, 0, -15);
+	l2->SetPosition(2, 1, -6);
+	l2->SetDiffuse(0, 1, 1);
+	l1->SetPosition(0, 0, 15);
+	l1->SetDiffuse(1, 0, 0);
+	
+	scene->AddLight(l2);
 	scene->AddLight(l1);
-
 //	VividApp::SetMouseMoveFunc(F_MouseMove);
 
 }

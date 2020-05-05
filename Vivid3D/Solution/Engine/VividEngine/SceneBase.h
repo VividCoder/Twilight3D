@@ -41,6 +41,10 @@ namespace Vivid {
 
 			}
 
+			vector<Vivid::Scene::Nodes::NodeLight*> GetLights() {
+				return lights;
+			}
+
 		private:
 
 			VSceneNode* root;

@@ -31,7 +31,8 @@ struct PSInput
 	float3 Tangent : TANGENT;
     float3 eyeDir : E_DIR;
     float3 lightDir : LIGHT_DIR;
-
+    float3 lightDiff : LIGHT_DIFF;
+    float3 lightSpec : LIGHT_SPEC;
 
     
 };
@@ -62,6 +63,7 @@ void main(in  VSInput VSIn,
     PSIn.lightDir = normalize(lightPos.xyz - worldPos);
     PSIn.eyeDir = normalize(camPos.xyz - worldPos);
     PSIn.Tangent = normalize(mul(VSIn.Tangent, (float3x3) g_Model));
-
+    PSIn.lightDiff = lightDiff.rgb;
+    PSIn.lightSpec = lightSpec.rgb;
     
 }

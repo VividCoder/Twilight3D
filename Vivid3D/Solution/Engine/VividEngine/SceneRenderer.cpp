@@ -14,7 +14,7 @@ float4x4 mview;
 float4x4 mmodel;
 float4x4 mproj;
 
-Vivid::Scene::Nodes::NodeLight* light;
+vector<Vivid::Scene::Nodes::NodeLight*> light;
 
 Vivid::Scene::Nodes::NodeCam* cam;
 
@@ -86,46 +86,86 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
 
     };
 
+    bool first = true;
 
 
+    for (int i = 0; i < light.size(); i++) {
 
-    {
-        // Map the buffer and write current world-view-projection matrix
-        MapHelper<Constants> CBConstants(devCon, s1->GetConsts(), MAP_WRITE, MAP_FLAG_DISCARD);
-        CBConstants->g_View = mview.Transpose();
-        CBConstants->g_Model = mmodel.Transpose();
-        CBConstants->g_Projection = mproj.Transpose();
-        CBConstants->lightDir = float4(0.4f,0.3f, -0.2f, 0);
+        auto l1 = light.at(i);
+
+        {
+            // Map the buffer and write current world-view-projection matrix
+            if (first) {
+                MapHelper<Constants> CBConstants(devCon, s1->GetConsts(), MAP_WRITE, MAP_FLAG_DISCARD);
+                CBConstants->g_View = mview.Transpose();
+                CBConstants->g_Model = mmodel.Transpose();
+                CBConstants->g_Projection = mproj.Transpose();
+                CBConstants->lightDir = float4(0.4f, 0.3f, -0.2f, 0);
+
+                auto pos = l1->GetPosition();
+                auto diff = l1->GetDiffuse();
+                auto spec = l1->GetSpecular();
+                auto cpos = cam->GetPosition();
+
+                CBConstants->lightPos = float4(pos.x, pos.y, pos.z, 1.0);
+                CBConstants->lightDiff = float4(diff.x, diff.y, diff.z, 1.0);
+                CBConstants->lightSpec = float4(spec.x, spec.y, spec.z, 1.0);
+                CBConstants->camPos = float4(cpos.x, cpos.y, cpos.z, 1.0);
+                //CBConstants->lightDir;
+            }
+            else {
+
+                MapHelper<Constants> CBConstants(devCon, s1->GetConsts2(), MAP_WRITE, MAP_FLAG_DISCARD);
+                CBConstants->g_View = mview.Transpose();
+                CBConstants->g_Model = mmodel.Transpose();
+                CBConstants->g_Projection = mproj.Transpose();
+                CBConstants->lightDir = float4(0.4f, 0.3f, -0.2f, 0);
+
+                auto pos = l1->GetPosition();
+                auto diff = l1->GetDiffuse();
+                auto spec = l1->GetSpecular();
+                auto cpos = cam->GetPosition();
+
+                CBConstants->lightPos = float4(pos.x, pos.y, pos.z, 1.0);
+                CBConstants->lightDiff = float4(diff.x, diff.y, diff.z, 1.0);
+                CBConstants->lightSpec = float4(spec.x, spec.y, spec.z, 1.0);
+                CBConstants->camPos = float4(cpos.x, cpos.y, cpos.z, 1.0);
+            }
+        }
+
+        if (first) {
+            devCon->CommitShaderResources(s1->GetBinding(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
         
-        auto pos = light->GetPosition();
-        auto diff = light->GetDiffuse();
-        auto spec = light->GetSpecular();
-        auto cpos = cam->GetPosition();
-
-        CBConstants->lightPos = float4(pos.x,pos.y,pos.z, 1.0);
-        CBConstants->lightDiff = float4(diff.x, diff.y, diff.z, 1.0);
-        CBConstants->lightSpec = float4(spec.x, spec.y, spec.z, 1.0);
-        CBConstants->camPos = float4(cpos.x, cpos.y, cpos.z, 1.0);
-        //CBConstants->lightDir;
+        }
+        else {
+            devCon->CommitShaderResources(s1->GetBinding2(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+        }
+        // Commit shader resources. RESOURCE_STATE_TRANSITION_MODE_TRANSITION mode
+        // makes sure that resources are transitioned to required states.
 
 
 
+        DrawIndexedAttribs DrawAttrs;     // This is an indexed draw call
+        DrawAttrs.IndexType = VT_UINT32; // Index type
+        DrawAttrs.NumIndices = mesh->IndicesNum() * 3;
+        // Verify the state of vertex and index buffers
+        DrawAttrs.Flags = DRAW_FLAG_VERIFY_ALL;
+        devCon->DrawIndexed(DrawAttrs);
+
+        if (first) {
+
+            first = false;
+            devCon->SetPipelineState(s1->GetState2());
+            devCon->CommitShaderResources(s1->GetBinding2(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+            rb = s1->GetBinding2();
 
 
+            rb->GetVariableByName(SHADER_TYPE_PIXEL, "color_Texture")->Set(mat->GetDiffuse()->GetView());
+            rb->GetVariableByName(SHADER_TYPE_PIXEL, "normal_Texture")->Set(mat->GetNormal()->GetView());
+
+        }
+        //   rb->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Release();
     }
-
-    // Commit shader resources. RESOURCE_STATE_TRANSITION_MODE_TRANSITION mode
-    // makes sure that resources are transitioned to required states.
-
-
-    DrawIndexedAttribs DrawAttrs;     // This is an indexed draw call
-    DrawAttrs.IndexType = VT_UINT32; // Index type
-    DrawAttrs.NumIndices = mesh->IndicesNum() * 3;
-    // Verify the state of vertex and index buffers
-    DrawAttrs.Flags = DRAW_FLAG_VERIFY_ALL;
-    devCon->DrawIndexed(DrawAttrs);
- //   rb->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Release();
-
 }
 
 void render_node(Vivid::Scene::VSceneNode* node) {
@@ -173,7 +213,7 @@ void SceneRenderer::Render() {
 
     mview = cam->GetWorld();
 
-    light = pScene->GetLight(0);
+    light = pScene->GetLights();
 
 
 

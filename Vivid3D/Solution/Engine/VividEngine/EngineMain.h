@@ -83,7 +83,11 @@ namespace Vivid {
             }
         }
 
+        void Mouse_CB(GLFWwindow* win, double x, double y) {
 
+            Vivid::App::VividApp::CallMouseMoveFunc((int)-x, (int)y);
+
+        }
 
         bool initWindow(VividApp* app)
         {
@@ -134,6 +138,7 @@ namespace Vivid {
 
             g_pTheApp->CreateResources();
 
+            glfwSetCursorPosCallback(window, Mouse_CB);
           
             /* Loop until the user closes the window */
             while (!glfwWindowShouldClose(window)) {

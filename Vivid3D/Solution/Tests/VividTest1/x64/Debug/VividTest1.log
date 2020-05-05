@@ -1,14 +1,2 @@
-﻿  VividTest1.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(41,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(23,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(34,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(98,26): warning C4305: 'return': truncation from 'int' to 'bool'
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(114,26): warning C4305: 'return': truncation from 'int' to 'bool'
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(132,25): warning C4305: 'return': truncation from 'int' to 'bool'
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(158): warning C4715: 'Vivid::Engine::initWindow': not all control paths return a value
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   VividTest1.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\VividTest1.exe

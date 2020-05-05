@@ -11,6 +11,8 @@ struct PSInput
 	float3 Tangent : TANGENT;
     float3 eyeDir : E_DIR;
     float3 lightDir : LIGHT_DIR;
+    float3 lightDiff : LIGHT_DIFF;
+    float3 lightSpec : LIGHT_SPEC;
 
   
 };
@@ -48,13 +50,23 @@ void main(in  PSInput  PSIn,
     normal = mul(bumpNorm, TBN);
     
     float3 lightDir = normalize(PSIn.lightDir);
-   // float3 viewDir = normalize(PSIn.eyeDir);
+    float3 viewDir = normalize(PSIn.eyeDir);
     
-    //float n_dol_l = saturate(dot(lightDir, normal));
+    
+    float n_dot_l = saturate(dot(lightDir, normal));
+    
+    float3 refVec = normalize(2 * n_dot_l * normal - lightDir);
+    
+    float3 spec = PSIn.lightSpec * pow(saturate(dot(refVec, viewDir)), 0.8f);
+    
     
     float fL = saturate(dot(normal, lightDir));
     
     float3 diffuseCol = fL;
+    
+    diffuseCol = diffuseCol * PSIn.lightDiff;
+    
+    diffuseCol += spec;
     
     float4 output = float4(diffuseCol.r, diffuseCol.g, diffuseCol.b, 1.0);
     
@@ -66,9 +78,10 @@ void main(in  PSInput  PSIn,
     
     
     
+    
     float4 test = float4(normal.x, normal.y, normal.z, 1.0);
     
-    PSOut.Color = output * (texCol); //   +texCol;
+    PSOut.Color = (output * (texCol)); //   +texCol;
  
     //fl////oat4 cc = normal_Texture.Sample(normal_Texture_sampler, PSIn.UV.xy);
     

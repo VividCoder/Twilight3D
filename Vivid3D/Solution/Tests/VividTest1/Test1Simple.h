@@ -36,7 +36,7 @@ private:
 	Vivid::Scene::SceneBase* scene;
 	Vivid::Renderer::SceneRenderer* sceneRen;
 	float ang = 0.0f;
-	Vivid::Scene::Nodes::NodeLight* l1;
+	Vivid::Scene::Nodes::NodeLight* l1,* l2;
 
 
 };

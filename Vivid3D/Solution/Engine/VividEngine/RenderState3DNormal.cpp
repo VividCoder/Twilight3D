@@ -9,6 +9,13 @@ RenderState3DNormal::RenderState3DNormal() {
     RefCntAutoPtr<ISwapChain> swapChain = Vivid::App::VividApp::GetSwapChain();
     RefCntAutoPtr<IEngineFactory> engineFactory = Vivid::App::VividApp::GetEngineFactory();
 
+
+    BlendStateDesc Blend;
+
+    Blend.RenderTargets[0].BlendEnable = true;
+    Blend.RenderTargets[0].SrcBlend = BLEND_FACTOR_ONE;
+    Blend.RenderTargets[0].DestBlend = BLEND_FACTOR_ZERO;
+
     PipelineStateCreateInfo PSOCreateInfo;
     PipelineStateDesc& PSODesc = PSOCreateInfo.PSODesc;
 
@@ -31,7 +38,10 @@ RenderState3DNormal::RenderState3DNormal() {
     // Cull back faces
     PSODesc.GraphicsPipeline.RasterizerDesc.CullMode = CULL_MODE_BACK;
     // Enable depth testing
-    PSODesc.GraphicsPipeline.DepthStencilDesc.DepthEnable = True;
+    PSODesc.GraphicsPipeline.DepthStencilDesc.DepthEnable = False;
+    
+    PSODesc.GraphicsPipeline.BlendDesc = Blend;
+    
     // clang-format on
 
     ShaderCreateInfo ShaderCI;
@@ -64,6 +74,7 @@ RenderState3DNormal::RenderState3DNormal() {
         CBDesc.BindFlags = BIND_UNIFORM_BUFFER;
         CBDesc.CPUAccessFlags = CPU_ACCESS_WRITE;
         device->CreateBuffer(CBDesc, nullptr, &vsConsts);
+        device->CreateBuffer(CBDesc, nullptr, &vsConsts2);
     }
 
     // Create a pixel shader
@@ -132,11 +143,21 @@ RenderState3DNormal::RenderState3DNormal() {
 
 
     device->CreatePipelineState(PSOCreateInfo, &pState);
+    
+    BlendStateDesc Blend2;
+    Blend2.RenderTargets[0].BlendEnable = true;
+    Blend2.RenderTargets[0].SrcBlend = BLEND_FACTOR_ONE;
+    Blend2.RenderTargets[0].DestBlend = BLEND_FACTOR_ONE;
+    
+    PSODesc.GraphicsPipeline.BlendDesc = Blend2;
 
+    device->CreatePipelineState(PSOCreateInfo, &pState2);
+   
 
     pState->GetStaticVariableByName(SHADER_TYPE_VERTEX, "Constants")->Set(vsConsts);
-
+    pState2->GetStaticVariableByName(SHADER_TYPE_VERTEX, "Constants")->Set(vsConsts2);
     // Create a shader resource binding object and bind all static resources in it
     pState->CreateShaderResourceBinding(&pRB, true);
+    pState2->CreateShaderResourceBinding(&pRB2, true);
 
 };
