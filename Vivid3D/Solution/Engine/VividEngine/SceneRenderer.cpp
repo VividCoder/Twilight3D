@@ -152,7 +152,7 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
         DrawAttrs.Flags = DRAW_FLAG_VERIFY_ALL;
         devCon->DrawIndexed(DrawAttrs);
 
-        if (first) {
+        if (first && light.size()>1) {
 
             first = false;
             devCon->SetPipelineState(s1->GetState2());

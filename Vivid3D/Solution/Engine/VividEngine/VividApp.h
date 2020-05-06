@@ -19,13 +19,15 @@ namespace Vivid {
         public:
 
             VividApp();
-
+            static std::string rp;
             static void SetPath(const char* path)
             {
 
-                AppPath = path;
+                rp = std::string(path);
+                AppPath = rp.c_str();
 
             }
+            
 
             static const char* GetPath()
             {

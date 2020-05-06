@@ -48,7 +48,7 @@ void main(in  PSInput  PSIn,
 }
 )";
 
-
+std::string VividApp::rp = "";
 
 void VividApp::WindowResize(int w, int h)
 {
@@ -329,13 +329,11 @@ bool VividApp::ProcessCommandLine(const char* CmdLine)
 void VividApp::Present()
 {
 
-    std::clock_t start = std::clock();
 
     //DBOUT("Presenting.\n");
 
     m_pSwapChain->Present();
     
-    std::clock_t end = std::clock();
     
 
    // DBOUT("Presented:" << (end-start) << "\n" );
@@ -344,9 +342,7 @@ void VividApp::Present()
 
 void VividApp::Render() {
 
-    std::clock_t start = std::clock();
-
-    UpdateApp();
+  
 
 
     // Set render targets before issuing any draw command.
@@ -363,9 +359,7 @@ void VividApp::Render() {
 
    
 
-    RenderApp();
 
-    std::clock_t end = std::clock();
 
 
    // DBOUT("Rendered:" << (end - start) << "\n");

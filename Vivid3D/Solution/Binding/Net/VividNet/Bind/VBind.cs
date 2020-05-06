@@ -9,8 +9,20 @@ namespace VividNet.Bind
     public class VBind
     {
 
-        [DllImport("VividBind.dll",CallingConvention = CallingConvention.ThisCall)]
+        [DllImport("VividBind.dll")]
         public static extern int testBind(int v);
+
+        [DllImport("VividBind.dll")]
+        public static extern int initWinHW(IntPtr hw);
+
+        [DllImport("VividBind.dll")]
+        public extern static int vRender();
+
+        [DllImport("VividBind.dll")]
+        public extern static int vPresent();
+
+        [DllImport("VividBind.dll")]
+        public extern static int vSetPath([MarshalAs(UnmanagedType.LPStr)]string path);
 
     }
 }

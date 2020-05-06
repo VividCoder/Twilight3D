@@ -89,6 +89,38 @@ namespace Vivid {
 
         }
 
+        bool initWindowHW(HWND hw) {
+
+            g_pTheApp.reset(new VividApp());
+
+            if (!g_pTheApp->InitBackend(hw))
+                return -1;
+
+
+            g_pTheApp->CreateResources();
+
+        }
+
+        void eUpdate() {
+            
+        }
+
+        void eRender() {
+
+
+            g_pTheApp->Render();
+
+
+
+        }
+
+        void ePresent() {
+            g_pTheApp->Present();
+
+        }
+
+
+
         bool initWindow(VividApp* app)
         {
 

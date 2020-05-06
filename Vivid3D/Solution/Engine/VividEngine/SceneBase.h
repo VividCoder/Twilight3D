@@ -29,6 +29,12 @@ namespace Vivid {
 
 			}
 
+			void SetRoot(Vivid::Scene::VSceneNode* node) {
+
+				root = node;
+
+			}
+
 			int LightCount() {
 
 				return lights.size();

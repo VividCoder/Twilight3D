@@ -1,7 +1,6 @@
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNetTest1.exe.config
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNetTest1.exe
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNetTest1.pdb
-C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.pdb
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\obj\x64\Debug\VividNetTest1.csprojAssemblyReference.cache
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\obj\x64\Debug\VividNetTest1.Form1.resources
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\obj\x64\Debug\VividNetTest1.Properties.Resources.resources

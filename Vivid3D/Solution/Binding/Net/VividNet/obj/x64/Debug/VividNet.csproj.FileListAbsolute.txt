@@ -5,3 +5,4 @@ C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.dll
 C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.pdb
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.dll
 C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.csprojAssemblyReference.cache

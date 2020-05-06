@@ -8,19 +8,19 @@ using namespace Diligent;
 
 Texture2D::Texture2D(const char* path) {
 
-	const char* realPath = Vivid::App::VividApp::GetResPath(path);
+	//const char* realPath = Vivid::App::VividApp::GetResPath(path);
 
    // DBOUT("TexPath:" << realPath << "\n");
 
     TextureLoadInfo loadInfo;
     loadInfo.IsSRGB = true;
     RefCntAutoPtr<ITexture> Tex;
-    CreateTextureFromFile(realPath, loadInfo,Vivid::App::VividApp::GetDevice(), &Tex);
+    CreateTextureFromFile(path, loadInfo,Vivid::App::VividApp::GetDevice(), &Tex);
     tex = Tex;
     // Get shader resource view from the texture
     texView = Tex->GetDefaultView(TEXTURE_VIEW_SHADER_RESOURCE);
-    DBOUT("Tex:" << realPath);
-    texpath = realPath;
+    DBOUT("Tex:" << path);
+    texpath = path;
     // Set texture SRV in the SRBr
   //  m_SRB->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Set(m_TextureSRV);
 }

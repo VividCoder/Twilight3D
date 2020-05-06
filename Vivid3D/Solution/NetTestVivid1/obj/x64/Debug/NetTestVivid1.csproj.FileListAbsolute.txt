@@ -1,0 +1,13 @@
+C:\Projects\Vivid3D\Solution\NetTestVivid1\bin\x64\Debug\NetTestVivid1.exe.config
+C:\Projects\Vivid3D\Solution\NetTestVivid1\bin\x64\Debug\NetTestVivid1.exe
+C:\Projects\Vivid3D\Solution\NetTestVivid1\bin\x64\Debug\NetTestVivid1.pdb
+C:\Projects\Vivid3D\Solution\NetTestVivid1\bin\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\NetTestVivid1\bin\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.Form1.resources
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.Properties.Resources.resources
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.csproj.GenerateResource.cache
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.csproj.CoreCompileInputs.cache
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.csproj.CopyComplete
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.exe
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.pdb
+C:\Projects\Vivid3D\Solution\NetTestVivid1\obj\x64\Debug\NetTestVivid1.csprojAssemblyReference.cache
