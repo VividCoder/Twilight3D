@@ -3,15 +3,81 @@
 //#include "Graphics/GraphicsTools/interface//i"
 
 
+//#include "IL/ilut.h
+
+
+#define _CRT_SECURE_NO_WARNINGS
+
+
+
 using namespace Vivid::Texture;
 using namespace Diligent;
 
+const wchar_t* GetWC(const char* c)
+{
+    const size_t cSize = strlen(c) + 1;
+    wchar_t* wc = new wchar_t[cSize];
+    mbstowcs(wc, c, cSize);
+
+    return wc;
+}
+
+Texture2D::Texture2D(void* data, int w, int h,int bpp) {
+
+    TextureDesc TexDesc;
+    TexDesc.Name = "My texture 2D";
+    TexDesc.Type = RESOURCE_DIM_TEX_2D;
+    TexDesc.Width = w;
+    TexDesc.Height = h;
+    TexDesc.Format = TEX_FORMAT_RGBA8_UNORM;
+    TexDesc.Usage = USAGE_DEFAULT;
+    TexDesc.BindFlags = BIND_SHADER_RESOURCE | BIND_RENDER_TARGET | BIND_UNORDERED_ACCESS;
+    TexDesc.Name = "Sample 2D Texture";
+    
+    auto dev = Vivid::App::VividApp::GetDevice();
+
+    TextureSubResData sub;
+
+    sub.pData = data;
+    sub.Stride = w * bpp;
+
+    TextureData dat;
+    dat.pSubResources = &sub;
+    dat.NumSubresources = 1;
+
+    dev->CreateTexture(TexDesc, &dat, &tex);
+    texView = tex->GetDefaultView(TEXTURE_VIEW_SHADER_RESOURCE);
+
+
+};
+
 Texture2D::Texture2D(const char* path) {
 
-	//const char* realPath = Vivid::App::VividApp::GetResPath(path);
+	const char* realPath = Vivid::App::VividApp::GetResPath(path);
 
    // DBOUT("TexPath:" << realPath << "\n");
+    path = realPath;
 
+    std::vector<unsigned char> img;
+    unsigned iw, ih;
+    unsigned error = lodepng::decode(img, iw, ih, path);
+
+    if (error != 0) {
+        std::cout << "error " << error << ": " << lodepng_error_text(error) << std::endl;
+        return;
+    }
+
+    std::cout << "Loaded image. W:" << iw << " H:" << ih << std::endl;
+
+
+    auto nt = new Texture2D(&img[0],iw,ih,4);
+
+    tex = nt->GetTex();
+    texView = nt->GetView();
+
+    texpath = path;
+    
+    /*
     TextureLoadInfo loadInfo;
     loadInfo.IsSRGB = true;
     RefCntAutoPtr<ITexture> Tex;
@@ -21,6 +87,7 @@ Texture2D::Texture2D(const char* path) {
     texView = Tex->GetDefaultView(TEXTURE_VIEW_SHADER_RESOURCE);
     DBOUT("Tex:" << path);
     texpath = path;
+    */
     // Set texture SRV in the SRBr
   //  m_SRB->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Set(m_TextureSRV);
 }

@@ -1,8 +1,15 @@
-﻿  Test1Simple.cpp
-Test1-Simple.obj : error LNK2019: unresolved external symbol "public: void __thiscall VividApp::WindowResize(int,int)" (?WindowResize@VividApp@@QAEXHH@Z) referenced in function "long __stdcall MessageProc(struct HWND__ *,unsigned int,unsigned int,long)" (?MessageProc@@YGJPAUHWND__@@IIJ@Z)
-Test1-Simple.obj : error LNK2019: unresolved external symbol "public: bool __thiscall VividApp::InitBackend(struct HWND__ *)" (?InitBackend@VividApp@@QAE_NPAUHWND__@@@Z) referenced in function "bool __cdecl initWindow(struct HINSTANCE__ *,int,class VividApp *)" (?initWindow@@YA_NPAUHINSTANCE__@@HPAVVividApp@@@Z)
-Test1-Simple.obj : error LNK2019: unresolved external symbol "public: bool __thiscall VividApp::ProcessCommandLine(char const *)" (?ProcessCommandLine@VividApp@@QAE_NPBD@Z) referenced in function "bool __cdecl initWindow(struct HINSTANCE__ *,int,class VividApp *)" (?initWindow@@YA_NPAUHINSTANCE__@@HPAVVividApp@@@Z)
-Test1-Simple.obj : error LNK2019: unresolved external symbol "public: void __thiscall VividApp::Present(void)" (?Present@VividApp@@QAEXXZ) referenced in function "bool __cdecl initWindow(struct HINSTANCE__ *,int,class VividApp *)" (?initWindow@@YA_NPAUHINSTANCE__@@HPAVVividApp@@@Z)
-Test1-Simple.obj : error LNK2019: unresolved external symbol "public: void __thiscall VividApp::CreateResources(void)" (?CreateResources@VividApp@@QAEXXZ) referenced in function "bool __cdecl initWindow(struct HINSTANCE__ *,int,class VividApp *)" (?initWindow@@YA_NPAUHINSTANCE__@@HPAVVividApp@@@Z)
-Test1-Simple.obj : error LNK2019: unresolved external symbol "public: void __thiscall VividApp::Render(void)" (?Render@VividApp@@QAEXXZ) referenced in function "bool __cdecl initWindow(struct HINSTANCE__ *,int,class VividApp *)" (?initWindow@@YA_NPAUHINSTANCE__@@HPAVVividApp@@@Z)
-C:\Projects\Vivid3D\Solution\Debug\Test1-Simple.exe : fatal error LNK1120: 6 unresolved externals
+﻿  pch.cpp
+  lodepng.cpp
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\lodepng.cpp(735,35): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\lodepng.cpp(759,37): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\lodepng.cpp(776,38): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+  Test1-Simple.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(13,10): fatal error C1083: Cannot open include file: 'GLFW/glfw3.h': No such file or directory
+  Test1Simple.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Projects\Vivid3D\Solution\Tests\Test1-Simple\Test1Simple.cpp(59,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...

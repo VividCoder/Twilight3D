@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
 
-    Vivid::Engine::initWindow(hInstance, nCmdShow, new Test1Simple());
+    Vivid::Engine::initWindow(new Test1Simple());
 
 
 

@@ -158,6 +158,24 @@ namespace Vivid {
 
             };
 
+            static void SetSize(int w, int h) {
+
+                WinW = w;
+                WinH = h;
+
+            }
+
+            static int GetW() {
+
+                return WinW;
+
+            }
+
+            static int GetH() {
+
+                return WinH;
+
+            }
 
 
             virtual void MouseMoved(int x, int y) {};
@@ -167,7 +185,7 @@ private:
 
          //   static void (*FMouseMove)(int, int) = NULL;
 
-
+    static int WinW, WinH;
 
             static int MouseX, MouseY;
             static int MouseDX, MouseDY;

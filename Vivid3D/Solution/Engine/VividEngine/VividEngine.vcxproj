@@ -106,18 +106,18 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\glfw-3.3.2.bin.WIN64\include;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentTools;C:\Projects\Vivid3D\Other\DiligentEngine\DiligentCore;C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Vivid3D\Other\glfw-3.3.2.bin.WIN64\include;C:\Projects\Vivid3D\Other\lodepng;C:\Projects\Vivid3D\Other\include;C:\Projects\Vivid3D\Other\AssImp5\build\include;C:\Projects\Vivid3D\Other\AssImp5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>DiligentCore.lib;Diligent-TextureLoader.lib;glew-static.lib;zlib.lib;D3D12.lib;d3dcompiler.lib;dxgi.lib;LibJpeg.lib;LibPng.lib;LibTiff.lib;assimp-vc142-mtd.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Other\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Projects\Vivid3D\Other\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>DiligentCore.lib;GraphicsEngineD3D12_64d.lib;GraphicsEngineOpenGL_64d.lib;HLSLd.lib;glfw3.lib;glew32s.lib;glslangd.lib;OGLCompilerd.lib;spirv-cross-cored.lib;SPIRVd.lib;SPIRV-Tools.lib;SPIRV-Tools-opt.lib;OSDependentd.lib;assimp-vc142-mtd.lib;D3D12.lib;dxgi.lib;d3dcompiler.lib;OpenGL32.lib;GLU32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Other\glew-2.1.0\lib\Release\x64;C:\Projects\Vivid3D\Other\DevIL Windows SDK\lib\x64\Release;C:\Projects\Vivid3D\Other\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Projects\Vivid3D\Other\Libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

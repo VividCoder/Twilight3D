@@ -1,0 +1,9 @@
+
+
+Date:2020-05-08 16:32:11,364
+Thread:[1]
+Level:ERROR
+Logger:Syncfusion.TemplateWizard.Base.IWizardImplementationRoot                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Syncfusion.TemplateWizard.Base.IWizardImplementationRoot.AddfromTemplate(Boolean isCallfromTestingAutomation, String AssemblyFromLocation, DTE2 dte, String _destinationPath, Project _project, String _projectName, TargetPlatform targetPlatform, ApplicationType TargetApplicationType, ProjectLanguage projectLanguage, TargetFramework targetFramework, String sourcePath, ServiceProvider _nugetServices, String TargetControl, String version, String SelectedTheme)
+   at Syncfusion.TemplateWizard.Base.IWizardImplementationRoot.RunFinished()

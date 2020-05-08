@@ -13,8 +13,10 @@
 #include <GLFW/glfw3.h>
 #include "GLFW/glfw3native.h"
 
+
 using namespace Diligent;
 
+using namespace Vivid::App;
 
 namespace Vivid {
 
@@ -83,11 +85,7 @@ namespace Vivid {
             }
         }
 
-        void Mouse_CB(GLFWwindow* win, double x, double y) {
-
-            Vivid::App::VividApp::CallMouseMoveFunc((int)-x, (int)y);
-
-        }
+      
 
         bool initWindowHW(HWND hw) {
 
@@ -100,6 +98,10 @@ namespace Vivid {
             g_pTheApp->CreateResources();
 
         }
+
+
+
+
 
         void eUpdate() {
             
@@ -119,7 +121,11 @@ namespace Vivid {
 
         }
 
+        void Mouse_CB(GLFWwindow* win, double x, double y) {
 
+            Vivid::App::VividApp::CallMouseMoveFunc((int)-x, (int)y);
+
+        }
 
         bool initWindow(VividApp* app)
         {
@@ -149,7 +155,7 @@ namespace Vivid {
                 glfwTerminate();
                 return -1;
             }
-     
+
             HWND hw;
             void* window_handle = NULL;
 #if PLATFORM_WIN32
@@ -164,36 +170,39 @@ namespace Vivid {
 #endif
 
 
-           if (!g_pTheApp->InitBackend(hw))
-               return -1;
+            if (!g_pTheApp->InitBackend(hw))
+                return -1;
 
 
             g_pTheApp->CreateResources();
 
             glfwSetCursorPosCallback(window, Mouse_CB);
-          
+
             /* Loop until the user closes the window */
             while (!glfwWindowShouldClose(window)) {
                 //if (m_pImmediateContext) {
 
-               
 
-                    g_pTheApp->Render();
+
+                g_pTheApp->Render();
 
 #if PLATFORM_MACOS
-                    glfwSwapBuffers(window);
+                glfwSwapBuffers(window);
 #else
-                    g_pTheApp->Present();
+                g_pTheApp->Present();
 #endif
-                
+
 
                 /* Poll for and process events */
                 glfwPollEvents();
             }
-          
+
             glfwTerminate();
         }
 
+
+
+     
         int vInitEngine()
         {
             printf("Initializing VivdEngine.");

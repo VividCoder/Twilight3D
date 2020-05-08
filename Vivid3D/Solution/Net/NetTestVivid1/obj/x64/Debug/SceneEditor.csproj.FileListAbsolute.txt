@@ -1,0 +1,17 @@
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\NetTestVivid1.exe.config
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\NetTestVivid1.exe
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\NetTestVivid1.pdb
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\Syncfusion.Core.WinForms.dll
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\Syncfusion.Shared.Base.dll
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\Syncfusion.Core.WinForms.xml
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\Syncfusion.Shared.Base.xml
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\SceneEditor.csprojAssemblyReference.cache
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\NetTestVivid1.SceneEditor.resources
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\NetTestVivid1.Properties.Resources.resources
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\SceneEditor.csproj.GenerateResource.cache
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\SceneEditor.csproj.CoreCompileInputs.cache
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\SceneEditor.csproj.CopyComplete
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\NetTestVivid1.exe
+C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\obj\x64\Debug\NetTestVivid1.pdb

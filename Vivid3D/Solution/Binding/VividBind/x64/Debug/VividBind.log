@@ -1,4 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1288,5): warning MSB8012: TargetPath(C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.dll) does not match the Linker's OutputFile property value (C:\Projects\Vivid3D\Solution\NetTestVivid1\bin\x64\Debug\VividBind.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-     Creating library C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.lib and object C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.exp
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  VividBind.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.dll

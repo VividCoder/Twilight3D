@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "VividApp.h"
 
+
 using namespace Vivid::App;
 
 static const char* VSSource = R"(
@@ -97,6 +98,7 @@ VividApp * VividApp::sThis = NULL;
 bool VividApp::InitBackend(HWND hWnd) {
 
     m_DeviceType = RENDER_DEVICE_TYPE_D3D12;
+
     SwapChainDesc SCDesc;
     switch (m_DeviceType)
     {
@@ -340,10 +342,14 @@ void VividApp::Present()
 }
 
 
+int VividApp::WinW = 800;
+int VividApp::WinH = 600;
+
+
 void VividApp::Render() {
 
   
-
+    //UpdateApp();
 
     // Set render targets before issuing any draw command.
        // Note that Present() unbinds the back buffer if it is set as render target.
@@ -358,7 +364,7 @@ void VividApp::Render() {
     m_pImmediateContext->ClearDepthStencil(pDSV, CLEAR_DEPTH_FLAG, 1.f, 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
 
    
-
+   // RenderApp();
 
 
 

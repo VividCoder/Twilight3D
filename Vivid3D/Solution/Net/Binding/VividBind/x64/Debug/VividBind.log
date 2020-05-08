@@ -1,0 +1,177 @@
+﻿  pch.cpp
+  lodepng.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(717,54): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(735,35): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(736,39): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(759,37): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(776,38): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(3713,78): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4667,33): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4889,60): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4894,83): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4895,94): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4896,83): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4897,94): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4898,83): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4899,94): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(4900,78): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5084,3): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5108,7): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5142,62): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5159,3): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5181,57): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5212,57): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5325,57): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng.cpp(5403,33): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  lodepng_util.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(114,38): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(116,38): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(117,38): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(119,38): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(543,42): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(721,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(722,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(723,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(747,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(748,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(749,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(750,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(751,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(752,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(753,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(754,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(755,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(806,3): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(811,3): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(816,3): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(821,3): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1560,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1561,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1562,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1586,1): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1594,1): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1652,1): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\lodepng_util.cpp(1654,1): warning C4267: '=': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  dllmain.cpp
+  VividBind.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(43,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(23,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(40,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(95,26): warning C4305: 'return': truncation from 'int' to 'bool'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(140,26): warning C4305: 'return': truncation from 'int' to 'bool'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(156,26): warning C4305: 'return': truncation from 'int' to 'bool'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(174,26): warning C4305: 'return': truncation from 'int' to 'bool'
+  Generating Code...
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(100): warning C4715: 'Vivid::Engine::initWindowHW': not all control paths return a value
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(201): warning C4715: 'Vivid::Engine::initWindow': not all control paths return a value
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1288,5): warning MSB8012: TargetPath(C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.dll) does not match the Linker's OutputFile property value (C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\VividBind.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.lib and object C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.exp
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+VividEngine.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'VividEngine.lib(glew.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\vc120.pdb'; linking object as if no debug info
+VividEngine.lib(DebugOutput.obj) : warning LNK4099: PDB 'Diligent-Primitives.pdb' was not found with 'VividEngine.lib(DebugOutput.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Primitives.pdb'; linking object as if no debug info
+VividEngine.lib(BasicFileSystem.obj) : warning LNK4099: PDB 'Diligent-BasicPlatform.pdb' was not found with 'VividEngine.lib(BasicFileSystem.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-BasicPlatform.pdb'; linking object as if no debug info
+VividEngine.lib(BasicPlatformDebug.obj) : warning LNK4099: PDB 'Diligent-BasicPlatform.pdb' was not found with 'VividEngine.lib(BasicPlatformDebug.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-BasicPlatform.pdb'; linking object as if no debug info
+VividEngine.lib(StandardFile.obj) : warning LNK4099: PDB 'Diligent-BasicPlatform.pdb' was not found with 'VividEngine.lib(StandardFile.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-BasicPlatform.pdb'; linking object as if no debug info
+VividEngine.lib(Win32Atomics.obj) : warning LNK4099: PDB 'Diligent-Win32Platform.pdb' was not found with 'VividEngine.lib(Win32Atomics.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Win32Platform.pdb'; linking object as if no debug info
+VividEngine.lib(Win32Debug.obj) : warning LNK4099: PDB 'Diligent-Win32Platform.pdb' was not found with 'VividEngine.lib(Win32Debug.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Win32Platform.pdb'; linking object as if no debug info
+VividEngine.lib(Win32FileSystem.obj) : warning LNK4099: PDB 'Diligent-Win32Platform.pdb' was not found with 'VividEngine.lib(Win32FileSystem.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Win32Platform.pdb'; linking object as if no debug info
+VividEngine.lib(BasicFileStream.obj) : warning LNK4099: PDB 'Diligent-Common.pdb' was not found with 'VividEngine.lib(BasicFileStream.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Common.pdb'; linking object as if no debug info
+VividEngine.lib(DataBlobImpl.obj) : warning LNK4099: PDB 'Diligent-Common.pdb' was not found with 'VividEngine.lib(DataBlobImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Common.pdb'; linking object as if no debug info
+VividEngine.lib(DefaultRawMemoryAllocator.obj) : warning LNK4099: PDB 'Diligent-Common.pdb' was not found with 'VividEngine.lib(DefaultRawMemoryAllocator.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Common.pdb'; linking object as if no debug info
+VividEngine.lib(FixedBlockMemoryAllocator.obj) : warning LNK4099: PDB 'Diligent-Common.pdb' was not found with 'VividEngine.lib(FixedBlockMemoryAllocator.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Common.pdb'; linking object as if no debug info
+VividEngine.lib(LockHelper.obj) : warning LNK4099: PDB 'Diligent-Common.pdb' was not found with 'VividEngine.lib(LockHelper.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-Common.pdb'; linking object as if no debug info
+VividEngine.lib(SRBMemoryAllocator.obj) : warning LNK4099: PDB 'Diligent-GraphicsAccessories.pdb' was not found with 'VividEngine.lib(SRBMemoryAllocator.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsAccessories.pdb'; linking object as if no debug info
+VividEngine.lib(GraphicsAccessories.obj) : warning LNK4099: PDB 'Diligent-GraphicsAccessories.pdb' was not found with 'VividEngine.lib(GraphicsAccessories.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsAccessories.pdb'; linking object as if no debug info
+VividEngine.lib(APIInfo.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngine.pdb' was not found with 'VividEngine.lib(APIInfo.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngine.pdb'; linking object as if no debug info
+VividEngine.lib(DefaultShaderSourceStreamFactory.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngine.pdb' was not found with 'VividEngine.lib(DefaultShaderSourceStreamFactory.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngine.pdb'; linking object as if no debug info
+VividEngine.lib(EngineMemory.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngine.pdb' was not found with 'VividEngine.lib(EngineMemory.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngine.pdb'; linking object as if no debug info
+VividEngine.lib(ResourceMapping.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngine.pdb' was not found with 'VividEngine.lib(ResourceMapping.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngine.pdb'; linking object as if no debug info
+VividEngine.lib(Texture.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngine.pdb' was not found with 'VividEngine.lib(Texture.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngine.pdb'; linking object as if no debug info
+VividEngine.lib(DXGITypeConversions.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3DBase.pdb' was not found with 'VividEngine.lib(DXGITypeConversions.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3DBase.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderD3DBase.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3DBase.pdb' was not found with 'VividEngine.lib(ShaderD3DBase.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3DBase.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderResources.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3DBase.pdb' was not found with 'VividEngine.lib(ShaderResources.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3DBase.pdb'; linking object as if no debug info
+VividEngine.lib(BufferD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(BufferD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(BufferViewD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(BufferViewD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(CommandContext.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(CommandContext.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(CommandListManager.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(CommandListManager.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(CommandQueueD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(CommandQueueD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(D3D12TypeConversions.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(D3D12TypeConversions.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(D3D12Utils.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(D3D12Utils.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(DescriptorHeap.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(DescriptorHeap.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(DeviceContextD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(DeviceContextD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(D3D12DynamicHeap.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(D3D12DynamicHeap.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(EngineFactoryD3D12.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(EngineFactoryD3D12.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(FenceD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(FenceD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(GenerateMips.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(GenerateMips.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(PipelineStateD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(PipelineStateD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(QueryD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(QueryD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(QueryManagerD3D12.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(QueryManagerD3D12.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(RenderDeviceD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(RenderDeviceD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(RootSignature.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(RootSignature.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(SamplerD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(SamplerD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(ShaderD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderResourceBindingD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(ShaderResourceBindingD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderResourceCacheD3D12.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(ShaderResourceCacheD3D12.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderResourceLayoutD3D12.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(ShaderResourceLayoutD3D12.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderResourcesD3D12.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(ShaderResourcesD3D12.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderVariableD3D12.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(ShaderVariableD3D12.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(SwapChainD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(SwapChainD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(TextureD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(TextureD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(TextureViewD3D12Impl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(TextureViewD3D12Impl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(D3D12Loader.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineD3D12-static.pdb' was not found with 'VividEngine.lib(D3D12Loader.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineD3D12-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLSLSourceBuilder.obj) : warning LNK4099: PDB 'Diligent-GLSLTools.pdb' was not found with 'VividEngine.lib(GLSLSourceBuilder.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GLSLTools.pdb'; linking object as if no debug info
+VividEngine.lib(HLSL2GLSLConverterImpl.obj) : warning LNK4099: PDB 'Diligent-HLSL2GLSLConverterLib.pdb' was not found with 'VividEngine.lib(HLSL2GLSLConverterImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-HLSL2GLSLConverterLib.pdb'; linking object as if no debug info
+VividEngine.lib(HLSL2GLSLConverterObject.obj) : warning LNK4099: PDB 'Diligent-HLSL2GLSLConverterLib.pdb' was not found with 'VividEngine.lib(HLSL2GLSLConverterObject.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-HLSL2GLSLConverterLib.pdb'; linking object as if no debug info
+VividEngine.lib(BufferGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(BufferGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(BufferViewGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(BufferViewGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(DeviceContextGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(DeviceContextGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(EngineFactoryOpenGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(EngineFactoryOpenGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(FBOCache.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(FBOCache.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(FenceGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(FenceGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLContextState.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLContextState.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLObjectWrapper.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLObjectWrapper.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLProgramResourceCache.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLProgramResourceCache.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLPipelineResourceLayout.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLPipelineResourceLayout.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLProgramResources.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLProgramResources.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLTypeConversions.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLTypeConversions.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(PipelineStateGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(PipelineStateGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(QueryGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(QueryGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(RenderDeviceGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(RenderDeviceGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(SamplerGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(SamplerGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(ShaderGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(ShaderResourceBindingGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(ShaderResourceBindingGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(TexRegionRender.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(TexRegionRender.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(Texture1D_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(Texture1D_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(Texture1DArray_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(Texture1DArray_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(Texture2D_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(Texture2D_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(Texture2DArray_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(Texture2DArray_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(Texture3D_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(Texture3D_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(TextureBaseGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(TextureBaseGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(TextureCube_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(TextureCube_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(TextureCubeArray_OGL.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(TextureCubeArray_OGL.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(TextureViewGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(TextureViewGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(VAOCache.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(VAOCache.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(GLContextWindows.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(GLContextWindows.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+VividEngine.lib(SwapChainGLImpl.obj) : warning LNK4099: PDB 'Diligent-GraphicsEngineOpenGL-static.pdb' was not found with 'VividEngine.lib(SwapChainGLImpl.obj)' or at 'C:\Projects\Vivid3D\Solution\x64\Debug\Diligent-GraphicsEngineOpenGL-static.pdb'; linking object as if no debug info
+  VividBind.vcxproj -> C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.dll

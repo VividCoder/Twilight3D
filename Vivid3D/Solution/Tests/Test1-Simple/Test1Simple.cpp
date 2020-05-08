@@ -29,14 +29,13 @@ void Test1Simple::MouseMoved(int x, int y) {
 	cy = cy + mdx;
 
 	auto cam = scene->GetCam();
-	cam->SetRotation(-cp,cy, 0);
+	//cam->SetRotation(-cp,cy, 0);
 
 
 }
 
 void Test1Simple::SetKeyDown(int key) {
 
-	if(key ==)
 
 	exit(1);
 
@@ -48,13 +47,13 @@ void Test1Simple::SetKeyUp(int key) {
 
 void Test1Simple::InitApp() {
 	SetPath("C:/Projects/Vivid3D/Solution/x64/Debug/");
-
+	VividApp::SetSize(800, 600);
 	
 
 //	testMesh2D = new VMesh2D();
 	Drawer = new Vivid::Draw::Draw2D();
 	
-	//tex1 = new Vivid::Texture::Texture2D("tex1.jpg");
+	tex1 = new Vivid::Texture::Texture2D("tex1.jpg");
 //	tex2 = new Vivid::Texture::Texture2D("tex2.jpg");
 	
 	srand(time(NULL));
@@ -84,7 +83,7 @@ void Test1Simple::RenderApp() {
 
 	auto cam = scene->GetCam();
 
-	cam->SetPosition(0, 0.2f, 0.8f);
+	cam->SetPosition(0, 0.2f, 2.0f);
 
 	ang = ang + 1.4f;
 	float x, z;
@@ -97,18 +96,16 @@ void Test1Simple::RenderApp() {
 	//scene->GetRoot()->SetRotation(60, 0, 0);
 	l1->SetPosition(x, 0, z);
 
-
-
-
 	sceneRen->Render();
 
-	return;
-	Drawer->SetTexture(tex2);
 
-	Drawer->Bind();
+	
+//	Drawer->SetTexture(tex2);
 
-	Drawer->SetTexture(tex1);
-	Drawer->SetColor(0, 1, 1, 1);
+//	Drawer->Bind();
+
+//	Drawer->SetTexture(tex1);
+//	Drawer->SetColor(0, 1, 1, 1);
 
 	
 
@@ -116,7 +113,7 @@ void Test1Simple::RenderApp() {
 
 		int x = rand() % 512;
 		int y = rand() % 512;
-		Drawer->Rect(x, y, 200, 200);
+	//	Drawer->Rect(x, y, 200, 200);
 	}
 		printf("Rendered");
 

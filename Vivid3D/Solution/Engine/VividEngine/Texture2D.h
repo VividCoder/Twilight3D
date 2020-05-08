@@ -2,8 +2,7 @@
 #include "Graphics/GraphicsTools/interface/MapHelper.hpp"
 #include "Graphics/GraphicsTools/interface/GraphicsUtilities.h"
 #include "Common/interface/BasicMath.hpp"
-#include "TextureLoader/interface/TextureLoader.h"
-#include "TextureLoader/interface/TextureUtilities.h"
+
 #include "VividApp.h"
 namespace Vivid {
 
@@ -13,10 +12,18 @@ namespace Vivid {
 		{
 		public:
 
+			Texture2D(void* data, int w, int h,int bpp);
+
 			Texture2D(const char* path);
 			RefCntAutoPtr<ITextureView> GetView() {
 
 				return texView;
+
+			}
+
+			RefCntAutoPtr<ITexture> GetTex() {
+
+				return tex;
 
 			}
 

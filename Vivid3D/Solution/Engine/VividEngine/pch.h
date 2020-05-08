@@ -33,9 +33,28 @@
 #endif
 
 
-#ifndef D3D12_SUPPORTED
-#    define D3D12_SUPPORTED 1
+#ifndef VULKAN_SUPPORTED
+//# define VULKAN_SUPPORTED 1
 #endif
+
+
+#ifndef GL_SUPPORTED
+//#	define GL_SUPPORTED 1
+#endif
+
+#ifndef D3D12_SUPPORTED
+
+#	define D3D12_SUPPORTED 1
+
+#endif
+
+#ifndef GL_SUPPORTED
+	
+#	define GL_SUPPORTED 1
+
+#endif
+#include <lodepng.h>
+
 
 #include "Graphics//GraphicsEngine/interface/EngineFactory.h"
 #include "Graphics/GraphicsEngineD3D11/interface/EngineFactoryD3D11.h"

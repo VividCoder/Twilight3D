@@ -205,7 +205,7 @@ void render_node(Vivid::Scene::VSceneNode* node) {
 void SceneRenderer::Render() {
 
 
-    mproj = float4x4::Projection(45.0f, 1360.0f / 800.0f, 0.1f, 1000.0f, false);
+    mproj = float4x4::Projection(45.0f, (float)Vivid::App::VividApp::GetW() /(float)Vivid::App::VividApp::GetH(), 0.1f, 1000.0f, false);
     
 
      

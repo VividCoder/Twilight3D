@@ -1,0 +1,14 @@
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\bin\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\bin\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.csproj.CoreCompileInputs.cache
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Binding\Net\VividNet\obj\x64\Debug\VividNet.csprojAssemblyReference.cache
+C:\Projects\Vivid3D\Solution\Net\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Net\Tests\Net\VividNetTest1\bin\x64\Debug\VividNet.pdb
+C:\Projects\Vivid3D\Solution\Net\Binding\Net\VividNet\obj\x64\Debug\VividNet.csprojAssemblyReference.cache
+C:\Projects\Vivid3D\Solution\Net\Binding\Net\VividNet\obj\x64\Debug\VividNet.csproj.CoreCompileInputs.cache
+C:\Projects\Vivid3D\Solution\Net\Binding\Net\VividNet\obj\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\Net\Binding\Net\VividNet\obj\x64\Debug\VividNet.pdb
