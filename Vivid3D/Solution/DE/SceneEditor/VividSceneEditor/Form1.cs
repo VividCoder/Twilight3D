@@ -37,6 +37,8 @@ namespace VividSceneEditor
             Browser = new ContentBrowser();
             Browser.Show(Doc1, DockState.DockBottom);
 
+            ContentBrowser.CB.SetPath("C:\\Content\\");
+
             PropEdit = new PropertiesEdit();
             PropEdit.Show(Doc1, DockState.DockRightAutoHide);
 
