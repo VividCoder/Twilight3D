@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Runtime.CompilerServices;
 using VividSceneEditor.Browser;
+using System.Runtime.InteropServices;
 
 namespace VividSceneEditor
 {
@@ -22,6 +23,8 @@ namespace VividSceneEditor
         public static Browser.BrowserContent ContentOver;
         public static Browser.BrowserContent ContentActive;
         public static Browser.BrowserContent ContentDrag;
+
+        private Stack<string> PathS = new Stack<string>();
 
         public ContentBrowser()
         {
@@ -178,6 +181,43 @@ namespace VividSceneEditor
         }
 
 
+        private void BackFolder()
+        {
+
+            int nd = -1;
+            int pd = -1;
+            int od = -1;
+            while (true)
+            {
+
+                od = pd;
+                pd = nd;
+                nd = ContentPath.IndexOf("\\", nd+1);
+                if (nd == -1)
+                {
+                    break;
+                }
+                Console.WriteLine("ND:" + nd);
+                 
+
+
+
+
+            }
+            if(od==-1)
+            {
+                return;
+            }
+            PathS.Push(ContentPath);
+            string new_path = ContentPath.Substring(0, od)+"\\";
+
+            SetPath(new_path);
+            //int vv = 5;
+
+
+
+        }
+
 
         private void ContentBrowser_MouseDown(object sender, MouseEventArgs e)
         {
@@ -188,9 +228,19 @@ namespace VividSceneEditor
 
             if (e.Button == MouseButtons.XButton1)
             {
-                
-            }
+                // Environment.Exit(0);
+                BackFolder();
 
+
+            }
+            else if (e.Button == MouseButtons.XButton2)
+            {
+
+                if (PathS.Count > 0)
+                {
+                    SetPath(PathS.Pop());
+                }
+            }
             foreach (var content in Contents)
             {
 
@@ -222,10 +272,44 @@ namespace VividSceneEditor
 
                 if (ContentActive is ContentFolder)
                 {
-                    SetPath(ContentActive.RealPath)
-                        ;
+                    SetPath(ContentActive.RealPath + "\\");
+                    
+                }else if(ContentActive is ContentFile)
+                {
+
+                    string ext = new FileInfo(ContentActive.LocalPath).Extension;
+                    switch (ext.ToLower())
+                    {
+                        case ".gltf":
+                        case ".obj":
+                        case ".fbx":
+                        case ".dae":
+                        case ".3ds":
+
+                            
+
+                            var imp_model = VividNet.Import.Importer.ImportEntityAI(ContentActive.RealPath);
+
+                            Viewer.Scene.AddNode(imp_model);
+
+                            int vv = 5;
+
+
+                            break;
+
+
+                    }
+                    
+                    //int vv = 0;
+
+
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BackFolder();
         }
 
         private void ContentBrowser_MouseUp(object sender, MouseEventArgs e)

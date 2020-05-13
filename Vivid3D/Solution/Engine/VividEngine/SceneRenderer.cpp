@@ -116,8 +116,8 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
             else {
 
                 MapHelper<Constants> CBConstants(devCon, s1->GetConsts2(), MAP_WRITE, MAP_FLAG_DISCARD);
-                CBConstants->g_View = mview.Transpose();
-                CBConstants->g_Model = mmodel.Transpose();
+                CBConstants->g_View = mview; // Transpose();
+                CBConstants->g_Model = mmodel; // .Transpose();
                 CBConstants->g_Projection = mproj.Transpose();
                 CBConstants->lightDir = float4(0.4f, 0.3f, -0.2f, 0);
 
@@ -174,24 +174,35 @@ void render_node(Vivid::Scene::VSceneNode* node) {
 
    // DBOUT("Rendering Node:" << node->GetName() << " Meshes:" << nEnt->MeshCount() << " \n");
 
-    mvp = node->GetWorld() * cam->GetWorld();
+
+    auto isn = dynamic_cast<Vivid::Scene::Nodes::VSceneEntity*>(node);
+
+    if (isn == NULL) {
+  
+    }
+    else {
+        //    return 2;
 
 
-    //mvp = mvp * float4x4::Projection(45.0f, 800.0f / 600.0f , 0.1f, 1000.f, false);
-    
-    mmodel = node->GetWorld();
+        mvp = node->GetWorld() * cam->GetWorld();
 
-   
-    for (int i = 0; i < nEnt->MeshCount(); i++) {
 
-        auto msh = nEnt->GetMesh(i);
+        //mvp = mvp * float4x4::Projection(45.0f, 800.0f / 600.0f , 0.1f, 1000.f, false);
 
-        ent = nEnt;
+        mmodel = node->GetWorld();
 
-        render_mesh(msh);
 
-    };
+        for (int i = 0; i < nEnt->MeshCount(); i++) {
 
+            auto msh = nEnt->GetMesh(i);
+
+            ent = nEnt;
+
+            render_mesh(msh);
+
+        };
+
+    }
     for (int i = 0; i<node->NodeCount(); i++) {
 
         auto n2 = node->GetNode(i);

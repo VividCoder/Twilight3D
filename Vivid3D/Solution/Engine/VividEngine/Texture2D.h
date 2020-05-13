@@ -14,7 +14,7 @@ namespace Vivid {
 
 			Texture2D(void* data, int w, int h,int bpp);
 
-			Texture2D(const char* path);
+			Texture2D(const char* path,bool imp);
 			RefCntAutoPtr<ITextureView> GetView() {
 
 				return texView;

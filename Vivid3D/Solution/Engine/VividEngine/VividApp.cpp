@@ -50,6 +50,7 @@ void main(in  PSInput  PSIn,
 )";
 
 std::string VividApp::rp = "";
+std::string VividApp::imp_path = "";
 
 void VividApp::WindowResize(int w, int h)
 {
@@ -358,7 +359,7 @@ void VividApp::Render() {
     m_pImmediateContext->SetRenderTargets(1, &pRTV, pDSV, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
 
     // Clear the back buffer
-    const float ClearColor[] = { 0,0,0, 1.0f };
+    const float ClearColor[] = { 0.5f,0,0, 1.0f };
     // Let the engine perform required state transitions
     m_pImmediateContext->ClearRenderTarget(pRTV, ClearColor, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
     m_pImmediateContext->ClearDepthStencil(pDSV, CLEAR_DEPTH_FLAG, 1.f, 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
@@ -372,4 +373,5 @@ void VividApp::Render() {
 }
 
 
+const char* Vivid::App::VividApp::ImpPath = NULL;
 const char* Vivid::App::VividApp::AppPath = NULL;

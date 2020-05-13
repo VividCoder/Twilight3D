@@ -5,20 +5,27 @@ using namespace Vivid::Renderer::States;
 
 RenderState3DNormal::RenderState3DNormal() {
 
+
+    printf("Creating RS3D.\n");
     RefCntAutoPtr<IRenderDevice> device = Vivid::App::VividApp::GetDevice();
     RefCntAutoPtr<ISwapChain> swapChain = Vivid::App::VividApp::GetSwapChain();
     RefCntAutoPtr<IEngineFactory> engineFactory = Vivid::App::VividApp::GetEngineFactory();
-
+    printf("Got resources\n");
 
     BlendStateDesc Blend;
 
+    printf("Setting blend.\n");
     Blend.RenderTargets[0].BlendEnable = true;
     Blend.RenderTargets[0].SrcBlend = BLEND_FACTOR_ONE;
     Blend.RenderTargets[0].DestBlend = BLEND_FACTOR_ZERO;
 
+    printf("Created.\n");
     PipelineStateCreateInfo PSOCreateInfo;
     PipelineStateDesc& PSODesc = PSOCreateInfo.PSODesc;
 
+
+
+    printf("Creating pso.\n");
     // Pipeline state name is used by the engine to report issues.
     // It is always a good idea to give objects descriptive names.
     PSODesc.Name = "RenderState3DNormal";
@@ -43,7 +50,7 @@ RenderState3DNormal::RenderState3DNormal() {
     PSODesc.GraphicsPipeline.BlendDesc = Blend;
     
     // clang-format on
-
+    printf("Created\n");
     ShaderCreateInfo ShaderCI;
     // Tell the system that the shader source code is in HLSL.
     // For OpenGL, the engine will convert this into GLSL under the hood.
@@ -52,6 +59,7 @@ RenderState3DNormal::RenderState3DNormal() {
     // OpenGL backend requires emulated combined HLSL texture samplers (g_Texture + g_Texture_sampler combination)
     ShaderCI.UseCombinedTextureSamplers = true;
 
+    printf("Creating shaders\n");
     // In this tutorial, we will load shaders from file. To be able to do that,
     // we need to create a shader source stream factory
     RefCntAutoPtr<IShaderSourceInputStreamFactory> pShaderSourceFactory;
@@ -77,6 +85,10 @@ RenderState3DNormal::RenderState3DNormal() {
         device->CreateBuffer(CBDesc, nullptr, &vsConsts2);
     }
 
+    printf("created vertex shader\n");
+
+
+    printf("Creating pixel shader.\n");
     // Create a pixel shader
     RefCntAutoPtr<IShader> pPS;
     {
@@ -87,6 +99,7 @@ RenderState3DNormal::RenderState3DNormal() {
         device->CreateShader(ShaderCI, &pPS);
     }
 
+    printf("Created pixel shader.");
     // clang-format off
     // Define vertex shader input layout
     LayoutElement LayoutElems[] =
@@ -99,7 +112,10 @@ RenderState3DNormal::RenderState3DNormal() {
         LayoutElement{3,0,3,VT_FLOAT32,False },
         LayoutElement{4,0,3,VT_FLOAT32,False }
     };
+    printf("Created layout elements.\n");
 
+
+    printf("Creating pipeline details.\n");
     // clang-format on
     PSODesc.GraphicsPipeline.InputLayout.LayoutElements = LayoutElems;
     PSODesc.GraphicsPipeline.InputLayout.NumElements = _countof(LayoutElems);
@@ -115,7 +131,7 @@ RenderState3DNormal::RenderState3DNormal() {
     // type (SHADER_RESOURCE_VARIABLE_TYPE_STATIC) will be used. Static variables never
     // change and are bound directly through the pipeline state object.
 
-   
+    printf("Creating var types.\n");
     
     ShaderResourceVariableDesc Vars[] =
     {
@@ -142,8 +158,10 @@ RenderState3DNormal::RenderState3DNormal() {
     PSODesc.ResourceLayout.NumStaticSamplers = _countof(StaticSamplers);
 
 
+    printf("Creating final pipeline obj.\n");
+
     device->CreatePipelineState(PSOCreateInfo, &pState);
-    
+    printf("Created.\n");
     BlendStateDesc Blend2;
     Blend2.RenderTargets[0].BlendEnable = true;
     Blend2.RenderTargets[0].SrcBlend = BLEND_FACTOR_ONE;
@@ -153,13 +171,16 @@ RenderState3DNormal::RenderState3DNormal() {
     PSODesc.GraphicsPipeline.DepthStencilDesc.DepthEnable = true;
     PSODesc.GraphicsPipeline.DepthStencilDesc.DepthFunc = COMPARISON_FUNC_EQUAL;
 
-    device->CreatePipelineState(PSOCreateInfo, &pState2);
-   
+    printf("Creating secondary pipeline.\n");
 
+    device->CreatePipelineState(PSOCreateInfo, &pState2);
+    printf("Created.\n");
+
+    printf("Creating final resources.\n");
     pState->GetStaticVariableByName(SHADER_TYPE_VERTEX, "Constants")->Set(vsConsts);
     pState2->GetStaticVariableByName(SHADER_TYPE_VERTEX, "Constants")->Set(vsConsts2);
     // Create a shader resource binding object and bind all static resources in it
     pState->CreateShaderResourceBinding(&pRB, true);
     pState2->CreateShaderResourceBinding(&pRB2, true);
-
+    printf("Created.\n");
 };

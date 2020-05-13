@@ -83,6 +83,9 @@ namespace VividNet.Scene.Nodes
         public void SetRotation(float pitch,float yaw,float roll)
         {
 
+           // pitch = Math.Maths.DegToRad(pitch);
+         //   yaw = Math.Maths.DegToRad(yaw);
+          //  roll = Math.Maths.DegToRad(roll);
             BindScene.vSceneNodeSetRotate(ID, pitch, yaw, roll);
 
         }

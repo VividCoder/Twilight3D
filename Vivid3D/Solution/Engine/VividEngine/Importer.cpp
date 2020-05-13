@@ -51,11 +51,18 @@ void add_node(const C_STRUCT aiNode* nd, VSceneEntity* ent)
 
 VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
-	auto rpath = Vivid::App::VividApp::GetResPath(path);
+	//auto rpath = Vivid::App::VividApp::GetResPath(path);
+
+	printf("importing\n");
+
+	auto rpath = path;
 
 	unsigned int flags = aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_ConvertToLeftHanded;
 
 	auto root = aiImportFile(rpath, flags);
+
+	printf("imported.\n");
+	//while(true){}
 
 	//vector<Vivid::Mesh::Mesh3D*> meshes;
 
@@ -75,14 +82,18 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 //	DBOUT("Mats:" << root->mNumMaterials << "\n");
 
+	printf("reading materials.\n");
+	printf("count:%d\n", root->mNumMaterials);
+
 	for (int i = 0; i < root->mNumMaterials; i++) {
 
 		Vivid::Material::Material* mat = new Material::Material();
-
+		printf("\n Math:%d \n", i);
 		auto am = root->mMaterials[i];
 
 		if(am->GetTextureCount(aiTextureType_DIFFUSE)>0)
 		{
+			printf("Reading textures.\n");
 
 			am->GetTexture(aiTextureType_DIFFUSE, 0, &tpath);
 
@@ -90,13 +101,17 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 			string p2 = p.replace(0, 2, "");
 
-
-
-			Texture2D* tex = new Texture2D(&tpath.data[0]);
+			printf("Importing Texture:");
+			printf(&tpath.data[0]);
+			printf(".\n");
+		
+			Texture2D* tex = new Texture2D(&tpath.data[0],true);
 
 			//	DBOUT("Mat:" << i << " Tex:" << p2.c_str() << "\n");
 
 			mat->SetDiffuse(tex);
+
+			printf("read texture\n");
 
 		}
 
@@ -105,7 +120,7 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 		{
 			am->GetTexture(aiTextureType_NORMALS, 0, &tpath);
 
-			mat->SetNormal(new Texture2D(&tpath.data[0]));
+			mat->SetNormal(new Texture2D(&tpath.data[0],true));
 
 		}
 

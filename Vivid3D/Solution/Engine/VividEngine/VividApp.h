@@ -20,6 +20,8 @@ namespace Vivid {
 
             VividApp();
             static std::string rp;
+            static std::string imp_path;
+            static const char* ImpPath; 
             static void SetPath(const char* path)
             {
 
@@ -28,7 +30,32 @@ namespace Vivid {
 
             }
             
+            static void SetImpPath(const char* path) {
 
+                imp_path = std::string(path);
+                ImpPath = imp_path.c_str();
+
+            }
+          
+            static const char* GetImpPath(const char *path) {
+
+                auto r = std::string(imp_path) + std::string(path);
+
+                int siz = r.length() + 1;
+
+                const char* ns = r.c_str();
+
+                char* rs = new char[siz];
+                for (int i = 0; i < siz; i++) {
+
+                    rs[i] = ns[i];
+
+                }
+                rs[siz - 1] = 0;
+
+
+                return rs;
+            }
             static const char* GetPath()
             {
 
@@ -37,6 +64,15 @@ namespace Vivid {
             }
 
             static const char* GetResPath(const char* path) {
+
+
+                printf("ResCr:");
+                printf(path);
+                printf("\n");
+
+                printf("App:");
+                printf(AppPath);
+                printf("\n");
 
                 auto r =  std::string(AppPath) + std::string(path);
                 
@@ -52,7 +88,9 @@ namespace Vivid {
                 }
                 rs[siz - 1] = 0;
 
-                
+                printf("ResourcePath:");
+                printf(rs);
+                printf("!\n");
                 return rs;
 
 

@@ -51,12 +51,22 @@ Texture2D::Texture2D(void* data, int w, int h,int bpp) {
 
 };
 
-Texture2D::Texture2D(const char* path) {
+Texture2D::Texture2D(const char* path,bool useImp) {
 
-	const char* realPath = Vivid::App::VividApp::GetResPath(path);
+    const char* realPath;
+        
 
+    if (useImp) {
+        realPath = Vivid::App::VividApp::GetImpPath(path);
+    }else{
+       realPath = Vivid::App::VividApp::GetResPath(path);
+    }
    // DBOUT("TexPath:" << realPath << "\n");
     path = realPath;
+
+    printf("real:");
+    printf(realPath);
+    printf("\n");
 
     std::vector<unsigned char> img;
     unsigned iw, ih;
@@ -72,10 +82,13 @@ Texture2D::Texture2D(const char* path) {
 
     auto nt = new Texture2D(&img[0],iw,ih,4);
 
+    printf("Loaded\n");
+
     tex = nt->GetTex();
     texView = nt->GetView();
 
     texpath = path;
+    printf("Done.\n");
     
     /*
     TextureLoadInfo loadInfo;

@@ -102,7 +102,7 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>VividEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Projects\Vivid3D\Solution\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <OutputFile>C:\Projects\Vivid3D\Solution\Net\NetTestVivid1\bin\x64\Debug\VividBind.dll</OutputFile>
+      <OutputFile>C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\bin\x64\Debug\VividBind.dll</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

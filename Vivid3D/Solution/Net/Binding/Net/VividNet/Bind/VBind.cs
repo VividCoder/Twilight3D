@@ -24,5 +24,8 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public extern static int vSetPath([MarshalAs(UnmanagedType.LPStr)]string path);
 
+        [DllImport("VividBind.dll")]
+        public extern static int vSetImpPath([MarshalAs(UnmanagedType.LPStr)]string path);
+
     }
 }

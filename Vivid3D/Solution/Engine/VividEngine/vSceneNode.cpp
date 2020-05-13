@@ -24,7 +24,7 @@ float4x4 VSceneNode::GetWorld()
 
 	}
 
-	return (float4x4::Translation(Position) * Rotation * float4x4::Scale(Scale)) * top;
+	return (Rotation * float4x4::Translation(Position)) * top;
 
 
 }

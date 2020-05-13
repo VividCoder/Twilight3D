@@ -171,6 +171,47 @@ extern "C" {
 
     }
 
+
+    // :- Meshes
+
+    VIVIDBIND_API Vivid::Mesh::Mesh3D* vNewMesh(int vertices, int tris) {
+
+        return new Vivid::Mesh::Mesh3D(vertices, tris);
+
+    }
+
+    VIVIDBIND_API void vSetMeshVertex(Vivid::Mesh::Mesh3D *mesh,int ix, float x1, float y1, float z1, float u, float v, float w, float nx, float ny, float nz, float tx, float ty, float tz, float bx, float by, float bz) {
+
+        auto vert = new Vivid::DataTypes::Vertex3D();
+
+        vert->Pos = float3(x1, y1, z1);
+        vert->Normal = float3(nx, ny, nz);
+        vert->Tangent = float3(tx, ty, tz);
+        vert->BiNormal = float3(bx, by, bz);
+        vert->UV = float3(u, v, w);
+       
+        mesh->SetVertex(ix, vert);
+
+    }
+
+    VIVIDBIND_API void vSetMeshTri(Vivid::Mesh::Mesh3D* mesh, int ix, int v0, int v1, int v2) {
+
+        auto tri = new Vivid::DataTypes::Tri();
+
+        tri->V0 = v0;
+        tri->V1 = v1;
+        tri->V2 = v2;
+
+        mesh->SetTri(ix, tri);
+
+    }
+
+    VIVIDBIND_API void vMeshFinal(Vivid::Mesh::Mesh3D* mesh) {
+
+        mesh->Final();
+
+    }
+
     // :- Lights
 
     VIVIDBIND_API void vSceneAddLight(Vivid::Scene::SceneBase* scene, Vivid::Scene::Nodes::NodeLight *light) {
@@ -188,6 +229,21 @@ extern "C" {
     VIVIDBIND_API void vLightSetDiff(Vivid::Scene::Nodes::NodeLight *l, float r, float g, float b) {
 
         l->SetDiffuse(r, g, b);
+
+    }
+
+    // :- Entity
+
+    VIVIDBIND_API Vivid::Scene::Nodes::VSceneEntity* vNewEntity() {
+
+        return new Vivid::Scene::Nodes::VSceneEntity();
+
+
+    }
+
+    VIVIDBIND_API void vEntityAddMesh(Vivid::Scene::Nodes::VSceneEntity * ent,Vivid::Mesh::Mesh3D* mesh) {
+
+        ent->AddMesh(mesh);
 
     }
 
@@ -229,6 +285,12 @@ extern "C" {
         return 0;
     }
 
+    VIVIDBIND_API void vSetImpPath(const char* path) {
+
+        Vivid::App::VividApp::SetImpPath(path);
+
+    }
+
     VIVIDBIND_API int initWinHW(HWND hw)
     {
 
@@ -251,11 +313,14 @@ extern "C" {
 
     // :- Texture
 
-    VIVIDBIND_API Vivid::Texture::Texture2D* vLoadTexture2D(const char* path) {
+    VIVIDBIND_API Vivid::Texture::Texture2D* vLoadTexture2D(const char* path,int useImp) {
 
-      
-        return new Vivid::Texture::Texture2D(path);
-
+        if (useImp) {
+            return new Vivid::Texture::Texture2D(path,true);
+        }
+        else {
+            return new Vivid::Texture::Texture2D(path, false);
+        }
     }
 
     VIVIDBIND_API Vivid::Texture::Texture2D* vCreateTexture2D(void* data, int w, int h,int bpp  ) {

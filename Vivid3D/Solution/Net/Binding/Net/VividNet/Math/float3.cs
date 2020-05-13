@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VividNet.Math
 {
-    public class float3
+    public struct float3
     {
 
         public float X, Y, Z;

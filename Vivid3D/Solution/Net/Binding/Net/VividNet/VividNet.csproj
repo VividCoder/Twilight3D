@@ -65,17 +65,22 @@
     <Compile Include="App\App.cs" />
     <Compile Include="Bind\BindApp.cs" />
     <Compile Include="Bind\BindDraw2D.cs" />
+    <Compile Include="Bind\BindEntity.cs" />
     <Compile Include="Bind\BindImport.cs" />
     <Compile Include="Bind\BindLight.cs" />
+    <Compile Include="Bind\BindMesh.cs" />
     <Compile Include="Bind\BindRenderer.cs" />
     <Compile Include="Bind\BindScene.cs" />
     <Compile Include="Bind\BindTexture.cs" />
     <Compile Include="Bind\VBind.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Draw\Draw2D.cs" />
+    <Compile Include="Gen\GenGrid.cs" />
     <Compile Include="Import\Importer.cs" />
     <Compile Include="Math\Color.cs" />
     <Compile Include="Math\float3.cs" />
+    <Compile Include="Math\Maths.cs" />
+    <Compile Include="Mesh\Mesh3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderer\SceneRenderer.cs" />
     <Compile Include="Scene\Nodes\NodeCam.cs" />
@@ -85,6 +90,9 @@
     <Compile Include="Scene\SceneBase.cs" />
     <Compile Include="Texture\Texture2D.cs" />
     <Compile Include="VividObj.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

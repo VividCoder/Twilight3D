@@ -25,3 +25,5 @@ C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\obj\x64\Debug\Vivid
 C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\obj\x64\Debug\VividSceneEditor.exe
 C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\obj\x64\Debug\VividSceneEditor.pdb
 C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\obj\x64\Debug\VividSceneEditor.ContentBrowser.resources
+C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\bin\x64\Debug\VividNet.dll
+C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\bin\x64\Debug\VividNet.pdb

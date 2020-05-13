@@ -35,6 +35,8 @@ using namespace Diligent;
 
      }
 
+     material = new Vivid::Material::Material();
+
 }
 
  void Mesh3D::SetVertex(int index, Vertex3D* v) {
