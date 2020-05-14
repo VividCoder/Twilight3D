@@ -16,6 +16,8 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public static extern void vEntityAddMesh(IntPtr ent, IntPtr mesh);
 
+        [DllImport("VividBind.dll")]
+        public static extern void vEntitySetRenderMode(IntPtr ent, int rMode);
 
     }
 }

@@ -90,6 +90,13 @@ namespace VividNet.Scene.Nodes
 
         }
 
+        public void Move(float x,float y,float z)
+        {
+
+            BindScene.vNodeMove(ID, x, y, z);
+
+        }
+
         public void UpdateCS()
         {
 

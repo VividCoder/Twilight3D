@@ -135,6 +135,12 @@
     <ClInclude Include="NodeLight.h">
       <Filter>Scene\Nodes</Filter>
     </ClInclude>
+    <ClInclude Include="RenderState3DFullBright.h">
+      <Filter>Renderer\RenderStates</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderState3D.h">
+      <Filter>Renderer\RenderStates</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -199,6 +205,12 @@
     </ClCompile>
     <ClCompile Include="NodeLight.cpp">
       <Filter>Scene\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderState3DFullBright.cpp">
+      <Filter>Renderer\RenderStates</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderState3D.cpp">
+      <Filter>Renderer\RenderStates</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

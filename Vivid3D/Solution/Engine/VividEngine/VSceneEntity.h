@@ -8,6 +8,13 @@ namespace Vivid {
 
 		namespace Nodes {
 
+
+			enum RenderMode {
+
+				Lit,FullBright
+
+			};
+
 			class VSceneEntity :
 				public VSceneNode
 			{
@@ -30,9 +37,22 @@ namespace Vivid {
 
 				}
 
+				void SetRenderMode(RenderMode mode) {
+
+					rendermode = mode;
+
+				}
+
+				RenderMode GetRenderMode() {
+
+					return rendermode;
+
+				}
+
 			private:
 
 				vector<Vivid::Mesh::Mesh3D*> meshes;
+				RenderMode rendermode;
 
 			};
 

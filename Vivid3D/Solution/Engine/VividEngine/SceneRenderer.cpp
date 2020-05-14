@@ -6,13 +6,16 @@
 
 using namespace Vivid::Renderer;
 
-Vivid::Renderer::States::RenderState3DNormal *s1;
+Vivid::Renderer::States::RenderState3D *s1;
+Vivid::Renderer::States::RenderState3DFullBright* sFB;
 
 float4x4 mvp;
 
 float4x4 mview;
 float4x4 mmodel;
 float4x4 mproj;
+
+Vivid::Scene::Nodes::RenderMode cMode;
 
 vector<Vivid::Scene::Nodes::NodeLight*> light;
 
@@ -24,50 +27,118 @@ SceneRenderer::SceneRenderer(Vivid::Scene::SceneBase* scene)
 {
 
 	pScene = scene;
-	rs1 = new Vivid::Renderer::States::RenderState3DNormal();
-    s1 = rs1;
+	rsLit = new Vivid::Renderer::States::RenderState3DNormal();
+    rsFB = new Vivid::Renderer::States::RenderState3DFullBright();
+    s1 = rsLit;
+    sFB = rsFB;
+
 
 
 };
 
-void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
+void render_meshFB(Vivid::Mesh::Mesh3D* mesh) {
+
+//    printf("RenderMeshFB\n");
+    RefCntAutoPtr<IDeviceContext> devCon = Vivid::App::VividApp::GetDeviceContext();
+    Vivid::Material::Material* mat;
+    RefCntAutoPtr<IShaderResourceBinding> rb;
+    Uint32 offset = 0;
+    DrawIndexedAttribs DrawAttrs;
+    //printf("11\n");
+    // Set the pipeline state
+    devCon->SetPipelineState(sFB->GetState());
+    //printf("11-2\n");
+    devCon->CommitShaderResources(sFB->GetBinding(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+    //printf("11-3\n");
+    rb = sFB->GetBinding();
 
 
-	 auto devCon = Vivid::App::VividApp::GetDeviceContext();
+    //printf("22\n");
+    mat = mesh->GetMaterial();
+
+    rb->GetVariableByName(SHADER_TYPE_PIXEL, "color_Texture")->Set(mat->GetDiffuse()->GetView());
+
+    //printf("33\n");
+    offset = 0;
+    IBuffer* pBuffs2[] = { mesh->GetVB()->GetVBuf() };
+    devCon->SetVertexBuffers(0, 1, pBuffs2, &offset, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
+    devCon->SetIndexBuffer(mesh->GetVB()->GetIBuf(), 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+    //printf("44\n");
+    struct Constants2 {
+
+        float4x4 g_View;
+        float4x4 g_Model;
+        float4x4 g_Projection;
 
 
 
-     // Set the pipeline state
-     devCon->SetPipelineState(s1->GetState());
-     devCon->CommitShaderResources(s1->GetBinding(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
-     auto rb = s1->GetBinding();
+    };
 
-     auto mat = mesh->GetMaterial();
-     
+    //printf("55\n");
+    MapHelper<Constants2> CBConstants2(devCon, sFB->GetConsts(), MAP_WRITE, MAP_FLAG_DISCARD);
+    CBConstants2->g_View = mview.Transpose();
+    CBConstants2->g_Model = mmodel.Transpose();
+    CBConstants2->g_Projection = mproj.Transpose();
+    //      CBConstants->lightDir = float4(0.4f, 0.3f, -0.2f, 0);
 
-     //if (mat->hasDiffuse()) {
+    //printf("66\n");
+    devCon->CommitShaderResources(sFB->GetBinding(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+
+    //printf("77\n");
+             // This is an indexed draw call
+    DrawAttrs.IndexType = VT_UINT32; // Index type
+    DrawAttrs.NumIndices = mesh->IndicesNum() * 3;
+    // Verify the state of vertex and index buffers
+    DrawAttrs.Flags = DRAW_FLAG_VERIFY_ALL;
+    devCon->DrawIndexed(DrawAttrs);
+    //printf("88\n");
+
+}
+
+void render_meshLit(Vivid::Mesh::Mesh3D* mesh) {
+
+    RefCntAutoPtr<IDeviceContext> devCon = Vivid::App::VividApp::GetDeviceContext();
+    Vivid::Material::Material* mat;
+    RefCntAutoPtr<IShaderResourceBinding> rb;
+    Uint32 offset = 0;
+    DrawIndexedAttribs DrawAttrs;
+
+
+    //devCon = Vivid::App::VividApp::GetDeviceContext();
+
+
+
+    // Set the pipeline state
+    devCon->SetPipelineState(s1->GetState());
+    devCon->CommitShaderResources(s1->GetBinding(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
+    rb = s1->GetBinding();
+
+     mat = mesh->GetMaterial();
+
+
+    //if (mat->hasDiffuse()) {
 
 
 
 
-         //if(mat->)
+        //if(mat->)
 
-        // DBOUT("Tex:" << mat->GetDiffuse()->GetPath() << "\n");
-       
-         rb->GetVariableByName(SHADER_TYPE_PIXEL, "color_Texture")->Set(mat->GetDiffuse()->GetView());
-         rb->GetVariableByName(SHADER_TYPE_PIXEL, "normal_Texture")->Set(mat->GetNormal()->GetView());
+       // DBOUT("Tex:" << mat->GetDiffuse()->GetPath() << "\n");
 
-     //}
+    rb->GetVariableByName(SHADER_TYPE_PIXEL, "color_Texture")->Set(mat->GetDiffuse()->GetView());
+    rb->GetVariableByName(SHADER_TYPE_PIXEL, "normal_Texture")->Set(mat->GetNormal()->GetView());
 
-     
+    //}
 
 
 
 
 
-    // Bind vertex and index buffers
-    Uint32   offset = 0;
-    IBuffer* pBuffs[] = {  mesh->GetVB()->GetVBuf() };
+
+
+   // Bind vertex and index buffers
+
+    IBuffer* pBuffs[] = { mesh->GetVB()->GetVBuf() };
     devCon->SetVertexBuffers(0, 1, pBuffs, &offset, RESOURCE_STATE_TRANSITION_MODE_TRANSITION, SET_VERTEX_BUFFERS_FLAG_RESET);
     devCon->SetIndexBuffer(mesh->GetVB()->GetIBuf(), 0, RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
 
@@ -135,7 +206,7 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
 
         if (first) {
             devCon->CommitShaderResources(s1->GetBinding(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
-        
+
         }
         else {
             devCon->CommitShaderResources(s1->GetBinding2(), RESOURCE_STATE_TRANSITION_MODE_TRANSITION);
@@ -152,7 +223,7 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
         DrawAttrs.Flags = DRAW_FLAG_VERIFY_ALL;
         devCon->DrawIndexed(DrawAttrs);
 
-        if (first && light.size()>1) {
+        if (first && light.size() > 1) {
 
             first = false;
             devCon->SetPipelineState(s1->GetState2());
@@ -166,6 +237,29 @@ void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
         }
         //   rb->GetVariableByName(SHADER_TYPE_PIXEL, "g_Texture")->Release();
     }
+
+
+
+}
+
+void render_mesh(Vivid::Mesh::Mesh3D* mesh) {
+
+   
+    switch (cMode) {
+
+    case Vivid::Scene::Nodes::FullBright:
+
+        render_meshFB(mesh);
+
+
+        break;
+    case Vivid::Scene::Nodes::Lit:
+
+        render_meshLit(mesh);
+
+        break;
+    }
+
 }
 
 void render_node(Vivid::Scene::VSceneNode* node) {
@@ -183,6 +277,7 @@ void render_node(Vivid::Scene::VSceneNode* node) {
     else {
         //    return 2;
 
+        cMode = isn->GetRenderMode();
 
         mvp = node->GetWorld() * cam->GetWorld();
 

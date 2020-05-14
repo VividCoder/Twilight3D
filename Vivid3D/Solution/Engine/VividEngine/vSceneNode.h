@@ -79,6 +79,16 @@ namespace Vivid {
 
 			}
 
+			void Move(float x, float y, float z) {
+
+				auto mv = float3(x, y, z);
+
+				mv = mv * Rotation;
+
+				Position = Position + mv;
+
+			}
+
 			void Turn(float pitch, float yaw, float roll) {
 
 

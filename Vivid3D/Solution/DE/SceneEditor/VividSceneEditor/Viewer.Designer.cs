@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sceneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,8 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.exitVividToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +131,11 @@
             this.exitVividToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.exitVividToolStripMenuItem.Text = "Exit Vivid";
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Viewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,6 +147,8 @@
             this.Name = "Viewer";
             this.Load += new System.EventHandler(this.Viewer_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Viewer_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Viewer_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Viewer_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Viewer_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Viewer_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Viewer_MouseUp);
@@ -162,5 +172,7 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem exitVividToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

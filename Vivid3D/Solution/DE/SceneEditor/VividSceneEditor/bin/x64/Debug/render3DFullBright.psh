@@ -1,0 +1,44 @@
+Texture2D    color_Texture;
+SamplerState color_Texture_sampler; // By convention, texture samplers must use the '_sampler' suffix
+
+
+struct PSInput 
+{ 
+    float4 Pos   : SV_POSITION; 
+    float3 UV : TEX_COORD;
+
+
+  
+};
+
+struct PSOutput
+{ 
+    float4 Color : SV_TARGET; 
+};
+
+// Note that if separate shader objects are not supported (this is only the case for old GLES3.0 devices), vertex
+// shader output variable name must match exactly the name of the pixel shader input variable.
+// If the variable has structure type (like in this example), the structure declarations must also be indentical.
+void main(in  PSInput  PSIn,
+          out PSOutput PSOut)
+{
+    
+    float2 uv = PSIn.UV.xy;
+    
+  
+    float4 texCol = color_Texture.Sample(color_Texture_sampler, uv);
+ 
+    
+    //output = 1.0;
+    //texCol = 1.0;
+
+
+    PSOut.Color = texCol; //   +texCol;
+ 
+    //fl////oat4 cc = normal_Texture.Sample(normal_Texture_sampler, PSIn.UV.xy);
+    
+    
+    
+   // PSOut.Color = texCol * fcol;
+    
+}

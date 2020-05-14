@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WeifenLuo.WinFormsUI.Docking;
 using VividNet;
 using System.Configuration;
+using System.Threading;
 
 namespace VividSceneEditor
 {
@@ -24,7 +25,42 @@ namespace VividSceneEditor
         {
             InitializeComponent();
             Text = "View";
-            
+            CT1 = new Thread(new ThreadStart(Control_Thread));
+            CT1.Priority = ThreadPriority.Normal;
+            CT1.Start();
+
+        }
+        Thread CT1;
+        int c = 0;
+        public void Control_Thread()
+        {
+
+            while (true)
+            {
+                c = c + 1;
+               // Console.WriteLine("!" + c);
+                if (mF)
+                {
+
+                    Cam.Move(0, 0, 1);
+
+                }
+                if (mB)
+                {
+                    Cam.Move(0, 0, -1);
+                }
+                if (mL)
+                {
+                    Cam.Move(-1, 0, 0);
+                }
+                if (mR)
+                {
+                    Cam.Move(1, 0, 0);
+                }
+                System.Threading.Thread.Sleep(25);
+
+            }
+
         }
 
         protected override void OnLoad(EventArgs e)
@@ -43,6 +79,7 @@ namespace VividSceneEditor
             Cam.Position = new VividNet.Math.float3(0, 35,0 );
             Grid1 = VividNet.Gen.GenGrid.Grid(50);
             Scene.AddNode(Grid1);
+            Grid1.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
             //Grid1.SetRotation(90, 0, 0);
 
             Grid1.Position = new VividNet.Math.float3(0, 0,0);
@@ -53,7 +90,7 @@ namespace VividSceneEditor
         private void Viewer_Paint(object sender, PaintEventArgs e)
         {
             x = x + 1;
-           // Scene.Root.SetRotation(x*3, x, 0);
+            // Scene.Root.SetRotation(x*3, x, 0);
 
             VividNet.Bind.VBind.vRender();
 
@@ -61,6 +98,8 @@ namespace VividSceneEditor
 
             VividNet.Bind.VBind.vPresent();
             Invalidate();
+            timer2.Enabled = true;
+          
         }
 
         private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
@@ -85,6 +124,58 @@ namespace VividSceneEditor
 
                 camRot = false;
 
+            }
+        }
+
+        bool mF, mB, mL, mR;
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            int vv = 5;
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Viewer_KeyUp(object sender, KeyEventArgs e)
+        {
+            Console.WriteLine("E:" + e.KeyCode);
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    mF = false;
+                    break;
+                case Keys.S:
+                    mB = false;
+                    break;
+                case Keys.A:
+                    mL = false; ;
+                    break;
+                case Keys.D:
+                    mR = false;
+                    break;
+            }
+        }
+
+        private void Viewer_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    mF = true;
+                    break;
+                case Keys.S:
+                    mB = true;
+                    break;
+                case Keys.A:
+                    mL = true;
+                    break;
+                case Keys.D:
+                    mR = true;
+                    break;
             }
         }
 

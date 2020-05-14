@@ -62,6 +62,8 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public static extern IntPtr vSceneNodeSetRotate(IntPtr node, float pitch, float yaw, float roll);
 
+        [DllImport("VividBind.dll")]
+        public static extern void vNodeMove(IntPtr node, float x, float y, float z);
 
 
 

@@ -85,7 +85,7 @@ void main(in  PSInput  PSIn,
     //texCol = 1.0;
 
 
-    PSOut.Color = 1.0+((output * (texCol))); //   +texCol;
+    PSOut.Color =((output * (texCol))); //   +texCol;
  
     //fl////oat4 cc = normal_Texture.Sample(normal_Texture_sampler, PSIn.UV.xy);
     

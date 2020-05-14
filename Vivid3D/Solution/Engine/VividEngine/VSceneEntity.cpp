@@ -8,6 +8,7 @@ using namespace Vivid::Scene::Nodes;
 VSceneEntity::VSceneEntity() {
 
 	meshes.resize(0);
+	rendermode = RenderMode::Lit;
 
 }
 

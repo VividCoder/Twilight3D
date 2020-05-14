@@ -2,8 +2,6 @@ c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vividengine.pch
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vividengine.pdb
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vividengine.idb
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\pch.obj
-c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vscenenode.obj
-c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vsceneentity.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vmesh3d.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vmesh2d.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vividapp.obj
@@ -13,6 +11,8 @@ c:\projects\vivid3d\solution\engine\vividengine\x64\debug\texture2d.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\scenerenderer.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\scenebase.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\renderstate3dnormal.obj
+c:\projects\vivid3d\solution\engine\vividengine\x64\debug\renderstate3dfullbright.obj
+c:\projects\vivid3d\solution\engine\vividengine\x64\debug\renderstate3d.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\renderstate2d.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\nodelight.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\nodecam.obj
@@ -22,6 +22,8 @@ c:\projects\vivid3d\solution\engine\vividengine\x64\debug\material.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\importer.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\draw2d.obj
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\datagen.obj
+c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vscenenode.obj
+c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vsceneentity.obj
 c:\projects\vivid3d\solution\x64\debug\vividengine.lib
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vividengine.tlog\cl.command.1.tlog
 c:\projects\vivid3d\solution\engine\vividengine\x64\debug\vividengine.tlog\cl.read.1.tlog

@@ -169,6 +169,8 @@
     <ClInclude Include="NodeLight.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="RenderState2D.h" />
+    <ClInclude Include="RenderState3D.h" />
+    <ClInclude Include="RenderState3DFullBright.h" />
     <ClInclude Include="RenderState3DNormal.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneRenderer.h" />
@@ -197,6 +199,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RenderState2D.cpp" />
+    <ClCompile Include="RenderState3D.cpp" />
+    <ClCompile Include="RenderState3DFullBright.cpp" />
     <ClCompile Include="RenderState3DNormal.cpp" />
     <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="SceneRenderer.cpp" />

@@ -71,6 +71,12 @@ extern "C" {
 
     }
 
+    VIVIDBIND_API void vNodeMove(Vivid::Scene::VSceneNode* node, float x, float y, float z) {
+
+        node->Move(x, y, z);
+
+    }
+
     VIVIDBIND_API void vSceneSetRoot(Vivid::Scene::SceneBase* scene, Vivid::Scene::VSceneNode* node) {
 
         scene->SetRoot(node);
@@ -245,6 +251,18 @@ extern "C" {
 
         ent->AddMesh(mesh);
 
+    }
+
+    VIVIDBIND_API void vEntitySetRenderMode(Vivid::Scene::Nodes::VSceneEntity * ent,int mode) {
+
+        switch (mode) {
+        case 0:
+            ent->SetRenderMode(Vivid::Scene::Nodes::RenderMode::Lit);
+            break;
+        case 1:
+            ent->SetRenderMode(Vivid::Scene::Nodes::RenderMode::FullBright);
+            break;
+        }
     }
 
     // :- Renderer

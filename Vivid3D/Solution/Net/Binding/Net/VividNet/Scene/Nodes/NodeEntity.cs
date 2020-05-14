@@ -34,5 +34,18 @@ namespace VividNet.Scene.Nodes
 
         }
 
+        public void SetRenderMode(RenderMode mode)
+        {
+
+            BindEntity.vEntitySetRenderMode(ID, (int)mode);
+
+        }
+
+    }
+    public enum RenderMode
+    {
+
+        Lit=0,FullBright
+
     }
 }
