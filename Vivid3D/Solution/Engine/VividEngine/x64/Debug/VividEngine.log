@@ -1,8 +1,12 @@
 ﻿  pch.cpp
+  BoundingBox.cpp
+  CamPick.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   DataGen.cpp
   Draw2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Draw2D.cpp(15,102): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
@@ -28,12 +32,12 @@ C:\Projects\Vivid3D\Solution\Engine\VividEngine\Draw2D.cpp(113,74): warning C424
               T=float
           ]
   Importer.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(33,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(30,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(32,20): warning C4018: '<': signed/unsigned mismatch
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(44,20): warning C4018: '<': signed/unsigned mismatch
@@ -41,91 +45,109 @@ C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(88,20): warning C40
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(130,20): warning C4018: '<': signed/unsigned mismatch
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(150,21): warning C4018: '<': signed/unsigned mismatch
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Importer.cpp(177,21): warning C4018: '<': signed/unsigned mismatch
+  Intersection.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Intersection.h(1,9): warning C4068: unknown pragma
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Intersection.cpp(10,36): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Intersection.cpp(24,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Material.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   MathsUtil.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   MeshTypes2.cpp
   NodeCam.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   NodeLight.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   RenderState2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   RenderState3D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   RenderState3DFullBright.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   RenderState3DNormal.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   SceneBase.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(33,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(30,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(40,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(51,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(131,9): warning C4552: '/': result of expression not used
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(132,9): warning C4552: '/': result of expression not used
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(133,9): warning C4552: '/': result of expression not used
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(144,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(144,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(145,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(145,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(157,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.cpp(158,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   SceneRenderer.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(33,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(30,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(40,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(51,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   Texture2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\Texture2D.cpp(9,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': macro redefinition
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\pch.cpp : message : see previous definition of '_CRT_SECURE_NO_WARNINGS'
   VertexBuffer2D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(11,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(49,48): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(52,40): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer2D.cpp(58,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   VertexBuffer3D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer3D.cpp(11,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer3D.cpp(59,49): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer3D.cpp(62,41): warning C4267: '=': conversion from 'size_t' to 'Diligent::Uint32', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VertexBuffer3D.cpp(68,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  VividApp.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  VMesh2D.cpp
-  VMesh3D.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
   Compiling...
+  VividApp.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  VMesh2D.cpp
+  VMesh3D.cpp
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(33,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\Intersection.h(1,9): warning C4068: unknown pragma
   VSceneEntity.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(44,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(79,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(32,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(46,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VividApp.h(81,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(33,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(30,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   vSceneNode.cpp
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(17,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(23,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
 GraphicsEngineD3D12_64d.lib(GraphicsEngineD3D12_64d.dll) : warning LNK4006: "struct Diligent::IEngineFactoryD3D12 * __cdecl Diligent::GetEngineFactoryD3D12(void)" (?GetEngineFactoryD3D12@Diligent@@YAPEAUIEngineFactoryD3D12@1@XZ) already defined in DiligentCore.lib(EngineFactoryD3D12.obj); second definition ignored

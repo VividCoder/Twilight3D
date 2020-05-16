@@ -66,6 +66,25 @@ namespace VividNet.Bind
         public static extern void vNodeMove(IntPtr node, float x, float y, float z);
 
 
+        [DllImport("VividBind.dll")]
+        public static extern IntPtr vSceneRayToTri(IntPtr scene, float ox, float oy, float oz, float vx, float vy, float vz);
 
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneHitPX(IntPtr hit);
+
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneHitPY(IntPtr hit);
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneHitPZ(IntPtr hit);
+
+        [DllImport("VividBind.dll")]
+        public static extern int vSceneHitHit(IntPtr hit);
+
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneHitDis(IntPtr hit);
+
+        [DllImport("VividBind.dll")]
+        public static extern IntPtr vSceneCamPick(IntPtr scene, int mx, int my);
     }
+
 }

@@ -22,5 +22,13 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public extern static void vMeshFinal(IntPtr mesh);
 
+        [DllImport("VividBind.dll")]
+        public extern static IntPtr vMeshGetMat(IntPtr mesh);
+
+        [DllImport("VividBind.dll")]
+        public extern static void vMeshSetMat(IntPtr mesh, IntPtr mat);
+
+        [DllImport("VividBind.dll")]
+        public extern static IntPtr vMeshGetBounds(IntPtr ent,IntPtr mesh);
     }
 }

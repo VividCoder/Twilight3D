@@ -19,5 +19,18 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public static extern void vEntitySetRenderMode(IntPtr ent, int rMode);
 
+        [DllImport("VividBind.dll")]
+        public static extern int vEntityMeshCount(IntPtr ent);
+
+        [DllImport("VividBind.dll")]
+        public static extern IntPtr vEntityGetMesh(IntPtr ent,int i);
+
+        [DllImport("VividBind.dll")]
+        public static extern void vSetCanPick(IntPtr ent, int can);
+
+        [DllImport("VividBind.dll")]
+        public static extern int vCanPick(IntPtr ent);
     }
+
+
 }

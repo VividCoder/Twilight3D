@@ -157,11 +157,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BoundingBox.h" />
+    <ClInclude Include="CamPick.h" />
     <ClInclude Include="DataGen.h" />
     <ClInclude Include="Draw2D.h" />
     <ClInclude Include="EngineMain.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Importer.h" />
+    <ClInclude Include="Intersection.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="MathsUtil.h" />
     <ClInclude Include="MeshTypes2.h" />
@@ -184,9 +187,12 @@
     <ClInclude Include="vSceneNode.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BoundingBox.cpp" />
+    <ClCompile Include="CamPick.cpp" />
     <ClCompile Include="DataGen.cpp" />
     <ClCompile Include="Draw2D.cpp" />
     <ClCompile Include="Importer.cpp" />
+    <ClCompile Include="Intersection.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="MathsUtil.cpp" />
     <ClCompile Include="MeshTypes2.cpp" />

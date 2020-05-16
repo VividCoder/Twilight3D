@@ -66,7 +66,7 @@ Texture2D::Texture2D(const char* path,bool useImp) {
 
     printf("real:");
     printf(realPath);
-    printf("\n");
+    printf("----\n");
 
     std::vector<unsigned char> img;
     unsigned iw, ih;

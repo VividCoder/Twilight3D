@@ -11,10 +11,10 @@ namespace VividNet.Bind
     {
 
         [DllImport("VividBind.dll")]
-        public extern static IntPtr vLoadTexture2D([MarshalAs(UnmanagedType.LPStr)]string path);
+        public extern static IntPtr vLoadTexture2D([MarshalAs(UnmanagedType.LPStr)]string path,int mp);
 
         [DllImport("VividBind.dll")]
-        public extern static IntPtr vCreateTexture2D([In, Out] [MarshalAs(UnmanagedType.LPArray)] byte[] data, int w, int h);
+        public extern static IntPtr vCreateTexture2D([In, Out] [MarshalAs(UnmanagedType.LPArray)] byte[] data, int w, int h,int bpp);
 
 
     }

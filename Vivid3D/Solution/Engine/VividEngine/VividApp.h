@@ -7,6 +7,8 @@
    os_ << s;                   \
    OutputDebugStringW( os_.str().c_str() );  \
 }
+#include "Common/interface/BasicMath.hpp"
+
 
 using namespace Diligent;
 
@@ -98,6 +100,13 @@ namespace Vivid {
 
             void WindowResize(int w, int h);
             bool InitBackend(HWND hWnd);
+
+            static float4x4 GetProjMat() {
+
+                return float4x4::Projection(45.0f, (float)Vivid::App::VividApp::GetW() / (float)Vivid::App::VividApp::GetH(), 0.1f, 1000.0f, false);
+
+
+            };
 
             bool ProcessCommandLine(const char* CmdLine);
 

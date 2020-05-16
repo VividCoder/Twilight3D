@@ -16,7 +16,8 @@ namespace VividNet.Texture
         public Texture2D(string path)
         {
 
-            ID = BindTexture.vLoadTexture2D(Environment.CurrentDirectory+"\\"+path);
+            ID = BindTexture.vLoadTexture2D(path,0);
+     
 
         }
 
@@ -75,7 +76,7 @@ namespace VividNet.Texture
 
         public Texture2D(byte[] data,int w,int h)
         {
-            ID = BindTexture.vCreateTexture2D(data, w, h);
+            ID = BindTexture.vCreateTexture2D(data, w, h,3);
         }
     }
 }

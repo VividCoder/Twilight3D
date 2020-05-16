@@ -141,6 +141,15 @@
     <ClInclude Include="RenderState3D.h">
       <Filter>Renderer\RenderStates</Filter>
     </ClInclude>
+    <ClInclude Include="BoundingBox.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="CamPick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -211,6 +220,15 @@
     </ClCompile>
     <ClCompile Include="RenderState3D.cpp">
       <Filter>Renderer\RenderStates</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingBox.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="CamPick.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

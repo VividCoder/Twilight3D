@@ -9,6 +9,13 @@ namespace Vivid {
 
 	namespace Scene {
 
+		class SceneHit {
+		public:
+			float3 pos;
+			bool hit = false;
+			float dis = 0;
+		};
+
 		class SceneBase
 		{
 		public:
@@ -28,6 +35,10 @@ namespace Vivid {
 				lights.push_back(light);
 
 			}
+
+			SceneHit* CamPick(int x, int y);
+
+			SceneHit* RayToTri(float3 origin, float3 vec);
 
 			void SetRoot(Vivid::Scene::VSceneNode* node) {
 

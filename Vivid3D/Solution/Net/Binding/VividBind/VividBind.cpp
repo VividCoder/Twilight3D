@@ -11,6 +11,7 @@
 #include "Importer.h"
 #include "SceneRenderer.h"
 #include "NodeLight.h"
+#include "BoundingBox.h"
 using namespace Vivid::App;
 
 #include "framework.h"
@@ -57,6 +58,28 @@ extern "C" {
 
     }
 
+    // :- Material 
+
+    VIVIDBIND_API Vivid::Material::Material * vNewMaterial() {
+
+        return new Vivid::Material::Material;
+
+    };
+
+    VIVIDBIND_API void vMatSetDiffuse(Vivid::Material::Material * mat, Vivid::Texture::Texture2D* tex) {
+
+        mat->SetDiffuse(tex);
+
+    };
+
+    VIVIDBIND_API void vMatSetNormal(Vivid::Material::Material* mat, Vivid::Texture::Texture2D* tex) {
+
+        mat->SetNormal(tex);
+
+    };
+
+
+
     // SCENE
 
     VIVIDBIND_API Vivid::Scene::SceneBase* vNewScene() {
@@ -64,6 +87,77 @@ extern "C" {
         return new Vivid::Scene::SceneBase();
 
     }
+
+    VIVIDBIND_API Vivid::Scene::SceneHit* vSceneRayToTri(Vivid::Scene::SceneBase* scene, float ox, float oy, float oz, float vx, float vy, float vz)
+    {
+
+        return scene->RayToTri(float3(ox, oy, oz), float3(vx, vy, vz));
+
+    }
+
+    VIVIDBIND_API Vivid::Scene::SceneHit* vSceneCamPick(Vivid::Scene::SceneBase* scene, int mx, int my) {
+
+        return scene->CamPick(mx, my);
+
+    }
+
+    VIVIDBIND_API void vSetCanPick(Vivid::Scene::Nodes::VSceneEntity* ent, int can)
+    {
+
+        if (can) {
+            ent->SetCanPick(true);
+        } else{
+            ent->SetCanPick(false);
+        }
+
+    }
+
+    VIVIDBIND_API int vCanPick(Vivid::Scene::Nodes::VSceneEntity* ent) {
+
+        if (ent->CanPick()) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+
+    }
+
+    VIVIDBIND_API float vSceneHitPX(Vivid::Scene::SceneHit* hit) {
+
+        return hit->pos.x;
+
+    }
+
+    VIVIDBIND_API float vSceneHitPY(Vivid::Scene::SceneHit* hit) {
+
+        return hit->pos.y;
+
+    }
+
+    VIVIDBIND_API float vSceneHitPZ(Vivid::Scene::SceneHit* hit) {
+
+        return hit->pos.z;
+
+    }
+
+    VIVIDBIND_API int vSceneHitHit(Vivid::Scene::SceneHit* hit) {
+
+        if (hit->hit) {
+            return 1;
+        }
+        return 0;
+
+
+    }
+
+
+    VIVIDBIND_API float vSceneHitDis(Vivid::Scene::SceneHit* hit) {
+
+        return hit->dis;
+
+    }
+
 
     VIVIDBIND_API Vivid::Scene::VSceneNode* vNewSceneNode() {
 
@@ -186,6 +280,12 @@ extern "C" {
 
     }
 
+    VIVIDBIND_API void vMeshSetMat(Vivid::Mesh::Mesh3D* mesh, Vivid::Material::Material* mat) {
+
+        mesh->SetMaterial(mat);
+
+    }
+
     VIVIDBIND_API void vSetMeshVertex(Vivid::Mesh::Mesh3D *mesh,int ix, float x1, float y1, float z1, float u, float v, float w, float nx, float ny, float nz, float tx, float ty, float tz, float bx, float by, float bz) {
 
         auto vert = new Vivid::DataTypes::Vertex3D();
@@ -218,6 +318,13 @@ extern "C" {
 
     }
 
+
+    VIVIDBIND_API Vivid::Material::Material* vMeshGetMat(Vivid::Mesh::Mesh3D * mesh) {
+
+        return mesh->GetMaterial();
+
+    }
+
     // :- Lights
 
     VIVIDBIND_API void vSceneAddLight(Vivid::Scene::SceneBase* scene, Vivid::Scene::Nodes::NodeLight *light) {
@@ -244,6 +351,25 @@ extern "C" {
 
         return new Vivid::Scene::Nodes::VSceneEntity();
 
+
+    }
+
+    VIVIDBIND_API BoundingBox* vMeshGetBounds(Vivid::Scene::Nodes::VSceneEntity * ent,Vivid::Mesh::Mesh3D* mesh) {
+
+        return mesh->GetBounds(ent->GetWorld());
+
+
+    }
+
+    VIVIDBIND_API int vEntityMeshCount(Vivid::Scene::Nodes::VSceneEntity* ent) {
+
+        return ent->MeshCount();
+
+    }
+
+    VIVIDBIND_API Vivid::Mesh::Mesh3D* vEntityGetMesh(Vivid::Scene::Nodes::VSceneEntity* ent, int i) {
+
+        return ent->GetMesh(i);
 
     }
 

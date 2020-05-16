@@ -4,10 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VividNet.Bind;
+using VividNet.Math;
+using VividNet.Mesh;
 using VividNet.Scene.Nodes;
 
 namespace VividNet.Scene
 {
+
+    public class SceneHit
+    {
+        public float3 Pos;
+        public bool Hit;
+        public float Dis;
+        public NodeEntity Node;
+        public Mesh3D Mesh;
+    }
     public class SceneBase : VividObj
     {
 
@@ -49,6 +60,50 @@ namespace VividNet.Scene
 
         }
 
+        public SceneHit CamPick(int mx,int my)
+        {
+
+            IntPtr hit = BindScene.vSceneCamPick(ID,mx, my);
+            var sh = new SceneHit();
+
+            sh.Pos = new float3(BindScene.vSceneHitPX(hit), BindScene.vSceneHitPY(hit), BindScene.vSceneHitPZ(hit));
+            sh.Dis = BindScene.vSceneHitDis(hit);
+            var hh = BindScene.vSceneHitHit(hit);
+
+            if (hh == 1)
+            {
+                sh.Hit = true;
+            }
+            else
+            {
+                sh.Hit = false;
+            }
+
+            return sh;
+        }
+
+        public SceneHit RayToTri(float3 origin,float3 vec)
+        {
+
+            IntPtr hit =  BindScene.vSceneRayToTri(ID, origin.X, origin.Y, origin.Z, vec.X, vec.Y, vec.Z);
+
+            var sh = new SceneHit();
+
+            sh.Pos =new float3(BindScene.vSceneHitPX(hit), BindScene.vSceneHitPY(hit), BindScene.vSceneHitPZ(hit));
+            sh.Dis = BindScene.vSceneHitDis(hit);
+            var hh = BindScene.vSceneHitHit(hit);
+
+            if (hh == 1)
+            {
+                sh.Hit = true;
+            }
+            else
+            {
+                sh.Hit = false;
+            }
+
+            return sh;
+        }
         public SceneNode AddNode(SceneNode node)
         {
 

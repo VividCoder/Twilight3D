@@ -4,6 +4,7 @@
 #include <vector>
 #include "VertexBuffer3D.h"
 #include "Material.h"
+#include "BoundingBox.h"
 
 using namespace std;
 
@@ -44,6 +45,10 @@ namespace Vivid {
 				return material;
 			}
 
+			bool RayToTri(float4x4 mat, float3 origin, float3 vec, float3& out);
+
+			BoundingBox* GetBounds(float4x4 m);
+
 		private:
 
 			//vector
@@ -51,6 +56,7 @@ namespace Vivid {
 			vector<Tri* > indices;
 			VertexBuffer3D* vb;
 			Material::Material* material = NULL;
+			BoundingBox* bb;
 
 		};
 

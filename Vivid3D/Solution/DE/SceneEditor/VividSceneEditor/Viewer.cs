@@ -11,6 +11,9 @@ using WeifenLuo.WinFormsUI.Docking;
 using VividNet;
 using System.Configuration;
 using System.Threading;
+using VividNet.Texture;
+using VividNet.Scene.Nodes;
+using VividNet.Math;
 
 namespace VividSceneEditor
 {
@@ -21,6 +24,9 @@ namespace VividSceneEditor
         public static VividNet.Scene.SceneBase Scene = null;
         public static VividNet.Scene.Nodes.NodeLight Light1;
         public static VividNet.Scene.Nodes.NodeEntity Grid1;
+        public static VividNet.Scene.Nodes.NodeEntity GizmoTranslate;
+       // public static VividNet
+
         public Viewer()
         {
             InitializeComponent();
@@ -62,7 +68,7 @@ namespace VividSceneEditor
             }
 
         }
-
+        NodeEntity ge;
         protected override void OnLoad(EventArgs e)
         {
 
@@ -78,17 +84,84 @@ namespace VividSceneEditor
             Light1.Position = new VividNet.Math.float3(0, 5, -5);
             Cam.Position = new VividNet.Math.float3(0, 35,0 );
             Grid1 = VividNet.Gen.GenGrid.Grid(50);
-            Scene.AddNode(Grid1);
+           // Scene.AddNode(Grid1);
             Grid1.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
             //Grid1.SetRotation(90, 0, 0);
 
             Grid1.Position = new VividNet.Math.float3(0, 0,0);
             //base.OnLoad(e);
+            GizmoTranslate = VividNet.Import.Importer.ImportEntityAI("edit/mesh/gizmo/drag2.obj");
+            var gizmo_up = VividNet.Import.Importer.ImportEntityAI("edit/mesh/gizmo/drag2.obj");
+            var gizmo_for = VividNet.Import.Importer.ImportEntityAI("edit/mesh/gizmo/drag2.obj");
+            var gizmo_hit = VividNet.Import.Importer.ImportEntityAI("edit/mesh/gizmo/hit1.obj");
+            ge = gizmo_hit;
+            var m = new VividNet.Material.MaterialBase();
+            var m2 = new VividNet.Material.MaterialBase();
+            var m3 = new VividNet.Material.MaterialBase();
+
+            var tex = new Texture2D("green.png");
+            var tex2 = new Texture2D("orange.png");
+            var tex3 = new Texture2D("blue.png");
+
+            m.SetDiffuse(tex);
+            m2.SetDiffuse(tex2);
+            m3.SetDiffuse(tex3);
+
+            gizmo_for.SetMaterialRc(m3);
+            gizmo_up.SetMaterialRc(m2);
+            gizmo_hit.SetMaterialRc(m3);
+            GizmoTranslate.SetMaterialRc(m);
+            GizmoTranslate.SetRotation(90, 0, 0);
+           GizmoTranslate.AddNode(gizmo_up);
+            GizmoTranslate.AddNode(gizmo_for);
+            gizmo_up.SetRotation(90, 90, 0);
+            gizmo_for.SetRotation(0, 0,-90);
+
+
+            GizmoTranslate.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
+            Scene.AddNode(GizmoTranslate);
+            Scene.AddNode(gizmo_hit);
+
+            var hit = Scene.RayToTri(new float3(0,3, -25), new float3(0, 0,1));
+            gizmo_hit.Position = hit.Pos;
+            gizmo_hit.SetCanPick(false);
+
+            Console.WriteLine("PX:" + hit.Pos.X + " PY:" + hit.Pos.Y + " PZ:" + hit.Pos.Z + " Dis:" + hit.Dis + " Hit?:" + hit.Hit);
+            //while (true)
+           // {
+
+            //}
+
             Invalidate();
         }
         int x = 0;
+
+        public void CheckBB(NodeEntity node)
+        {
+
+            for(int i = 0; i < node.MeshCount(); i++)
+            {
+
+                var msh = node.GetMesh(i);
+                msh.GetBounds(node);
+
+
+            }
+
+            for(int i = 0; i < node.Nodes.Count; i++)
+            {
+
+                CheckBB((NodeEntity)node.Nodes[i]);
+
+            }
+
+        }
+
+        int h = 0;
         private void Viewer_Paint(object sender, PaintEventArgs e)
         {
+            VividApp.SetSize(Width, Height);
+
             x = x + 1;
             // Scene.Root.SetRotation(x*3, x, 0);
 
@@ -98,6 +171,22 @@ namespace VividSceneEditor
 
             VividNet.Bind.VBind.vPresent();
             Invalidate();
+
+            var hit = Scene.CamPick(Width / 2, Height / 2);
+            if (hit.Hit)
+            {
+              //  Environment.Exit(1);
+                ge.Position = hit.Pos;
+                h++;
+                //Console.WriteLine("P:" + ge.Position.X + " Y:" + ge.Position.Y + " Z:" + ge.Position.Z);
+                //Console.WriteLine("Hit:" + h);
+
+            }
+            else
+            {
+             //   Console.WriteLine("No Hit:" + h);
+            }
+
             timer2.Enabled = true;
           
         }

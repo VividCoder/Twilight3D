@@ -31,6 +31,8 @@ namespace Vivid {
 
 				}
 
+				bool RayToTri(float3 origin, float3 vec, float3& out);
+
 				Vivid::Mesh::Mesh3D* GetMesh(int num) {
 
 					return meshes.at(num);
@@ -49,10 +51,21 @@ namespace Vivid {
 
 				}
 
+				bool CanPick() {
+					return canPick;
+				}
+
+				void SetCanPick(bool pick) {
+
+					canPick = pick;
+
+				}
+
 			private:
 
 				vector<Vivid::Mesh::Mesh3D*> meshes;
 				RenderMode rendermode;
+				bool canPick = true;
 
 			};
 

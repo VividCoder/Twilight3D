@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VividNet.Bind;
+using VividNet.Material;
 using VividNet.Math;
+using VividNet.Scene.Nodes;
 
 namespace VividNet.Mesh
 {
@@ -47,6 +49,35 @@ namespace VividNet.Mesh
         {
 
             ID = BindMesh.vNewMesh(vertices, indices);
+
+        }
+
+        public Mesh3D(IntPtr mesh)
+        {
+
+            ID = mesh;
+
+        }
+
+        public Material.MaterialBase GetMat()
+        {
+
+            return new Material.MaterialBase(BindMesh.vMeshGetMat(ID));
+
+        }
+
+        public void SetMaterial(MaterialBase mat)
+        {
+
+            BindMesh.vMeshSetMat(ID,mat.ID);
+
+        }
+
+        public void GetBounds(NodeEntity node)
+        {
+
+            IntPtr r = BindMesh.vMeshGetBounds(node.ID,ID);
+
 
         }
 

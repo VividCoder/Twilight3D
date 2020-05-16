@@ -68,6 +68,7 @@
     <Compile Include="Bind\BindEntity.cs" />
     <Compile Include="Bind\BindImport.cs" />
     <Compile Include="Bind\BindLight.cs" />
+    <Compile Include="Bind\BindMat.cs" />
     <Compile Include="Bind\BindMesh.cs" />
     <Compile Include="Bind\BindRenderer.cs" />
     <Compile Include="Bind\BindScene.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Draw\Draw2D.cs" />
     <Compile Include="Gen\GenGrid.cs" />
     <Compile Include="Import\Importer.cs" />
+    <Compile Include="Material\MaterialBase.cs" />
     <Compile Include="Math\Color.cs" />
     <Compile Include="Math\float3.cs" />
     <Compile Include="Math\Maths.cs" />
