@@ -24,6 +24,20 @@ namespace VividNet.Scene.Nodes
             }
         }
 
+        public Color Specular
+        {
+            get
+            {
+                return _Spec;
+            }
+            set
+            {
+                _Spec = value;
+                BindLight.vLightSetSpec(ID, value.R, value.G, value.B);
+            }
+        }
+        private Color _Spec;
+
         private Color _Diff;
 
          public NodeLight()
@@ -31,7 +45,7 @@ namespace VividNet.Scene.Nodes
 
             ID = BindLight.vNewLight();
             Diffuse = new Color(1, 1, 1);
-
+            Specular = new Color(1, 0, 0);
 
         }
 

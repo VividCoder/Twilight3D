@@ -16,5 +16,7 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public static extern void vLightSetDiff(IntPtr l, float r, float g, float b);
 
+        [DllImport("VividBind.dll")]
+        public static extern void vLightSetSpec(IntPtr light, float r, float g, float b);
     }
 }

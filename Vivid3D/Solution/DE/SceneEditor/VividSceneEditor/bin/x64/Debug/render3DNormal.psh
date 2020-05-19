@@ -9,11 +9,11 @@ struct PSInput
     float3 UV : TEX_COORD;
 	float3 Normal : NORMAL;
 	float3 Tangent : TANGENT;
-    float3 eyeDir : E_DIR;
-    float3 lightDir : LIGHT_DIR;
     float3 lightDiff : LIGHT_DIFF;
     float3 lightSpec : LIGHT_SPEC;
-
+    float3 worldPos : WORLD_POS;
+    float3 lightPos : LIGHT_POS;
+    float3 camPos : CAM_POS;
   
 };
 
@@ -22,6 +22,18 @@ struct PSOutput
     float4 Color : SV_TARGET; 
 };
 
+
+float getDiffuseIntensity(float3 normalNormalized, float3 vertexToLightNormalized) {
+    return saturate(dot(normalNormalized, vertexToLightNormalized));
+}
+
+float getSpecularIntensity(float3 vertexPos, float3 normalNormalized, float3 cameraPos, float3 vertexToLightNormalized, float power) {
+    float3 v = normalize(cameraPos - vertexPos);
+    float3 r = reflect(-vertexToLightNormalized, normalNormalized);
+    return pow(saturate(dot(r, v)), power);
+}
+
+
 // Note that if separate shader objects are not supported (this is only the case for old GLES3.0 devices), vertex
 // shader output variable name must match exactly the name of the pixel shader input variable.
 // If the variable has structure type (like in this example), the structure declarations must also be indentical.
@@ -29,68 +41,24 @@ void main(in  PSInput  PSIn,
           out PSOutput PSOut)
 {
     
-    float2 uv = PSIn.UV.xy;
-    
-    float3 B = cross(PSIn.Normal, PSIn.Tangent);
-    
-    float4 texCol = color_Texture.Sample(color_Texture_sampler, uv);
-    
-    float3 normal = normalize(PSIn.Normal);
-    
-    float3 bumpNorm = normal_Texture.Sample(normal_Texture_sampler, uv).rgb;
-    
-    float3 normalCom = 2 * (bumpNorm - 0.5);
-    
-    bumpNorm = normalCom;
-    
-    
-    
-    float3x3 TBN = float3x3(PSIn.Tangent, B, PSIn.Normal);
-    
-    normal = mul(bumpNorm, TBN);
-    
-    float3 lightDir = normalize(PSIn.lightDir);
-    float3 viewDir = normalize(PSIn.eyeDir);
-    
-    
-    float n_dot_l = saturate(dot(lightDir, normal));
-    
-    float3 refVec = normalize(2 * n_dot_l * normal - lightDir);
-    
-    float3 spec = PSIn.lightSpec * pow(saturate(dot(refVec, viewDir)), 0.8f);
-    
-    
-    float fL = saturate(dot(normal, lightDir));
-    
-    float3 diffuseCol = fL;
-    
-    diffuseCol = diffuseCol * PSIn.lightDiff;
-    
-    diffuseCol += spec;
-    
-    float4 output = float4(diffuseCol.r, diffuseCol.g, diffuseCol.b, 1.0);
-    
-   //output = output * 0.1f;
-    
-    
-    
-    
-    
-    
-    
-    
-    float4 test = float4(normal.x, normal.y, normal.z, 1.0);
-    
-    //output = 1.0;
-    //texCol = 1.0;
+   float3x3 toWorld = float3x3(PSIn.Tangent,cross(PSIn.Tangent,PSIn.Normal),PSIn.Normal);
+   float3 normalMap = normal_Texture.Sample(normal_Texture_sampler,PSIn.UV.xy).rgb * 2.0 - 1.0;
+   normalMap = mul(normalMap.rgb,toWorld);
+
+   float3 normal = normalize(normalMap);
+   float3 lightDir = normalize(PSIn.lightPos - PSIn.worldPos);
+
+    float diffuseI = getDiffuseIntensity(normal,lightDir);
 
 
-    PSOut.Color =((output * (texCol))); //   +texCol;
- 
-    //fl////oat4 cc = normal_Texture.Sample(normal_Texture_sampler, PSIn.UV.xy);
+
+    float3 texCol = color_Texture.Sample(color_Texture_sampler,PSIn.UV.xy).rgb;
     
-    
-    
-   // PSOut.Color = texCol * fcol;
+    float specularIntensity = getSpecularIntensity(PSIn.worldPos, normal, PSIn.camPos, lightDir, 8);
+
+    float3 final = (texCol * diffuseI) + specularIntensity;
+
+
+    PSOut.Color = float4(final,1.0);
     
 }

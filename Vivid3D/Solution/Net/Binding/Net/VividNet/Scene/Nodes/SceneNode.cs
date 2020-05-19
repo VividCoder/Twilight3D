@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
@@ -84,6 +85,44 @@ namespace VividNet.Scene.Nodes
 
         }
 
+        public List<ModuleLink> ModLinks = new List<ModuleLink>();
+
+        public void AddModuleLink(ModuleLink link)
+        {
+            ModLinks.Add(link);
+        }
+        public void UpdateScripts()
+        {
+            foreach(var mod in Modules)
+            {
+
+                mod.UpdateModule();
+
+            }
+
+        }
+        public void LoadScripts()
+        {
+
+            foreach(var link in ModLinks)
+            {
+
+                Console.WriteLine("Compiling script:" + link.CodePath);
+                string stext = System.IO.File.ReadAllText(link.CodePath);
+                dynamic sc = CSScriptLibrary.CSScript.LoadCode(stext).CreateObject("*");
+
+                
+                Modules.Add(sc);
+                sc.SetNode(this);
+                sc.InitModule();
+                Console.WriteLine("Compiled and Added module.");
+
+
+               // Modules.Add(new ModuleBase(link.CodePath));
+
+            }
+
+        }
 
         public string Name
         {
@@ -123,7 +162,7 @@ namespace VividNet.Scene.Nodes
             _Pos = new float3(0, 0, 0);
             ID = id;
             Name = BindScene.vNodeGetName(ID);
-
+            NotEdit = false;
             GetCPos();
             UpdateCS();
 
@@ -133,6 +172,7 @@ namespace VividNet.Scene.Nodes
             Modules = new List<NodeModule>();
             ID = BindScene.vNewSceneNode();
             _Pos = new float3(0, 0, 0);
+            NotEdit = false;
         }
 
         public SceneNode AddNode(SceneNode node)
@@ -155,6 +195,11 @@ namespace VividNet.Scene.Nodes
          //   return Cam;
         //}
 
+        public bool NotEdit
+        {
+            get;
+            set;
+        }
 
         public void SetRotation(float pitch,float yaw,float roll)
         {

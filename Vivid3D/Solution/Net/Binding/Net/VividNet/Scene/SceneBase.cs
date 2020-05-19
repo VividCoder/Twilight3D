@@ -84,6 +84,25 @@ namespace VividNet.Scene
             return sh;
         }
 
+        public SceneNode FindNode(IntPtr id)
+        {
+
+            return CheckFind(Root, id);
+
+
+        }
+
+        public SceneNode CheckFind(SceneNode node,IntPtr id)
+        {
+            if (id == node.ID) return node;
+            foreach(var n in node.Nodes)
+            {
+                var ret = CheckFind(n, id);
+                if (ret != null) return ret;
+            }
+            return null;
+        }
+
         public SceneHit RayToTri(float3 origin,float3 vec)
         {
 
@@ -112,6 +131,40 @@ namespace VividNet.Scene
 
             Root.AddNode(node);
             return null;
+        }
+
+        public void LoadScripts()
+        {
+
+            LoadNodeScripts(Root);
+
+        }
+
+        public void LoadNodeScripts(SceneNode node)
+        {
+            node.LoadScripts();
+            foreach(var snode in node.Nodes)
+            {
+                LoadNodeScripts(snode);
+            }
+        }
+
+        public void UpdateScripts()
+        {
+
+            UpdateNodeScripts(Root);
+            
+
+        }
+
+        public void UpdateNodeScripts(SceneNode node)
+        {
+            node.UpdateScripts();
+            foreach(var sn in node.Nodes)
+            {
+                UpdateNodeScripts(sn);
+            }
+
         }
 
         public NodeLight AddLight(NodeLight light)

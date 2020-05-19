@@ -7,9 +7,7 @@ VSceneNode::VSceneNode() {
 
 	nodes.resize(0);
 
-	char* nn = new char[32];
-	nn[0] = 25;
-	nn[1] = 0;
+	const char* nn = "Empty Node\n";
 	name = nn;
 
 	Position = float3(0, 0, 0);

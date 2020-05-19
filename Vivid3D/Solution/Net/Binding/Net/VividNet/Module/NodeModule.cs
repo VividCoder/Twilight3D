@@ -24,6 +24,22 @@ namespace VividNet.Module
             set;
         }
 
+        public NodeModule()
+        {
+
+        }
+
+        public void SetNode(SceneNode node)
+        {
+
+            Node = node;
+            if(node is NodeEntity)
+            {
+                Entity = node as NodeEntity;
+            }
+
+        }
+
         public NodeModule(SceneNode node)
         {
 

@@ -148,6 +148,7 @@ void render_meshLit(Vivid::Mesh::Mesh3D* mesh) {
         float4x4 g_View;
         float4x4 g_Model;
         float4x4 g_Projection;
+        float4x4 g_World;
         float4 lightDir;
         float4 lightPos;
         float4 lightDiff;
@@ -171,6 +172,7 @@ void render_meshLit(Vivid::Mesh::Mesh3D* mesh) {
                 CBConstants->g_View = mview.Transpose();
                 CBConstants->g_Model = mmodel.Transpose();
                 CBConstants->g_Projection = mproj.Transpose();
+                CBConstants->g_World = mmodel.Transpose();
                 CBConstants->lightDir = float4(0.4f, 0.3f, -0.2f, 0);
 
                 auto pos = l1->GetPosition();

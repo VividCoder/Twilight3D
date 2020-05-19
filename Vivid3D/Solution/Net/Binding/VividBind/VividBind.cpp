@@ -398,6 +398,13 @@ extern "C" {
 
     }
 
+    VIVIDBIND_API void vLightSetSpec(Vivid::Scene::Nodes::NodeLight* light, float r, float g, float b) {
+
+
+        light->SetSpecular(r, g, b);
+
+    }
+
     VIVIDBIND_API Vivid::Scene::Nodes::NodeLight* vNewLight() {
 
         return new Vivid::Scene::Nodes::NodeLight();

@@ -14,6 +14,8 @@ using System.Threading;
 using VividNet.Texture;
 using VividNet.Scene.Nodes;
 using VividNet.Math;
+using ComponentFactory.Krypton.Toolkit;
+using VividNet.Module;
 
 namespace VividSceneEditor
 {
@@ -29,6 +31,9 @@ namespace VividSceneEditor
         public static bool DragX, DragY, DragZ;
         public static EditMode EMode;
         public static SpaceMode SMode;
+
+
+
        // public static VividNet
 
         public Viewer()
@@ -87,11 +92,15 @@ namespace VividSceneEditor
             Light1 = new VividNet.Scene.Nodes.NodeLight();
             Scene.AddLight(Light1);
 
-            Light1.Position = new VividNet.Math.float3(0, 5, -5);
-            Cam.Position = new VividNet.Math.float3(0, 35,0 );
+            Light1.Position = new VividNet.Math.float3(0, 15, -50);
+            Light1.SetDiffuse(1.0f, 1.0f,1.0f);
+            Light1.Specular = new VividNet.Math.Color(0, 1, 1);
+            Cam.Position = new VividNet.Math.float3(0, 10,-8 );
+            Cam.SetRotation(25, 0, 0);
             Grid1 = VividNet.Gen.GenGrid.Grid(50);
             Grid1.SetCanPick(false);
             Scene.AddNode(Grid1);
+            Grid1.NotEdit = true;
             Grid1.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
             //Grid1.SetRotation(90, 0, 0);
 
@@ -130,8 +139,9 @@ namespace VividSceneEditor
 
             GizmoTranslate.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
             GizmoTranslate.SetDoRender(false);
+            GizmoTranslate.NotEdit = true;
             Scene.AddNode(GizmoTranslate);
-            Scene.AddNode(gizmo_hit);
+          //  Scene.AddNode(gizmo_hit);
 
             //GizmoTranslate.SetCanPick(false);
 
@@ -145,10 +155,13 @@ namespace VividSceneEditor
             // {
 
             //}
+            Form1.Graph3D.SetScene(Scene);
             ContextMenuStrip  = contextMenuStrip1;
             Invalidate();
         }
         int x = 0;
+
+     
 
         public void CheckBB(NodeEntity node)
         {
@@ -335,6 +348,38 @@ namespace VividSceneEditor
             statusStrip1.Invalidate();
         }
 
+        public void SelectNode(IntPtr node)
+        {
+
+            CheckSelect(node, Scene.Root);
+
+        }
+
+        public void CheckSelect(IntPtr node,SceneNode snode)
+        {
+
+            if(snode.ID == node)
+            {
+                SelectSceneNode(snode);
+            }
+            foreach(var n in snode.Nodes)
+            {
+                CheckSelect(node, n);
+            }
+
+
+        }
+
+        public void SelectSceneNode(SceneNode node)
+        {
+            if (node is NodeEntity)
+            {
+                SelectedEntity = (NodeEntity)node;
+                GizmoTranslate.SetDoRender(true);
+                GizmoTranslate.Position = node.GetGlobalPos();
+            }
+        }
+
         private void Viewer_MouseDown(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Middle)
@@ -367,9 +412,7 @@ namespace VividSceneEditor
 
                     if (!hit.Node.Name.Contains("Giz:"))
                     {
-                        SelectedEntity = hit.Node;
-                        GizmoTranslate.SetDoRender(true);
-                        GizmoTranslate.Position = hit.Node.GetGlobalPos();
+                        SelectSceneNode(hit.Node);
                         Form1.Graph3D.SelectNode(hit.Node);
                         //   ge.Position = new float3(hit.Node.GetGlobalPos().X, hit.Node.GetGlobalPos().Y+6, hit.Node.GetGlobalPos().Z);
                     }

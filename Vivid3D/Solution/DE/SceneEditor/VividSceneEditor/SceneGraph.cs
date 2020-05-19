@@ -86,6 +86,7 @@ namespace VividSceneEditor
         public void AddNodes(TreeNode tnode,SceneNode snode)
         {
 
+            if (snode.NotEdit) return;
             TreeNode nn = new TreeNode(snode.Name);
             nn.Tag = snode.ID;
             tnode.Nodes.Add(nn);
@@ -99,14 +100,35 @@ namespace VividSceneEditor
 
         }
 
+
+        NewNodeModule newNodeForm;
+
         private void kryptonTreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if (e.Node.Tag == null) return;
+            IntPtr id =  (IntPtr)e.Node.Tag;
+            Form1.View3D.SelectNode(id);
 
         }
 
         private void addNodeModuleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var node = graphTree.SelectedNode.Tag;
+            if (node != null)
+            {
 
+                var snode = Viewer.Scene.FindNode((IntPtr)node);
+                if (snode != null)
+                {
+                    Console.WriteLine("Added module to:"+snode.Name);
+                    NewNodeModule.ForNode = snode;
+                    newNodeForm = new NewNodeModule();
+                    newNodeForm.Show();
+
+                }
+
+
+            }
         }
     }
 }
