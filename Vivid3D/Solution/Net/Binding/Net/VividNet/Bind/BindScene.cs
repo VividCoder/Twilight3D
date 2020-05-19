@@ -38,6 +38,8 @@ namespace VividNet.Bind
             return Marshal.PtrToStringAnsi(p);
         }
 
+
+
         [DllImport("VividBind.dll")]
         static extern IntPtr _vSceneNodeGetName(IntPtr node);
 
@@ -52,6 +54,15 @@ namespace VividNet.Bind
 
         [DllImport("VividBind.dll")]
         public static extern float vSceneNodeGetPosZ(IntPtr node);
+
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneGetGlobalPosX(IntPtr node);
+
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneGetGlobalPosY(IntPtr node);
+
+        [DllImport("VividBind.dll")]
+        public static extern float vSceneGetGlobalPosZ(IntPtr node);
 
         [DllImport("VividBind.dll")]
         public static extern void vSceneAddLight(IntPtr scene, IntPtr light);
@@ -84,7 +95,25 @@ namespace VividNet.Bind
         public static extern float vSceneHitDis(IntPtr hit);
 
         [DllImport("VividBind.dll")]
+        public static extern IntPtr vSceneHitEntity(IntPtr hit);
+
+        [DllImport("VividBind.dll")]
         public static extern IntPtr vSceneCamPick(IntPtr scene, int mx, int my);
+
+        [DllImport("VividBind.dll",CharSet = CharSet.Ansi)]
+        public extern static int vSceneNodeSetName(IntPtr node, [MarshalAs(UnmanagedType.LPStr)]string path);
+
+        [DllImport("VividBind.dll", CharSet = CharSet.Ansi)]
+        public extern static void vSceneNodeSetNameRC(IntPtr node, [MarshalAs(UnmanagedType.LPStr)]string path);
+
+        [DllImport("VividBind.dll")]
+        public extern static void vNodeRotateLocal(IntPtr node, float pitch, float yaw, float roll);
+
+        [DllImport("VividBind.dll")]
+        public extern static void vNodeRotateGlobal(IntPtr node, float pitch, float yaw, float roll);
+
+
+
     }
 
 }

@@ -289,8 +289,11 @@ namespace VividSceneEditor
                             
 
                             var imp_model = VividNet.Import.Importer.ImportEntityAI(ContentActive.RealPath);
+                            //imp_model.Position = new VividNet.Math.float3(5, 2, 8);
 
                             Viewer.Scene.AddNode(imp_model);
+
+                            Form1.Graph3D.SetScene(Viewer.Scene);
 
                             int vv = 5;
 

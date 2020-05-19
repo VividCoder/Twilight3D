@@ -30,6 +30,14 @@ namespace VividNet.Bind
 
         [DllImport("VividBind.dll")]
         public static extern int vCanPick(IntPtr ent);
+
+        [DllImport("VividBind.dll")]
+        public static extern void vEntitySetDoRender(IntPtr ent, int render);
+
+        [DllImport("VividBind.dll")]
+        public static extern int vEntityGetDoRender(IntPtr ent);
+
+
     }
 
 

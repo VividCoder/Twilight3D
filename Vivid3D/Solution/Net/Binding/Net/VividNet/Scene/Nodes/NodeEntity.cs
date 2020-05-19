@@ -13,7 +13,8 @@ namespace VividNet.Scene.Nodes
         public NodeEntity(IntPtr id)
         {
             ID = id;
-            Name = BindScene.vNodeGetName(ID);
+           // Name = BindScene.vNodeGetName(ID);
+            Console.WriteLine("Set:");
             this.UpdateCS();
            
 
@@ -91,6 +92,19 @@ namespace VividNet.Scene.Nodes
 
         }
 
+        public void SetDoRender(bool render)
+        {
+
+            BindEntity.vEntitySetDoRender(ID, render ? 1 : 0);
+
+        }
+
+        public bool GetDoRender()
+        {
+
+            return BindEntity.vEntityGetDoRender(ID) == 1;
+
+        }
         public void SetCanPick(bool pick)
         {
 

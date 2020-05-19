@@ -44,11 +44,29 @@ namespace Vivid {
 
 			void SetName(const char* n)
 			{
-				name = n;
+				char* b = new char[strlen(n)+1];
+				std::copy(n, n + strlen(n) + 1, b);
+				name = b;
+
+			}
+
+			void SetNameRC(const char* n)
+			{
+
+				SetName(n);
+				for (int i = 0; i < nodes.size(); i++) {
+
+					nodes[i]->SetNameRC(n);
+
+				}
+
 			}
 
 			const char * GetName()
 			{
+				printf("NAME::");
+				printf(name);
+				printf("!!!!\n");
 				return name;
 			}
 
@@ -65,6 +83,31 @@ namespace Vivid {
 			void SetPosition(float x, float y, float z) {
 
 				Position = float3(x, y, z);
+
+			}
+
+			void TurnLocal(float pitch, float yaw, float roll) {
+
+				float4x4 p = float4x4::RotationX(MathsUtil::DegToRad(pitch));
+				float4x4 y = float4x4::RotationY(MathsUtil::DegToRad(yaw));
+				float4x4 r = float4x4::RotationZ(MathsUtil::DegToRad(roll));
+
+				float4x4 t = y * p * r;
+
+				Rotation = Rotation * t;
+
+			}
+
+			void TurnGlobal(float pitch, float yaw, float roll) {
+
+
+				float4x4 p = float4x4::RotationX(MathsUtil::DegToRad(pitch));
+				float4x4 y = float4x4::RotationY(MathsUtil::DegToRad(yaw));
+				float4x4 r = float4x4::RotationZ(MathsUtil::DegToRad(roll));
+
+				float4x4 t = y * p * r;
+
+				Rotation = t * Rotation;
 
 			}
 
@@ -116,6 +159,19 @@ namespace Vivid {
 				}
 
 				return top * Rotation;
+
+
+			}
+
+			float3 GetGlobalPos() {
+
+				auto m = GetWorld();
+
+				float3 nv = float3(0, 0, 0);
+
+				nv = nv * m;
+
+				return nv;
 
 
 			}

@@ -57,7 +57,7 @@ VSceneEntity* Importer::LoadEntityAI(const char* path) {
 
 	auto rpath = path;
 
-	unsigned int flags = aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_ConvertToLeftHanded;
+	unsigned int flags = aiProcessPreset_TargetRealtime_MaxQuality | aiProcess_ConvertToLeftHanded | aiProcess_OptimizeGraph | aiProcess_OptimizeMeshes;
 
 	auto root = aiImportFile(rpath, flags);
 

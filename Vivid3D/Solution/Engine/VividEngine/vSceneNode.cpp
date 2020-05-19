@@ -6,7 +6,12 @@ using namespace Vivid::Scene;
 VSceneNode::VSceneNode() {
 
 	nodes.resize(0);
-	name = "\n";
+
+	char* nn = new char[32];
+	nn[0] = 25;
+	nn[1] = 0;
+	name = nn;
+
 	Position = float3(0, 0, 0);
 	Rotation = float4x4::Identity();
 	Scale = float3(1, 1, 1);

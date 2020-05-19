@@ -123,6 +123,12 @@ extern "C" {
 
     }
 
+    VIVIDBIND_API Vivid::Scene::Nodes::VSceneEntity* vSceneHitEntity(Vivid::Scene::SceneHit* hit) {
+
+        return hit->Entity;
+
+    }
+
     VIVIDBIND_API float vSceneHitPX(Vivid::Scene::SceneHit* hit) {
 
         return hit->pos.x;
@@ -216,9 +222,31 @@ extern "C" {
 
     }
 
-    VIVIDBIND_API void vSceneNodeSetName(Vivid::Scene::VSceneNode* node, const char* name) {
+    VIVIDBIND_API void vSceneNodeSetName(Vivid::Scene::VSceneNode* node, const char* name)
+    {
+        
         node->SetName(name);
+
     }
+
+    VIVIDBIND_API void vSceneNodeSetNameRC(Vivid::Scene::VSceneNode* node, const char* name) {
+
+        node->SetNameRC(name);
+
+    }
+
+    VIVIDBIND_API void vNodeRotateLocal(Vivid::Scene::VSceneNode* node, float pitch, float yaw, float roll) {
+
+        node->TurnLocal(pitch, yaw, roll);
+
+    }
+    
+    VIVIDBIND_API void vNodeRotateGlobal(Vivid::Scene::VSceneNode* node, float pitch, float yaw, float roll) {
+
+        node->TurnGlobal(pitch, yaw, roll);
+
+    }
+
 
 
 
@@ -233,6 +261,43 @@ extern "C" {
         node->SetPosition(x, y, z);
 
     }
+
+    VIVIDBIND_API float vSceneGetGlobalPosX(Vivid::Scene::VSceneNode* node) {
+
+        return node->GetGlobalPos().x;
+
+    }
+
+    VIVIDBIND_API float vSceneGetGlobalPosY(Vivid::Scene::VSceneNode* node) {
+
+        return node->GetGlobalPos().y;
+
+    }
+
+    VIVIDBIND_API float vSceneGetGlobalPosZ(Vivid::Scene::VSceneNode* node) {
+
+        return node->GetGlobalPos().z;
+
+    }
+
+    VIVIDBIND_API void vEntitySetDoRender(Vivid::Scene::Nodes::VSceneEntity* node,int render) {
+
+        node->SetDoRender(render == 1);
+
+    }
+
+    VIVIDBIND_API int vEntityGetDoRender(Vivid::Scene::Nodes::VSceneEntity* node)
+    {
+
+        if (node->GetDoRender()) {
+            return 1;
+        }
+        return 0;
+
+    }
+
+
+
 
     VIVIDBIND_API float vSceneNodeGetPosX(Vivid::Scene::VSceneNode* node) {
 

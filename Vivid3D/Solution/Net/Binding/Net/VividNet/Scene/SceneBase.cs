@@ -69,6 +69,7 @@ namespace VividNet.Scene
             sh.Pos = new float3(BindScene.vSceneHitPX(hit), BindScene.vSceneHitPY(hit), BindScene.vSceneHitPZ(hit));
             sh.Dis = BindScene.vSceneHitDis(hit);
             var hh = BindScene.vSceneHitHit(hit);
+            
 
             if (hh == 1)
             {
@@ -77,8 +78,9 @@ namespace VividNet.Scene
             else
             {
                 sh.Hit = false;
+                return sh;
             }
-
+            sh.Node = new NodeEntity(BindScene.vSceneHitEntity(hit));   ;//(NodeEntity)SceneNode.GetNode(BindScene.vSceneHitEntity(hit), true);
             return sh;
         }
 
@@ -101,6 +103,7 @@ namespace VividNet.Scene
             {
                 sh.Hit = false;
             }
+            sh.Node =(NodeEntity)SceneNode.GetNode(BindScene.vSceneHitEntity(hit),true);
 
             return sh;
         }

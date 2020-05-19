@@ -83,6 +83,8 @@
     <Compile Include="Math\float3.cs" />
     <Compile Include="Math\Maths.cs" />
     <Compile Include="Mesh\Mesh3D.cs" />
+    <Compile Include="Module\ModuleBase.cs" />
+    <Compile Include="Module\NodeModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderer\SceneRenderer.cs" />
     <Compile Include="Scene\Nodes\NodeCam.cs" />

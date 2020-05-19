@@ -46,6 +46,7 @@ SceneHit* CheckRayTri(VSceneNode *node, float3 origin, float3 vec) {
 				hit->pos = out;
 				hit->dis = MathsUtil::Distance(origin, out);
 				hit->hit = true;
+				hit->Entity = isn;
 
 			}
 			else {
@@ -88,6 +89,7 @@ SceneHit* CheckRayTri(VSceneNode *node, float3 origin, float3 vec) {
 				hit->pos = nh->pos;
 				hit->dis = sd;
 				hit->hit = true;
+				hit->Entity = nh->Entity;
 
 			}
 

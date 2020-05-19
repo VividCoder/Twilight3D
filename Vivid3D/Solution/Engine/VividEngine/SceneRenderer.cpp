@@ -286,26 +286,42 @@ void render_node(Vivid::Scene::VSceneNode* node) {
 
         mmodel = node->GetWorld();
 
+        if (isn->GetDoRender()) {
 
-        for (int i = 0; i < nEnt->MeshCount(); i++) {
+            for (int i = 0; i < nEnt->MeshCount(); i++) {
 
-            auto msh = nEnt->GetMesh(i);
+                auto msh = nEnt->GetMesh(i);
 
-            ent = nEnt;
+                ent = nEnt;
 
-            render_mesh(msh);
+                render_mesh(msh);
 
-        };
-
-    }
-    for (int i = 0; i<node->NodeCount(); i++) {
-
-        auto n2 = node->GetNode(i);
-
-        render_node(n2);
+            };
+        }
 
     }
+    //if (isn->GetDoRender()) {
+    if (isn != NULL) {
+        if (isn->GetDoRender()) {
+            for (int i = 0; i < node->NodeCount(); i++) {
 
+                auto n2 = node->GetNode(i);
+
+                render_node(n2);
+
+            }
+        }
+    }
+    else {
+        for (int i = 0; i < node->NodeCount(); i++) {
+
+            auto n2 = node->GetNode(i);
+
+            render_node(n2);
+
+        }
+    }
+    //}
 }
 
 void SceneRenderer::Render() {

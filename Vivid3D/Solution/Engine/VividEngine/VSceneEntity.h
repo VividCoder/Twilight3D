@@ -61,11 +61,24 @@ namespace Vivid {
 
 				}
 
+				void SetDoRender(bool render) {
+
+					doRender = render;
+
+				}
+
+				bool GetDoRender() {
+
+					return doRender;
+
+				}
+
 			private:
 
 				vector<Vivid::Mesh::Mesh3D*> meshes;
 				RenderMode rendermode;
 				bool canPick = true;
+				bool doRender = true;
 
 			};
 

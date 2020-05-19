@@ -14,6 +14,8 @@ namespace Vivid {
 			float3 pos;
 			bool hit = false;
 			float dis = 0;
+			Vivid::Scene::Nodes::VSceneEntity* Entity=NULL;
+			Vivid::Mesh::Mesh3D* Mesh=NULL;
 		};
 
 		class SceneBase
