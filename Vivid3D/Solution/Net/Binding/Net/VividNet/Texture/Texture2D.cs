@@ -13,18 +13,39 @@ namespace VividNet.Texture
     public class Texture2D : VividObj
     {
 
-        public Texture2D(string path)
+        public Texture2D(string path,bool mp = false)
         {
 
-            ID = BindTexture.vLoadTexture2D(path,0);
-     
+            if (mp)
+            {
+                ID = BindTexture.vLoadTexture2D(path, 1);
+            }
+            else
+            {
+                ID = BindTexture.vLoadTexture2D(path, 0);
+            }
+
+        }
+
+        public Texture2D(IntPtr id)
+        {
+
+            ID = id;
+
+        }
+
+        public string GetPath()
+        {
+
+            return BindTexture.vTextureGetPath(ID);
 
         }
 
         public static Texture2D QuickLoad(string path)
         {
-            if(File.Exists(path+".cache"))
+            if(File.Exists(path+".ca2che"))
             {
+
                 FileStream fi = new FileStream(path + ".cache", FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fi);
 
@@ -43,7 +64,7 @@ namespace VividNet.Texture
             int w = map.Width;
             int h = map.Height;
 
-            byte[] data = new byte[w * h * 3];
+            byte[] data = new byte[w * h * 4];
             int dl = 0;
 
             for(int y = 0; y < h; y++)
@@ -54,6 +75,7 @@ namespace VividNet.Texture
                     data[dl++] = pix.R;
                     data[dl++] = pix.G;
                     data[dl++] = pix.B;
+                    data[dl++] = 255;
                 }
             }
 
@@ -62,7 +84,7 @@ namespace VividNet.Texture
 
             bw.Write(w);
             bw.Write(h);
-            bw.Write(3);
+            bw.Write(4);
             bw.Write(data);
 
             bw.Flush();
@@ -76,7 +98,7 @@ namespace VividNet.Texture
 
         public Texture2D(byte[] data,int w,int h)
         {
-            ID = BindTexture.vCreateTexture2D(data, w, h,3);
+            ID = BindTexture.vCreateTexture2D(data, w, h,4);
         }
     }
 }

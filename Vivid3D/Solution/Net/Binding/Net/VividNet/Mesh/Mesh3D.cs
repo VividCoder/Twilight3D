@@ -7,6 +7,7 @@ using VividNet.Bind;
 using VividNet.Material;
 using VividNet.Math;
 using VividNet.Scene.Nodes;
+using VividNet.Texture;
 
 namespace VividNet.Mesh
 {
@@ -92,6 +93,53 @@ namespace VividNet.Mesh
         {
 
             BindMesh.vSetMeshTri(ID, ix, tri.V0, tri.V1, tri.V2);
+
+        }
+
+        public int GetTriCount()
+        {
+
+            return BindMesh.vMeshGetTriCount(ID);
+
+        }
+
+        public Tri GetTri(int ix)
+        {
+            int[] dat = new int[3];
+            IntPtr id = BindMesh.vMeshGetTri(ID,ix);
+            BindMesh.vMeshTriData(id, dat);
+            return new Tri(dat[0], dat[1], dat[2]);
+        }
+
+        public Vertex3D GetVertex(int ix)
+        {
+            float[] dat = new float[16];
+            IntPtr id = BindMesh.vMeshGetVertex(ID, ix);
+            BindMesh.vMeshVertexData(id, dat);
+            float3 pos = new float3(dat[0], dat[1], dat[2]);
+            float3 uv = new float3(dat[3],dat[4],dat[5]);
+            float3 norm = new float3(dat[6], dat[7], dat[8]);
+            float3 tan = new float3(dat[9], dat[10], dat[11]);
+            float3 bi = new float3(dat[12], dat[13], dat[14]);
+
+            Vertex3D v = new Vertex3D(pos);
+            v.uv = uv;
+            v.norm = norm;
+            v.tan = tan;
+            v.binorm = bi;
+
+            return v;
+
+
+
+        }
+
+        
+
+        public int GetVertexCount()
+        {
+
+            return BindMesh.vMeshGetVertexCount(ID);
 
         }
 

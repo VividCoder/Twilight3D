@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,5 +31,28 @@ namespace VividNet.Bind
 
         [DllImport("VividBind.dll")]
         public extern static IntPtr vMeshGetBounds(IntPtr ent,IntPtr mesh);
+
+        [DllImport("VividBind.dll")]
+        public extern static int vMeshGetTriCount(IntPtr mesh);
+
+        [DllImport("VividBind.dll")]
+        public extern static int vMeshGetVertexCount(IntPtr mesh);
+
+        [DllImport("VividBind.dll")]
+        public extern static IntPtr vMeshGetVertex(IntPtr mesh, int ix);
+
+        [DllImport("VividBind.dll")]
+        public extern static IntPtr vMeshGetTri(IntPtr mesh, int ix);
+
+        [DllImport("VividBind.dll")]
+        public extern static void vMeshTriData(IntPtr node, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] int[] arr);
+
+        [DllImport("VividBind.dll")]
+        public extern static void vMeshVertexData(IntPtr node, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] float[] arr);
+
+
+
+
+
     }
 }

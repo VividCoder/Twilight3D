@@ -11,6 +11,7 @@ namespace VividNet.Game
     {
 
         public Scene.SceneBase Scene;
+        public GameLevel ActiveLevel;
 
         public void LoadScripts()
         {

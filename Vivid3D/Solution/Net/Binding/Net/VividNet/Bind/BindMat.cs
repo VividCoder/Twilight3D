@@ -20,6 +20,12 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public extern static IntPtr vNewMaterial();
 
+        [DllImport("VividBind.dll")]
+        public extern static IntPtr vMatGetDiffuse(IntPtr mat);
+
+        [DllImport("VividBind.dll")]
+        public extern static IntPtr vMatGetNormal(IntPtr mat);
+
 
     }
 }

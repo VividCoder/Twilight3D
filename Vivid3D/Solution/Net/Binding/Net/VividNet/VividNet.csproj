@@ -213,6 +213,7 @@
   <ItemGroup>
     <Compile Include="App\App.cs" />
     <Compile Include="Bind\BindApp.cs" />
+    <Compile Include="Bind\BindDebug.cs" />
     <Compile Include="Bind\BindDraw2D.cs" />
     <Compile Include="Bind\BindEntity.cs" />
     <Compile Include="Bind\BindImport.cs" />
@@ -225,6 +226,7 @@
     <Compile Include="Bind\VBind.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Draw\Draw2D.cs" />
+    <Compile Include="Game\GameLevel.cs" />
     <Compile Include="Game\GameRunner.cs" />
     <Compile Include="Gen\GenGrid.cs" />
     <Compile Include="Import\Importer.cs" />

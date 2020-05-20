@@ -25,6 +25,21 @@ namespace VividNet.Material
 
         }
 
+        public Texture2D GetDiffuse()
+        {
+
+            return new Texture2D(BindMat.vMatGetDiffuse(ID));
+
+
+        }
+
+        public Texture2D GetNormal()
+        {
+
+            return new Texture2D(BindMat.vMatGetNormal(ID));
+
+        }
+
         public void SetDiffuse(Texture2D tex)
         {
 

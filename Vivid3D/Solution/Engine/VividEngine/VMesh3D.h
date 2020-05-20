@@ -47,6 +47,30 @@ namespace Vivid {
 
 			bool RayToTri(float4x4 mat, float3 origin, float3 vec, float3& out);
 
+			int GetTriCount() {
+
+				return indices.size();
+
+			}
+
+			int GetVertexCount() {
+
+				return vertices.size();
+
+			}
+
+			Tri* GetTri(int ix) {
+
+				return indices[ix];
+
+			}
+
+			Vertex3D* GetVertex(int ix) {
+
+				return vertices[ix];
+
+			}
+
 			BoundingBox* GetBounds(float4x4 m);
 
 		private:

@@ -296,7 +296,9 @@ void render_node(Vivid::Scene::VSceneNode* node) {
 
                 ent = nEnt;
 
+               // printf("Rendering Mesh:\n");
                 render_mesh(msh);
+                //printf("Rendered\n");
 
             };
         }
@@ -309,7 +311,10 @@ void render_node(Vivid::Scene::VSceneNode* node) {
 
                 auto n2 = node->GetNode(i);
 
+                //printf("Render node:\n");
                 render_node(n2);
+                //printf("rendered\n");
+
 
             }
         }

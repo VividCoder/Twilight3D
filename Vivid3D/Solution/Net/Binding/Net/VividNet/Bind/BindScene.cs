@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -112,6 +113,12 @@ namespace VividNet.Bind
         [DllImport("VividBind.dll")]
         public extern static void vNodeRotateGlobal(IntPtr node, float pitch, float yaw, float roll);
 
+        [DllImport("VividBind.dll")]
+        public extern static void vNodeGetRotation(IntPtr node, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] float[] arr);
+
+
+        [DllImport("VividBind.dll")]
+        public extern static void vNodeSetRotation(IntPtr node, [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 1)] float[] arr);
 
 
     }

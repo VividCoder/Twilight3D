@@ -101,6 +101,115 @@ namespace VividNet.Scene.Nodes
             }
 
         }
+        public static SceneNode ReadNode(BinaryReader r)
+        {
+            SceneNode res = null;
+            int typ = r.ReadInt32();
+            switch (typ)
+            {
+                case 0:
+
+                   return null;
+                case 1:
+                    res = new SceneNode();
+                    break;
+                case 2:
+                    res = new NodeEntity();
+                    break;
+
+            }
+
+            res.ReadNodeData(r);
+
+            return res;
+        }
+
+        public virtual void ReadNodeData(BinaryReader r)
+        {
+            Position = ReadVec3(r);
+
+            ReadRotation(r);
+            int nc = r.ReadInt32();
+            for(int i = 0; i < nc; i++)
+            {
+
+                var nn = SceneNode.ReadNode(r);
+                
+                if (nn != null)
+                {
+                    AddNode(nn);
+                    //nn.Root = this;
+                    //Nodes.Add(nn);
+
+                }
+
+            }
+        }
+        public virtual void WriteNode(BinaryWriter w)
+        {
+            if (NoSave)
+            {
+                w.Write(0);
+                return;
+            }
+          //  if (this is SceneNode)
+        //    {
+                w.Write((int)1);
+        
+            WriteVec3(Position,w);
+            //WriteVec3(Scale,w);
+
+            WriteRotation(w);
+            w.Write(Nodes.Count);
+            foreach(var n in Nodes)
+            {
+                n.WriteNode(w);
+            }
+
+        }
+
+        public void WriteVec3(float3 vec, BinaryWriter w)
+        {
+
+            w.Write(vec.X);
+            w.Write(vec.Y);
+            w.Write(vec.Z);
+
+        }
+
+        public float3 ReadVec3(BinaryReader r)
+        {
+
+            return new float3(r.ReadSingle(), r.ReadSingle(), r.ReadSingle());
+
+        }
+
+        public void WriteRotation(BinaryWriter w)
+        {
+
+            float[] arr = new float[16];
+
+            BindScene.vNodeGetRotation(ID, arr);
+
+            for (int i = 0; i < 16; i++)
+            {
+                w.Write(arr[i]);
+            }
+        
+        }
+
+        public void ReadRotation(BinaryReader r)
+        {
+
+            float[] mat = new float[16];
+            for(int i = 0; i < 16; i++)
+            {
+                mat[i] = r.ReadSingle();
+            }
+            BindScene.vNodeSetRotation(ID, mat);
+
+        }
+
         public void LoadScripts()
         {
 
@@ -165,6 +274,7 @@ namespace VividNet.Scene.Nodes
             NotEdit = false;
             GetCPos();
             UpdateCS();
+            NoSave = false;
 
         }
         public SceneNode()
@@ -173,6 +283,7 @@ namespace VividNet.Scene.Nodes
             ID = BindScene.vNewSceneNode();
             _Pos = new float3(0, 0, 0);
             NotEdit = false;
+            NoSave = false;
         }
 
         public SceneNode AddNode(SceneNode node)
@@ -196,6 +307,12 @@ namespace VividNet.Scene.Nodes
         //}
 
         public bool NotEdit
+        {
+            get;
+            set;
+        }
+
+        public bool NoSave
         {
             get;
             set;

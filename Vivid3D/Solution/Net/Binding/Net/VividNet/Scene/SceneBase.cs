@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,13 @@ namespace VividNet.Scene
             }
         }
         public NodeCam _Cam;
+
+        public void Debug()
+        {
+
+            BindDebug.vDebugScene(ID);
+
+        }
 
         public void SetRoot(SceneNode node)
         {
@@ -155,6 +163,20 @@ namespace VividNet.Scene
             UpdateNodeScripts(Root);
             
 
+        }
+
+        public void LoadScene(BinaryReader r)
+        {
+
+            SetRoot(SceneNode.ReadNode(r));
+
+        }
+
+        public void SaveScene(BinaryWriter w)
+        {
+
+            Root.WriteNode(w);
+            
         }
 
         public void UpdateNodeScripts(SceneNode node)

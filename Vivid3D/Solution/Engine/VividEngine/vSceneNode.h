@@ -64,9 +64,9 @@ namespace Vivid {
 
 			const char * GetName()
 			{
-				printf("NAME::");
-				printf(name);
-				printf("!!!!\n");
+				//printf("NAME::");
+				//printf(name);
+			//	printf("!!!!\n");
 				return name;
 			}
 
@@ -119,6 +119,12 @@ namespace Vivid {
 				float4x4 r = float4x4::RotationZ(MathsUtil::DegToRad(roll));
 
 				Rotation = p * y * r;
+
+			}
+
+			void SetRotationMatrix(float4x4 mat) {
+
+				Rotation = mat;
 
 			}
 

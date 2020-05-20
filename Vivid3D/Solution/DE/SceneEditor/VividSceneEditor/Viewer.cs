@@ -80,11 +80,20 @@ namespace VividSceneEditor
 
         }
         NodeEntity ge;
+        public void NewLevel()
+        {
+           // CreateData();
+        }
         protected override void OnLoad(EventArgs e)
         {
 
 
             VividApp.InitDisplay(this.Handle);
+            CreateData();
+        }
+
+        private void CreateData()
+        {
             VividNet.Bind.VBind.vSetPath(Environment.CurrentDirectory + "\\");
             Scene = new VividNet.Scene.SceneBase();
             Renderer = new VividNet.Renderer.SceneRenderer(Scene);
@@ -93,18 +102,19 @@ namespace VividSceneEditor
             Scene.AddLight(Light1);
 
             Light1.Position = new VividNet.Math.float3(0, 15, -50);
-            Light1.SetDiffuse(1.0f, 1.0f,1.0f);
+            Light1.SetDiffuse(1.0f, 1.0f, 1.0f);
             Light1.Specular = new VividNet.Math.Color(0, 1, 1);
-            Cam.Position = new VividNet.Math.float3(0, 10,-8 );
+            Cam.Position = new VividNet.Math.float3(0, 10, -8);
             Cam.SetRotation(25, 0, 0);
             Grid1 = VividNet.Gen.GenGrid.Grid(50);
             Grid1.SetCanPick(false);
+            Grid1.NoSave =  true;
             Scene.AddNode(Grid1);
             Grid1.NotEdit = true;
             Grid1.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
             //Grid1.SetRotation(90, 0, 0);
 
-            Grid1.Position = new VividNet.Math.float3(0, 0,0);
+            Grid1.Position = new VividNet.Math.float3(0, 0, 0);
             //base.OnLoad(e);
             GizmoTranslate = VividNet.Import.Importer.ImportEntityAI("edit/mesh/gizmo/drag2.obj");
             var gizmo_up = VividNet.Import.Importer.ImportEntityAI("edit/mesh/gizmo/drag2.obj");
@@ -115,6 +125,7 @@ namespace VividSceneEditor
             var m2 = new VividNet.Material.MaterialBase();
             var m3 = new VividNet.Material.MaterialBase();
 
+            GizmoTranslate.NoSave = true;
             var tex = new Texture2D("green.png");
             var tex2 = new Texture2D("orange.png");
             var tex3 = new Texture2D("blue.png");
@@ -129,25 +140,25 @@ namespace VividSceneEditor
             GizmoTranslate.SetMaterialRc(m);
             GizmoTranslate.SetRotation(90, 0, 0);
             GizmoTranslate.SetNameRC("Giz:LeftRight");
-           GizmoTranslate.AddNode(gizmo_up);
+            GizmoTranslate.AddNode(gizmo_up);
             gizmo_up.SetNameRC("Giz:UpDown");
-           gizmo_for.SetNameRC("Giz:BackFor");
+            gizmo_for.SetNameRC("Giz:BackFor");
             GizmoTranslate.AddNode(gizmo_for);
             gizmo_up.SetRotation(90, 90, 0);
-            gizmo_for.SetRotation(0, 0,-90);
+            gizmo_for.SetRotation(0, 0, -90);
 
 
             GizmoTranslate.SetRenderMode(VividNet.Scene.Nodes.RenderMode.FullBright);
             GizmoTranslate.SetDoRender(false);
             GizmoTranslate.NotEdit = true;
             Scene.AddNode(GizmoTranslate);
-          //  Scene.AddNode(gizmo_hit);
+            //  Scene.AddNode(gizmo_hit);
 
             //GizmoTranslate.SetCanPick(false);
 
 
-           // var hit = Scene.RayToTri(new float3(0,3, -25), new float3(0, 0,1));
-           // gizmo_hit.Position = hit.Pos;
+            // var hit = Scene.RayToTri(new float3(0,3, -25), new float3(0, 0,1));
+            // gizmo_hit.Position = hit.Pos;
             gizmo_hit.SetCanPick(false);
 
             // Console.WriteLine("PX:" + hit.Pos.X + " PY:" + hit.Pos.Y + " PZ:" + hit.Pos.Z + " Dis:" + hit.Dis + " Hit?:" + hit.Hit);
@@ -155,10 +166,13 @@ namespace VividSceneEditor
             // {
 
             //}
+            Form1.Runner.Scene = Scene;
+            Form1.Runner.ActiveLevel.Scene = Scene;
             Form1.Graph3D.SetScene(Scene);
-            ContextMenuStrip  = contextMenuStrip1;
+            ContextMenuStrip = contextMenuStrip1;
             Invalidate();
         }
+
         int x = 0;
 
      

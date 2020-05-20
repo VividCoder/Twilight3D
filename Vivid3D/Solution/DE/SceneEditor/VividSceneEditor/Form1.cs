@@ -46,9 +46,15 @@ namespace VividSceneEditor
 
             PropEdit = new PropertiesEdit();
             PropEdit.Show(Doc1, DockState.DockRightAutoHide);
+            View3D.NewLevel();
+
 
             Runner = new GameRunner();
             Runner.Scene = Viewer.Scene;
+            Runner.ActiveLevel = new GameLevel();
+            Runner.ActiveLevel.Scene = Runner.Scene;
+
+          
 
         }
         public static VividNet.Module.ModuleLink CreateNodeModule(string name)
@@ -77,6 +83,35 @@ namespace VividSceneEditor
             Runner.LoadScripts();
             Runner.Run();
             Console.WriteLine("Compiled.");
+        }
+
+        private void saveLevelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.InitialDirectory = ContentBrowser.ContentPath + "Level\\";// + "\\";
+            saveFileDialog1.Filter = "Vivid Levels (*.vl)|*.vl";
+            saveFileDialog1.DefaultExt = ".vl";
+            saveFileDialog1.Title = "Select a name to save your level as.";
+            saveFileDialog1.ShowDialog();
+            Console.WriteLine("Saving level:" + saveFileDialog1.FileName);
+            Runner.ActiveLevel.SaveLevel(saveFileDialog1.FileName);
+
+        }
+
+        private void loadLevelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = ContentBrowser.ContentPath + "Level\\";
+            openFileDialog1.Filter = "Vivid Levels (*.vl) |*.vl";
+            openFileDialog1.DefaultExt = ".vl";
+            openFileDialog1.Title = "Select a level to load.";
+            openFileDialog1.ShowDialog();
+            Console.WriteLine("Loading Level:" + openFileDialog1.FileName);
+            Runner.ActiveLevel.LoadLevel(openFileDialog1.FileName);
+            Runner.ActiveLevel.Scene.Debug();
+  //          while (true)
+    //        {
+
+
+//            }
         }
     }
 }

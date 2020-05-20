@@ -76,6 +76,8 @@ C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(40,23): warning C424
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\MathsUtil.h(46,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\vSceneNode.h(29,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(33,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(52,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\Vivid3D\Solution\Engine\VividEngine\VMesh3D.h(58,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\VSceneEntity.h(30,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\SceneBase.h(53,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(95,26): warning C4305: 'return': truncation from 'int' to 'bool'
@@ -85,7 +87,7 @@ C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(174,26): warning C4
   Generating Code...
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(100): warning C4715: 'Vivid::Engine::initWindowHW': not all control paths return a value
 C:\Projects\Vivid3D\Solution\Engine\VividEngine\EngineMain.h(201): warning C4715: 'Vivid::Engine::initWindow': not all control paths return a value
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1278,5): warning MSB8012: TargetPath(C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.dll) does not match the Linker's OutputFile property value (C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\bin\x64\Debug\VividBind.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1288,5): warning MSB8012: TargetPath(C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.dll) does not match the Linker's OutputFile property value (C:\Projects\Vivid3D\Solution\DE\SceneEditor\VividSceneEditor\bin\x64\Debug\VividBind.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      Creating library C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.lib and object C:\Projects\Vivid3D\Solution\x64\Debug\VIVIDBIND.exp
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library

@@ -185,7 +185,15 @@ extern "C" {
 
     VIVIDBIND_API void vSceneNodeAddNode(Vivid::Scene::VSceneNode* node1, Vivid::Scene::VSceneNode* node2) {
 
+        printf("Node>>");
+        printf(node1->GetName());
+        printf("\n");
+        printf("Added>>");
+        printf(node2->GetName());
+        printf("\n");
+
         node1->AddNode(node2);
+        printf("NC:%d\n", node1->NodeCount());
 
     }
 
@@ -387,6 +395,168 @@ extern "C" {
     VIVIDBIND_API Vivid::Material::Material* vMeshGetMat(Vivid::Mesh::Mesh3D * mesh) {
 
         return mesh->GetMaterial();
+
+    }
+
+    VIVIDBIND_API void vNodeSetRotation(Vivid::Scene::VSceneNode* node, float* mat)
+    {
+
+        float4x4 m;
+
+        m.m00 = mat[0];
+        m.m01 = mat[1];
+        m.m02 = mat[2];
+        m.m03 = mat[3];
+
+        m.m10 = mat[4];
+        m.m11 = mat[5];
+        m.m12 = mat[6];
+        m.m13 = mat[7];
+
+        m.m20 = mat[8];
+        m.m21 = mat[9];
+        m.m22 = mat[10];
+        m.m23 = mat[11];
+
+        m.m30 = mat[12];
+        m.m31 = mat[13];
+        m.m32 = mat[14];
+        m.m33 = mat[15];
+
+        node->SetRotationMatrix(m);
+
+
+
+    }
+
+    VIVIDBIND_API int vMeshGetTriCount(Vivid::Mesh::Mesh3D* mesh)
+    {
+
+        return mesh->GetTriCount();
+
+    }
+
+    VIVIDBIND_API int vMeshGetVertexCount(Vivid::Mesh::Mesh3D* mesh)
+    {
+
+        return mesh->GetVertexCount();
+
+    }
+
+    VIVIDBIND_API Tri* vMeshGetTri(Vivid::Mesh::Mesh3D* mesh,int ix) {
+
+        return mesh->GetTri(ix);
+
+    };
+
+    VIVIDBIND_API void vMeshTriData(Tri* t, int* data) {
+
+        data[0] = t->V0;
+        data[1] = t->V1;
+        data[2] = t->V2;
+
+    }
+
+    VIVIDBIND_API void vMeshVertexData(Vertex3D* v, float* data)
+    {
+        data[0] = v->Pos.x;
+        data[1] = v->Pos.y;
+        data[2] = v->Pos.z;
+
+        data[3] = v->UV.x;
+        data[4] = v->UV.y;
+        data[5] = v->UV.z;
+
+        data[6] = v->Normal.x;
+        data[7] = v->Normal.y;
+        data[8] = v->Normal.z;
+
+        data[9] = v->Tangent.x;
+        data[10] = v->Tangent.y;
+        data[11] = v->Tangent.z;
+
+        data[12] = v->BiNormal.x;
+        data[13] = v->BiNormal.y;
+        data[14] = v->BiNormal.z;
+
+    }
+
+    VIVIDBIND_API const char* _vTextureGetPath(Vivid::Texture::Texture2D* tex) {
+
+        return tex->GetPath();
+
+    }
+
+    VIVIDBIND_API Vertex3D* vMeshGetVertex(Vivid::Mesh::Mesh3D* mesh, int ix) {
+
+        return mesh->GetVertex(ix);
+
+    }
+
+    void debugNode(Vivid::Scene::VSceneNode* node) {
+
+        printf("Node:");
+        printf(node->GetName());
+        printf("\n");
+
+        printf("Nodes:%d\n", node->NodeCount());
+        auto isn = dynamic_cast<VSceneEntity*>(node);
+
+        if (isn == NULL) {
+           
+        }
+        else {
+           
+            int meshes = isn->MeshCount();
+            printf("Meshes:%d \n", meshes);
+            
+            //return 2;
+        }
+        for (int i = 0; i < node->NodeCount(); i++) {
+
+            debugNode(node->GetNode(i));
+
+        }
+
+    }
+
+    VIVIDBIND_API void vDebugScene(Vivid::Scene::SceneBase* scene) {
+
+        printf("-------------\n");
+        debugNode(scene->GetRoot());
+
+    }
+
+    VIVIDBIND_API void vNodeGetRotation(Vivid::Scene::VSceneNode* node,float *mat) {
+
+        float4x4 r = node->GetRotation();
+        mat[0] = r.m00;
+        mat[1] = r.m01;
+        mat[2] = r.m02;
+        mat[3] = r.m03;
+        mat[4] = r.m10;
+        mat[5] = r.m11;
+        mat[6] = r.m12;
+        mat[7] = r.m13;
+        mat[8] = r.m20;
+        mat[9] = r.m21;
+        mat[10] = r.m22;
+        mat[11] = r.m23;
+        mat[12] = r.m30;
+        mat[13] = r.m31;
+        mat[14] = r.m32;
+        mat[15] = r.m33;
+    }
+
+    VIVIDBIND_API Vivid::Texture::Texture2D* vMatGetDiffuse(Vivid::Material::Material* mat) {
+
+        return mat->GetDiffuse();
+
+    }
+
+    VIVIDBIND_API Vivid::Texture::Texture2D* vMatGetNormal(Vivid::Material::Material* mat) {
+
+        return mat->GetNormal();
 
     }
 
